@@ -60,6 +60,10 @@ Specify a character model by its name.
 String characterModelName;
 ```
 
+**Remarks**
+
+View the parameter reference of [CharacterModelName]({{ site.dcv_parameter_reference }}text-line-specification/character-model-name.html) for more details about how to use the parameter.
+
 ### lineStringRegExPattern
 
 Set the RegEx pattern of the text line string to filter out the unqualified results.
@@ -67,6 +71,8 @@ Set the RegEx pattern of the text line string to filter out the unqualified resu
 ```java
 String lineStringRegExPattern;
 ```
+
+**Remarks**
 
 ### maxThreadsInOneTask
 
@@ -76,6 +82,8 @@ Set the maximum available threads count in one label recognition task.
 int maxThreadsInOneTask;
 ```
 
+**Remarks**
+
 ### scaleDownThreshold
 
 Set the threshold for image shrinking when dealing with large images.
@@ -83,3 +91,5 @@ Set the threshold for image shrinking when dealing with large images.
 ```java
 int scaleDownThreshold;
 ```
+
+**Remarks**
