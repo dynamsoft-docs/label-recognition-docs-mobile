@@ -33,88 +33,52 @@ class CTextLineResultItem : public CCapturedResultItem
 | [`getText`](#gettext) | Gets the text content of the text line. |
 | [`getLocation`](#getlocation) | Gets the location of the text line in the form of a quadrilateral. |
 | [`getConfidence`](#getconfidence) | Gets the confidence of the text line recognition result. |
-| [`GetCharacterResultsCount`](#getcharacterresultscount) | Gets the count of character results in the text line. |
-| [`GetCharacterResult`](#getcharacterresult) | Gets the character result at the specified index. |
-| [`GetRotationTransformMatrix`](#getrotationtransformmatrix) | Gets the rotation transform matrix of the text line. |
+| [`getCharacterResults`](#getcharacterresults) | Get all the characters in the text line. Each character is represented by a [`CharacterResult`](character-result.md) object. |
 
-### GetText
+### getText
 
 It is used to get the text content of the text line.
 
 ```java
-virtual const char* GetText() const = 0;
+String getText();
 ```
 
 **Return value**
 
 Returns the text content of the text line.
 
-### GetLocation
+### getLocation
 
 It is used to get the location of the text line in the form of a quadrilateral.
 
 ```java
-virtual CQuadrilateral GetLocation() const = 0;
+Quadrilateral getLocation();
 ```
 
 **Return value**
 
 Returns the location of the text line in the form of a quadrilateral.
 
-### GetConfidence
+### getConfidence
 
 It is used to get the confidence of the text line recognition result.
 
 ```java
-virtual int GetConfidence() const = 0;
+int getConfidence();
 ```
 
 **Return value**
 
 Returns the confidence of the text line recognition result.
 
-### GetCharacterResultsCount
+### getCharacterResults
 
-It is used to get the count of character results in the text line.
+Get all the characters in the text line. Each character is represented by a [`CharacterResult`](character-result.md) object.
 
 ```java
-virtual int GetCharacterResultsCount() const = 0;
+CharacterResult[] getCharacterResults();
 ```
 
 **Return value**
 
-Returns the count of character results in the text line.
-
-### GetCharacterResult
-
-It is used to get the character result at the specified index.
-
-```java
-virtual int GetCharacterResult(int index, CCharacterResult* charResult) const = 0;
-```
-
-**Parameters**
-
-`[in] index` The index of the character result to get.
-
-`[out] charResult` The character result at the specified index.
-
-**Return value**
-
-Returns 0 if successful, otherwise returns a non-zero error code.
-
-### GetRotationTransformMatrix
-
-It is used to get the rotation transform matrix of the text line.
-
-```java
-virtual void GetRotationTransformMatrix(double matrix[9]) const = 0;
-```
-
-**Parameters**
-
-`[out] matrix` The rotation transform matrix of the text line.
-
-**Return value**
-
-None.
+An array of [`CharacterResult`](character-result.md) contains all the characters.
