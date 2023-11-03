@@ -24,15 +24,15 @@ The `CTextLineResultItem` class represents a text line result item recognized by
 class CTextLineResultItem : public CCapturedResultItem
 ```
 
-*Inheritance:* [CCapturedResultItem]({{ site.dcv_cpp_api }}core/basic-structures/captured-result-item.html) -> CTextLineResultItem
+*Inheritance:* [CCapturedResultItem]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html) -> CTextLineResultItem
 
 ## Methods Summary
 
 | Method               | Description |
 |----------------------|-------------|
-| [`GetText`](#gettext) | Gets the text content of the text line. |
-| [`GetLocation`](#getlocation) | Gets the location of the text line in the form of a quadrilateral. |
-| [`GetConfidence`](#getconfidence) | Gets the confidence of the text line recognition result. |
+| [`getText`](#gettext) | Gets the text content of the text line. |
+| [`getLocation`](#getlocation) | Gets the location of the text line in the form of a quadrilateral. |
+| [`getConfidence`](#getconfidence) | Gets the confidence of the text line recognition result. |
 | [`GetCharacterResultsCount`](#getcharacterresultscount) | Gets the count of character results in the text line. |
 | [`GetCharacterResult`](#getcharacterresult) | Gets the character result at the specified index. |
 | [`GetRotationTransformMatrix`](#getrotationtransformmatrix) | Gets the rotation transform matrix of the text line. |

@@ -16,7 +16,7 @@ The `LocalizedTextLineElement` class represents a localized text line element. I
 
 ## Definition
 
-*Namespace:* com.dynamsoft.dlr::intermediate_results
+*Namespace:* com.dynamsoft.dlr.intermediate_results
 
 *Assembly:* DynamsoftLabelRecognizer.aar
 
@@ -24,7 +24,7 @@ The `LocalizedTextLineElement` class represents a localized text line element. I
 class LocalizedTextLineElement extends RegionObjectElement
 ```
 
-*Inheritance:* [RegionObjectElement]({{ site.dcv_cpp_api }}core/intermediate-results/region-object-element.html) -> LocalizedTextLineElement
+*Inheritance:* [RegionObjectElement]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) -> LocalizedTextLineElement
 
 ## Methods Summary
 

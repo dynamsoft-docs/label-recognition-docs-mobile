@@ -1,63 +1,45 @@
 ---
 layout: default-layout
-title: CRecognizedTextLinesUnit - Dynamsoft Label Recognizer Android Edition
-description: The class CRecognizedTextLinesUnit of Dynamsoft Label Recognizer represents an intermediate result unit containing recognized text lines.
+title: RecognizedTextLinesUnit - Dynamsoft Label Recognizer Android Edition
+description: The class RecognizedTextLinesUnit of Dynamsoft Label Recognizer represents an intermediate result unit containing recognized text lines.
 keywords: Recognized text lines unit
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-breadcrumbText: CRecognizedTextLinesUnit
+breadcrumbText: RecognizedTextLinesUnit
 permalink: /programming/android/api-reference/recognized-text-lines-unit.html
 ---
 
-# CRecognizedTextLinesUnit
+# RecognizedTextLinesUnit
 
-The `CRecognizedTextLinesUnit` class represents an intermediate result unit containing recognized text lines. It inherits from the `CIntermediateResultUnit` class.
+The `RecognizedTextLinesUnit` class represents an intermediate result unit containing recognized text lines. It inherits from the [IntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class.
 
 ## Definition
 
-*Namespace:* com.dynamsoft.dlr::intermediate_results
+*Namespace:* com.dynamsoft.dlr.intermediate_results
 
 *Assembly:* DynamsoftLabelRecognizer.aar
 
 ```java
-class CRecognizedTextLinesUnit : public CIntermediateResultUnit
+class RecognizedTextLinesUnit : public IntermediateResultUnit
 ```
 
-*Inheritance:* [CIntermediateResultUnit]({{ site.dcv_cpp_api }}core/intermediate-results/intermediate-result-unit.html) -> CRecognizedTextLinesUnit
-
+*Inheritance:* [IntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) -> RecognizedTextLinesUnit
 
 ## Methods Summary
 
-| Method               | Description |
-|----------------------|-------------|
-| [`GetCount`](#getcount) | Gets the number of recognized text lines in the unit.|
-| [`GetRecognizedTextLine`](#getrecognizedtextline) | Gets a pointer to the CRecognizedTextLineElement object at the specified index. |
+| Method | Description |
+| ------ | ----------- |
+| [`getRecognizedTextLines`](#getrecognizedtextlines) | Gets a pointer to the [`RecognizedTextLineElement`](recognized-text-line-element.md) object at the specified index. |
 
-### GetCount
+### getRecognizedTextLines
 
-Gets the number of recognized text lines in the unit.
+Gets all the recognized text lines of this unit in an array of [`RecognizedTextLineElement`](recognized-text-line-element.md).
 
 ```java
-virtual int GetCount() const = 0;
+RecognizedTextLineElement[] getRecognizedTextLines();
 ```
 
 **Return value**
 
-Returns the number of recognized text lines in the unit.
-
-### GetRecognizedTextLine
-
-Gets a pointer to the CRecognizedTextLineElement object at the specified index.
-
-```java
-virtual const CRecognizedTextLineElement* GetRecognizedTextLine(int index) const = 0;
-```
-
-**Parameters**
-
-`[in] index` The index of the desired CRecognizedTextLineElement object.
-
-**Return value**
-
-Returns a pointer to the CRecognizedTextLineElement object at the specified index.
+An array of [`RecognizedTextLineElement`](recognized-text-line-element.md) that contains all recognized text line of this unit.

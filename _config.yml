@@ -15,6 +15,11 @@ objectivec-swift: /label-recognition/docs/mobile/programming/objectivec-swift/
 objectivec-swift-api: /label-recognition/docs/mobile/programming/objectivec-swift/api-reference/
 objectivec-swift-release-notes: /label-recognition/docs/mobile/programming/objectivec-swift/release-notes/
 
+dcv_android_api: /capture-vision/docs/mobile/programming/android/api-reference/
+dcv_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
+dcv_enumerations: /capture-vision/docs/core/enums/
+dcv_parameter_reference: /capture-vision/docs/core/parameters/reference/
+
 assets: /label-recognition/docs/mobile/assets/
 edit_icon: /label-recognition/docs/mobile/assets/img-icon/edit-icon.png
 smile_icon: /label-recognition/docs/mobile/assets/img-icon/icon-smile.png

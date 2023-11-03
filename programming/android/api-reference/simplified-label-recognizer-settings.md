@@ -14,42 +14,38 @@ permalink: /programming/android/api-reference/simplified-label-recognizer-settin
 The `SimplifiedLabelRecognizerSettings` struct contains settings for label recognition. It is a sub-parameter of `SimplifiedCaptureVisionSettings`
 
 ```java
-typedef struct tagSimplifiedLabelRecognizerSettings
-{
-    GrayscaleTransformationMode grayscaleTransformationModes[8];
-    GrayscaleEnhancementMode grayscaleEnhancementModes[8];
-    char characterModelName[64];
-    char lineStringRegExPattern[1024];
-    int maxThreadsInOneTask;
-    char reserved[512];
-} SimplifiedLabelRecognizerSettings;
+class SimplifiedLabelRecognizerSettings
 ```
 
 ## Attributes Summary
 
 | Attribute | Type |
 | --------- | ---- |
-| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *GrayscaleTransformationMode[8]* |
-| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *GrayscaleEnhancementMode[8]* |
-| [`characterModelName`](#charactermodelname) | *LocalizationMode[8]* |
-| [`lineStringRegExPattern`](#linestringregexpattern) | *DeblurMode[10]* |
+| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *EnumGrayscaleTransformationMode[]* |
+| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *EnumGrayscaleEnhancementMode[]* |
+| [`characterModelName`](#charactermodelname) | *LocalizationMode[]* |
+| [`lineStringRegExPattern`](#linestringregexpattern) | *DeblurMode[]* |
 | [`maxThreadsInOneTask`](#maxthreadsinonetask) | *int* |
-| [`reserved`](#reserved) | *char[512]* |
+| [`scaleDownThreshold`](#scaledownthreshold) | *int* |
 
 ### grayscaleTransformationModes
 
-Set the grayscale transformation modes with an array of enumeration `GrayscaleTransformationMode`. View the reference page of <a href="{{ site.dcv_enumerations}}core/grayscale-transformation-mode.html?src=cpp&&lang=cpp" target="_blank">`GrayscaleTransformationMode`</a> for more detail about grayscale transformation modes.
+Set the grayscale transformation modes with an array of enumeration [`GrayscaleTransformationMode`]({{ site.dcv_enumerations}}core/grayscale-transformation-mode.html).
+
+View the parameter reference page of [`GrayscaleTransformationMode`]({{ site.dcv_parameter_reference }}image-parameter/grayscale-transformation-modes.html){:target="_blank"} for more detail about how to set grayscale transformation modes.
 
 ```java
-GrayscaleTransformationMode grayscaleTransformationModes[8];
+int[] grayscaleTransformationModes;
 ```
 
 ### grayscaleEnhancementModes
 
-Set the grayscale enhancement modes with an array of enumeration `GrayscaleEnhancementMode`. View the reference page of <a href="{{ site.dcv_enumerations}}core/grayscale-enhancement-mode.html?src=cpp&&lang=cpp" target="_blank">`GrayscaleEnhancementMode`</a> for more detail about grayscale enhancement modes.
+Set the grayscale enhancement modes with an array of enumeration [`GrayscaleEnhancementMode`]({{ site.dcv_enumerations}}core/grayscale-enhancement-mode.html).
+
+View the reference page of [`GrayscaleEnhancementMode`]({{ site.dcv_parameter_reference }}image-parameter/grayscale-enhancement-modes.html){:target="_blank"} for more detail about how to set grayscale enhancement modes.
 
 ```java
-GrayscaleEnhancementMode grayscaleEnhancementModes[8];
+int[] grayscaleEnhancementModes;
 ```
 
 ### characterModelName
@@ -57,7 +53,7 @@ GrayscaleEnhancementMode grayscaleEnhancementModes[8];
 Specify a character model by its name.
 
 ```java
-char characterModelName[64];
+String characterModelName;
 ```
 
 ### lineStringRegExPattern
@@ -65,7 +61,7 @@ char characterModelName[64];
 Set the RegEx pattern of the text line string to filter out the unqualified results.
 
 ```java
-char lineStringRegExPattern[1024];
+String lineStringRegExPattern;
 ```
 
 ### maxThreadsInOneTask
@@ -76,10 +72,10 @@ Set the maximum available threads count in one label recognition task.
 int maxThreadsInOneTask;
 ```
 
-### reserved
+### scaleDownThreshold
 
-Reserved for future use.
+Set the threshold for image shrinking when dealing with large images.
 
 ```java
-char reserved[512];
+int scaleDownThreshold;
 ```

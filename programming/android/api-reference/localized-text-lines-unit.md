@@ -1,64 +1,45 @@
 ---
 layout: default-layout
-title: CLocalizedTextLinesUnit - Dynamsoft Label Recognizer Android Edition
-description: The class CLocalizedTextLinesUnit of Dynamsoft Label Recognizer represents a unit that contains localized text lines.
+title: LocalizedTextLinesUnit - Dynamsoft Label Recognizer Android Edition
+description: The class LocalizedTextLinesUnit of Dynamsoft Label Recognizer represents a unit that contains localized text lines.
 keywords: Localized text lines unit
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-breadcrumbText: CLocalizedTextLinesUnit
+breadcrumbText: LocalizedTextLinesUnit
 permalink: /programming/android/api-reference/localized-text-lines-unit.html
 ---
 
-# CLocalizedTextLinesUnit
+# LocalizedTextLinesUnit
 
-The `CLocalizedTextLinesUnit` class represents a unit that contains localized text lines. It inherits from the `CIntermediateResultUnit` class.
+The `LocalizedTextLinesUnit` class represents a unit that contains localized text lines. It inherits from the [IntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class.
 
 ## Definition
 
-*Namespace:* com.dynamsoft.dlr::intermediate_results
+*Namespace:* com.dynamsoft.dlr.intermediate_results
 
 *Assembly:* DynamsoftLabelRecognizer.aar
 
 ```java
-class CLocalizedTextLinesUnit : public CIntermediateResultUnit
+class LocalizedTextLinesUnit extends IntermediateResultUnit
 ```
 
-*Inheritance:* [CIntermediateResultUnit]({{ site.dcv_cpp_api }}core/intermediate-results/intermediate-result-unit.html) -> CLocalizedTextLinesUnit
+*Inheritance:* [IntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) -> LocalizedTextLinesUnit
 
-## Methods
+## Methods Summary
 
-| Method                            | Description |
-|-----------------------------------|-------------|
-| [`GetCount`](#getcount)           | Gets the number of localized text lines in the unit.|
-| [`GetLocalizedTextLine`](#getlocalizedtextline) | Gets a pointer to a specific localized text line element.|
+| Method | Description |
+| ------ | ----------- |
+| [`getLocalizedTextLine`](#getlocalizedtextlines) | Gets a pointer to a specific localized text line element. |
 
-### GetCount
+### getLocalizedTextLines
 
-Gets the number of localized text lines in the unit.
+Gets all the text lines that are localized from the image.
 
 ```java
-virtual int GetCount() const = 0;
+LocalizedTextLineElement[] getLocalizedTextLines();
 ```
 
 **Return value**
 
-Returns the number of localized text lines in the unit.
-
-### GetLocalizedTextLine
-
-Gets a pointer to a specific localized text line element.
-
-```java
-virtual const CLocalizedTextLineElement* GetLocalizedTextLine(int index) const = 0;
-```
-
-**Parameters**
-
-`[in] index` The index of the localized text line element to retrieve.
-
-**Return value**
-
-Returns a const pointer to the localized text line element at the specified index. 
-
-Note: The CLocalizedTextLineElement class is not defined in this input, so it may need to be included in the documentation separately.
+Returns an array of [`LocalizedTextLineElement`](localized-text-line-element.md), which is the basic unit of the localized text line result.
