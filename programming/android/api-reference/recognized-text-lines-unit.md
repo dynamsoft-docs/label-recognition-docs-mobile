@@ -21,7 +21,7 @@ The `RecognizedTextLinesUnit` class represents an intermediate result unit conta
 *Assembly:* DynamsoftLabelRecognizer.aar
 
 ```java
-class RecognizedTextLinesUnit : public IntermediateResultUnit
+class RecognizedTextLinesUnit extends IntermediateResultUnit
 ```
 
 *Inheritance:* [IntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) -> RecognizedTextLinesUnit

@@ -1,18 +1,18 @@
 ---
 layout: default-layout
-title: CTextLineResultItem - Dynamsoft Label Recognizer Android Edition
-description: The class CTextLineResultItem of Dynamsoft Label Recognizer represents a text line result item recognized by a document layout analysis engine.
+title: TextLineResultItem - Dynamsoft Label Recognizer Android Edition
+description: The class TextLineResultItem of Dynamsoft Label Recognizer represents a text line result item recognized by a document layout analysis engine.
 keywords: Text line result item
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-breadcrumbText: CTextLineResultItem
+breadcrumbText: TextLineResultItem
 permalink: /programming/android/api-reference/text-line-result-item.html
 ---
 
-# CTextLineResultItem
+# TextLineResultItem
 
-The `CTextLineResultItem` class represents a text line result item recognized by the library. It is derived from `CCapturedResultItem`.
+The `TextLineResultItem` class represents a text line result item recognized by the library. It is derived from `CapturedResultItem`.
 
 ## Definition
 
@@ -21,15 +21,15 @@ The `CTextLineResultItem` class represents a text line result item recognized by
 *Assembly:* DynamsoftLabelRecognizer.aar
 
 ```java
-class CTextLineResultItem : public CCapturedResultItem
+class TextLineResultItem extends CapturedResultItem
 ```
 
-*Inheritance:* [CCapturedResultItem]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html) -> CTextLineResultItem
+*Inheritance:* [CapturedResultItem]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html) -> TextLineResultItem
 
 ## Methods Summary
 
-| Method               | Description |
-|----------------------|-------------|
+| Method | Description |
+| ------ | ----------- |
 | [`getText`](#gettext) | Gets the text content of the text line. |
 | [`getLocation`](#getlocation) | Gets the location of the text line in the form of a quadrilateral. |
 | [`getConfidence`](#getconfidence) | Gets the confidence of the text line recognition result. |
