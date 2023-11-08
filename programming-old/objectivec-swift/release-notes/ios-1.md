@@ -13,7 +13,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-1.html
 
 ### New
 
-- Added a new property [`products`]({{ site.objectivec-swift-api }}class/dlr-lts-connection-parameters.html#products) to `iDLRLTSConnectionParameters`.
+- Added a new property [`products`]({{ site.dlr_ios_api }}class/dlr-lts-connection-parameters.html#products) to `iDLRLTSConnectionParameters`.
 - Added a new enumeration [`EnumProduct`]({{ site.enumerations }}other-enums.html#product).
 
 ### Fixed
@@ -31,7 +31,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-1.html
 
 - Added the following error codes: [`DLRERR_TIFF_READ_FAILED`]({{ site.enumerations }}error-code.html) , [`DLRERR_PDF_READ_FAILED`]({{ site.enumerations }}error-code.html) and [`DLRERR_PDF_DLL_MISSING`]({{ site.enumerations }}error-code.html). These error codes will be returned when the recognizer fails to read a TIFF file, a PDF file, or if the PDF DLL is missing, respectively.
 
-- Added a new property [`pageNumber`]({{ site.objectivec-swift-api }}dlr-result.html#pagenumber) to `iDLRResult` to identify the page on which the result is located.
+- Added a new property [`pageNumber`]({{ site.dlr_ios_api }}dlr-result.html#pagenumber) to `iDLRResult` to identify the page on which the result is located.
 
 - Added parameters `TextStringLengthRange` and `LineStringLengthRange` that can be used to define the minimum and maximum string length when running the recognition process on a text area or a specific line, respectively. They are available as:
   - [`LabelRecognitionParameter.TextStringLengthRange`]({{ site.parameters-reference }}label-recognition-parameter/parameter-control.html#textstringlengthrange)
@@ -46,7 +46,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-1.html
 
 - Added parameters [`LineSpecification.FirstPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#firstpoint), [`LineSpecification.SecondPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#secondpoint), [`LineSpecification.ThirdPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#thirdpoint), and [`LineSpecification.FourthPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#fourthpoint) to specify the coordinates of a line.
 
-- Added a new API [`appendSettingsFromFile`]({{ site.objectivec-swift-api }}methods/settings.html#appendsettingsfromfile) to allow appending settings directly from a JSON file.
+- Added a new API [`appendSettingsFromFile`]({{ site.dlr_ios_api }}methods/settings.html#appendsettingsfromfile) to allow appending settings directly from a JSON file.
 
 ### Improved
 

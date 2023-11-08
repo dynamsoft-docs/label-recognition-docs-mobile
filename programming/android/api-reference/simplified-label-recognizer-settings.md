@@ -19,14 +19,14 @@ class SimplifiedLabelRecognizerSettings
 
 ## Attributes Summary
 
-| Attribute | Type |
-| --------- | ---- |
-| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *EnumGrayscaleTransformationMode[]* |
-| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *EnumGrayscaleEnhancementMode[]* |
-| [`characterModelName`](#charactermodelname) | *LocalizationMode[]* |
-| [`lineStringRegExPattern`](#linestringregexpattern) | *DeblurMode[]* |
-| [`maxThreadsInOneTask`](#maxthreadsinonetask) | *int* |
-| [`scaleDownThreshold`](#scaledownthreshold) | *int* |
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *EnumGrayscaleTransformationMode[]* | Set the grayscale transformation modes with an array of enumeration [`GrayscaleTransformationMode`]({{ site.dcv_enumerations}}core/grayscale-transformation-mode.html). |
+| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *EnumGrayscaleEnhancementMode[]* | Set the grayscale enhancement modes with an array of enumeration [`GrayscaleEnhancementMode`]({{ site.dcv_enumerations}}core/grayscale-enhancement-mode.html). |
+| [`characterModelName`](#charactermodelname) | *LocalizationMode[]* | Specify a character model by its name. |
+| [`lineStringRegExPattern`](#linestringregexpattern) | *DeblurMode[]* | Set the RegEx pattern of the text line string to filter out the unqualified results. |
+| [`maxThreadsInOneTask`](#maxthreadsinonetask) | *int* | Set the maximum available threads count in one label recognition task. |
+| [`scaleDownThreshold`](#scaledownthreshold) | *int* | Set the threshold for image shrinking when dealing with large images. |
 
 ### grayscaleTransformationModes
 
