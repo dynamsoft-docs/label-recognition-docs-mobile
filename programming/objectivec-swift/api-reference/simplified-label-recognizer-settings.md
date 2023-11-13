@@ -36,8 +36,8 @@ class SimplifiedLabelRecognizerSettings: NSObject
 | -------- | ---- | ----------- |
 | [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *NSArray<*DSGrayscaleTransformationMode*>* | Set the grayscale transformation modes with an array of enumeration [`GrayscaleTransformationMode`]({{ site.dcv_enumerations}}core/grayscale-transformation-mode.html). |
 | [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *NSArray<*DSGrayscaleEnhancementMode*>* | Set the grayscale enhancement modes with an array of enumeration [`GrayscaleEnhancementMode`]({{ site.dcv_enumerations}}core/grayscale-enhancement-mode.html). |
-| [`characterModelName`](#charactermodelname) | *NSArray<*DSLocalizationMode*>* | Specify a character model by its name. |
-| [`lineStringRegExPattern`](#linestringregexpattern) | *NSArray<*DSDeblurMode*>* | Set the RegEx pattern of the text line string to filter out the unqualified results. |
+| [`characterModelName`](#charactermodelname) | *NSString* | Specify a character model by its name. |
+| [`lineStringRegExPattern`](#linestringregexpattern) | *NSString* | Set the RegEx pattern of the text line string to filter out the unqualified results. |
 | [`maxThreadsInOneTask`](#maxthreadsinonetask) | *NSInteger* | Set the maximum available threads count in one label recognition task. |
 | [`scaleDownThreshold`](#scaledownthreshold) | *NSInteger* | Set the threshold for image shrinking when dealing with large images. |
 
@@ -55,7 +55,7 @@ Set the grayscale transformation modes with an array of enumeration [`GrayscaleT
 ```
 2. 
 ```swift
-var grayscaleTransformationModes: [Any]? { get }
+var grayscaleTransformationModes: [Any]? { get set }
 ```
 
 **Remarks**
@@ -76,7 +76,7 @@ Set the grayscale enhancement modes with an array of enumeration [`GrayscaleEnha
 ```
 2. 
 ```swift
-var grayscaleEnhancementModes: [Any]? { get }
+var grayscaleEnhancementModes: [Any]? { get set }
 ```
 
 **Remarks**
@@ -97,7 +97,7 @@ Specify a character model by its name.
 ```
 2. 
 ```swift
-var characterModelName: String? { get }
+var characterModelName: String? { get set }
 ```
 
 **Remarks**
@@ -118,7 +118,7 @@ Set the RegEx pattern of the text line string to filter out the unqualified resu
 ```
 2. 
 ```swift
-var lineStringRegExPattern: String? { get }
+var lineStringRegExPattern: String? { get set }
 ```
 
 **Remarks**
@@ -139,7 +139,7 @@ Set the maximum available threads count in one label recognition task.
 ```
 2. 
 ```swift
-var maxThreadsInOneTask: Int { get }
+var maxThreadsInOneTask: Int { get set }
 ```
 
 **Remarks**
@@ -160,7 +160,7 @@ Set the threshold for image shrinking when dealing with large images.
 ```
 2. 
 ```swift
-var scaleDownThreshold: Int { get }
+var scaleDownThreshold: Int { get set }
 ```
 
 **Remarks**

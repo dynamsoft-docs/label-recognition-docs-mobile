@@ -33,7 +33,7 @@
     <ul>
         <li><a href="{{ site.dcv_ios_api }}capture-vision-router/capture-vision-router.html" class="otherLinkColour">DSCaptureVisionRouter</a>
             <ul>
-                <li><a href="{{ site.dcv_ios_api }}capture-vision-router/instantiate.html" class="otherLinkColour">Constructor and Destructor</a></li>
+                <li><a href="{{ site.dcv_ios_api }}capture-vision-router/constructors.html" class="otherLinkColour">Constructor and Destructor</a></li>
                 <li><a href="{{ site.dcv_ios_api }}capture-vision-router/single-file-processing.html" class="otherLinkColour">Single-File Processing</a></li>
                 <li><a href="{{ site.dcv_ios_api }}capture-vision-router/multiple-file-processing.html" class="otherLinkColour">Multiple-File Processing</a></li>
                 <li><a href="{{ site.dcv_ios_api }}capture-vision-router/settings.html" class="otherLinkColour">Settings</a></li>
@@ -68,77 +68,74 @@
 
         <li><a>Intermediate Results</a>
             <ul>
-                <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html" class="otherLinkColour">IntermediateResultManager</a></li>
-                <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-receiver.html" class="otherLinkColour">IntermediateResultReceiver</a></li>
-                <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/observation-parameters.html" class="otherLinkColour">ObservationParameters</a></li>
-                <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-extra-info.html" class="otherLinkColour">IntermediateResultExtraInfo</a></li>
-                <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/intermediate-result.html" class="otherLinkColour">IntermediateResult</a></li>
-                <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html" class="otherLinkColour">IntermediateResultUnit</a></li>
-                <li><a href="{{ site.dlr_ios_api }}recognized-text-lines-unit.html" class="otherLinkColour">RecognizedTextLinesUnit</a></li>
-                <li><a href="{{ site.dlr_ios_api }}localized-text-lines-unit.html" class="otherLinkColour">LocalizedTextLinesUnit</a></li>
-                <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/predetected-regions-unit.html" class="otherLinkColour">PredetectedRegionsUnit</a></li>
-                <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html" class="otherLinkColour">RegionObjectElement</a></li>
-                <li><a href="{{ site.dlr_ios_api }}recognized-text-line-element.html" class="otherLinkColour">RecognizedTextLineElement</a></li>
-                <li><a href="{{ site.dlr_ios_api }}localized-text-line-element.html" class="otherLinkColour">LocalizedTextLineElement</a></li>
-                <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/predetected-region-element.html" class="otherLinkColour">PredetectedRegionElement</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html" class="otherLinkColour">DSIntermediateResultManager</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-receiver.html" class="otherLinkColour">DSIntermediateResultReceiver</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/observation-parameters.html" class="otherLinkColour">DSObservationParameters</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-extra-info.html" class="otherLinkColour">DSIntermediateResultExtraInfo</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/intermediate-result.html" class="otherLinkColour">DSIntermediateResult</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html" class="otherLinkColour">DSIntermediateResultUnit</a></li>
+                <li><a href="{{ site.dlr_ios_api }}recognized-text-lines-unit.html" class="otherLinkColour">DSRecognizedTextLinesUnit</a></li>
+                <li><a href="{{ site.dlr_ios_api }}localized-text-lines-unit.html" class="otherLinkColour">DSLocalizedTextLinesUnit</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/predetected-regions-unit.html" class="otherLinkColour">DSPredetectedRegionsUnit</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html" class="otherLinkColour">DSRegionObjectElement</a></li>
+                <li><a href="{{ site.dlr_ios_api }}recognized-text-line-element.html" class="otherLinkColour">DSRecognizedTextLineElement</a></li>
+                <li><a href="{{ site.dlr_ios_api }}localized-text-line-element.html" class="otherLinkColour">DSLocalizedTextLineElement</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/predetected-region-element.html" class="otherLinkColour">DSPredetectedRegionElement</a></li>
                 <li><a>Others</a>
                     <ul>
-                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/binary-image-unit.html" class="otherLinkColour">BinaryImageUnit</a></li>
-                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/colour-image-unit.html" class="otherLinkColour">ColourImageUnit</a></li>
-                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/contours-unit.html" class="otherLinkColour">ContoursUnit</a></li>
-                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/enhanced-grayscale-image-unit.html" class="otherLinkColour">EnhancedGrayscaleImageUnit</a></li>
-                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/grayscale-image-unit.html" class="otherLinkColour">GrayscaleImageUnit</a></li>
-                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/line-segments-unit.html" class="otherLinkColour">LineSegmentsUnit</a></li>
-                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/scaled-down-colour-image-unit.html" class="otherLinkColour">ScaledDownColourImageUnit</a></li>
-                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/text-removed-binary-image-unit.html" class="otherLinkColour">TextRemovedBinaryImageUnit</a></li>
-                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/text-zones-unit.html" class="otherLinkColour">TextZonesUnit</a></li>
-                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/texture-detection-result-unit.html" class="otherLinkColour">TextureDetectionResultUnit</a></li>
-                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/texture-removed-binary-image-unit.html" class="otherLinkColour">TextureRemovedBinaryImageUnit</a></li>
-                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html" class="otherLinkColour">TextureRemovedGrayscaleImageUnit</a></li>
-                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/transformed-grayscale-image-unit.html" class="otherLinkColour">TransformedGrayscaleImageUnit</a></li>
+                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/binary-image-unit.html" class="otherLinkColour">DSBinaryImageUnit</a></li>
+                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/colour-image-unit.html" class="otherLinkColour">DSColourImageUnit</a></li>
+                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/contours-unit.html" class="otherLinkColour">DSContoursUnit</a></li>
+                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/enhanced-grayscale-image-unit.html" class="otherLinkColour">DSEnhancedGrayscaleImageUnit</a></li>
+                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/grayscale-image-unit.html" class="otherLinkColour">DSGrayscaleImageUnit</a></li>
+                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/line-segments-unit.html" class="otherLinkColour">DSLineSegmentsUnit</a></li>
+                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/scaled-down-colour-image-unit.html" class="otherLinkColour">DSScaledDownColourImageUnit</a></li>
+                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/text-removed-binary-image-unit.html" class="otherLinkColour">DSTextRemovedBinaryImageUnit</a></li>
+                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/text-zones-unit.html" class="otherLinkColour">DSTextZonesUnit</a></li>
+                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/texture-detection-result-unit.html" class="otherLinkColour">DSTextureDetectionResultUnit</a></li>
+                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/texture-removed-binary-image-unit.html" class="otherLinkColour">DSTextureRemovedBinaryImageUnit</a></li>
+                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html" class="otherLinkColour">DSTextureRemovedGrayscaleImageUnit</a></li>
+                        <li><a href="{{ site.dcv_ios_api }}core/intermediate-results/transformed-grayscale-image-unit.html" class="otherLinkColour">DSTransformedGrayscaleImageUnit</a></li>
                     </ul>
                 </li>
             </ul>
         </li>
         <li><a>Settings</a>
             <ul>
-                <li><a href="{{ site.dcv_ios_api }}capture-vision-router/structs/simplified-capture-vision-settings.html" class="otherLinkColour">SimplifiedCaptureVisionSettings</a></li>
-                <li><a href="{{ site.dlr_ios_api }}simplified-label-recognizer-settings.html" class="otherLinkColour">SimplifiedLabelRecognizerSettings</a></li>
+                <li><a href="{{ site.dcv_ios_api }}capture-vision-router/structs/simplified-capture-vision-settings.html" class="otherLinkColour">DSSimplifiedCaptureVisionSettings</a></li>
+                <li><a href="{{ site.dlr_ios_api }}simplified-label-recognizer-settings.html" class="otherLinkColour">DSSimplifiedLabelRecognizerSettings</a></li>
             </ul>
         </li>
         <li><a>State Listener</a>
             <ul>
-                <li><a href="{{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/capture-state-listener.html" class="otherLinkColour">CaptureStateListener</a></li>
-                <li><a href="{{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/image-source-state-listener.html" class="otherLinkColour">ImageSourceStateListener</a></li>
+                <li><a href="{{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/capture-state-listener.html" class="otherLinkColour">DSCaptureStateListener</a></li>
+                <li><a href="{{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/image-source-state-listener.html" class="otherLinkColour">DSImageSourceStateListener</a></li>
             </ul>
         </li>
-        <li><a href="{{ site.dcv_ios_api }}license/license-manager.html" class="otherLinkColour">LicenseManager</a></li>
+        <li><a href="{{ site.dcv_ios_api }}license/license-manager.html" class="otherLinkColour">DSLicenseManager</a></li>
         <li><a>Basic Structure</a>
             <ul>
-                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/contour.html" class="otherLinkColour">Contour</a></li>
-                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/corner.html" class="otherLinkColour">Corner</a></li>
-                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/edge.html" class="otherLinkColour">Edge</a></li>
-                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/file-image-tag.html" class="otherLinkColour">FileImageTag</a></li>
-                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/image-data.html" class="otherLinkColour">ImageData</a></li>
-                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/image-tag.html" class="otherLinkColour">ImageTag</a></li>
-                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/line-segment.html" class="otherLinkColour">LineSegment</a></li>
-                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/pdf-reading-parameter.html" class="otherLinkColour">PDFReadingParameter</a></li>
-                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html" class="otherLinkColour">Quadrilateral</a></li>
-                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/rect.html" class="otherLinkColour">Rect</a></li>
-                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/video-frame-tag.html" class="otherLinkColour">VideoFrameTag</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/contour.html" class="otherLinkColour">DSContour</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/corner.html" class="otherLinkColour">DSCorner</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/edge.html" class="otherLinkColour">DSEdge</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/file-image-tag.html" class="otherLinkColour">DSFileImageTag</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/image-data.html" class="otherLinkColour">DSImageData</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/image-tag.html" class="otherLinkColour">DSImageTag</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/line-segment.html" class="otherLinkColour">DSLineSegment</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/pdf-reading-parameter.html" class="otherLinkColour">DSPDFReadingParameter</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html" class="otherLinkColour">DSQuadrilateral</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/rect.html" class="otherLinkColour">DSRect</a></li>
+                <li><a href="{{ site.dcv_ios_api }}core/basic-structures/video-frame-tag.html" class="otherLinkColour">DSVideoFrameTag</a></li>
             </ul>
         </li>
         <li><a class="otherLinkColour">Enumerations</a>
             <ul>
-                <li><a href="{{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=objc&swift" class="otherLinkColour">BarcodeFormat</a></li>
                 <li><a href="{{ site.dcv_enumerations }}core/buffer-overflow-protection-mode.html?lang=objc&swift" class="otherLinkColour">BufferOverflowProtectionMode</a></li>
                 <li><a href="{{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc&swift" class="otherLinkColour">CapturedResultItemType</a></li>
                 <li><a href="{{ site.dcv_enumerations }}capture-vision-router/capture-state.html?lang=objc&swift" class="otherLinkColour">CaptureState</a></li>
                 <li><a href="{{ site.dcv_enumerations }}core/colour-channel-usage-type.html?lang=objc&swift" class="otherLinkColour">ColourChannelUsageType</a></li>
                 <li><a href="{{ site.dcv_enumerations }}core/corner-type.html?lang=objc&swift" class="otherLinkColour">CornerType</a></li>
-                <li><a href="{{ site.dcv_enumerations }}barcode-reader/deblur-mode.html?lang=objc&swift" class="otherLinkColour">DeblurMode</a></li>
                 <li><a href="{{ site.dcv_enumerations }}core/error-code.html?lang=objc&swift" class="otherLinkColour">ErrorCode</a></li>
-                <li><a href="{{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=objc&swift" class="otherLinkColour">ExtendedBarcodeResultType</a></li>
                 <li><a href="{{ site.dcv_enumerations }}core/grayscale-enhancement-mode.html?lang=objc&swift" class="otherLinkColour">GrayscaleEnhancementMode</a></li>
                 <li><a href="{{ site.dcv_enumerations }}core/grayscale-transformation-mode.html?lang=objc&swift" class="otherLinkColour">GrayscaleTransformationMode</a></li>
                 <li><a href="{{ site.dcv_enumerations }}core/image-capture-distance-mode.html?lang=objc&swift" class="otherLinkColour">ImageCaptureDistanceMode</a></li>
@@ -146,11 +143,9 @@
                 <li><a href="{{ site.dcv_enumerations }}core/image-source-state.html?lang=objc&swift" class="otherLinkColour">ImageSourceState</a></li>
                 <li><a href="{{ site.dcv_enumerations }}core/image-tag-type.html?lang=objc&swift" class="otherLinkColour">ImageTagType</a></li>
                 <li><a href="{{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=objc&swift" class="otherLinkColour">IntermediateResultUnitType</a></li>
-                <li><a href="{{ site.dcv_enumerations }}barcode-reader/localization-mode.html?lang=objc&swift" class="otherLinkColour">LocalizationMode</a></li>
                 <li><a href="{{ site.dcv_enumerations }}core/log-mode.html?lang=objc&swift" class="otherLinkColour">LogMode</a></li>
                 <li><a href="{{ site.dcv_enumerations }}core/pdf-reading-mode.html?lang=objc&swift" class="otherLinkColour">PDFReadingMode</a></li>
                 <li><a href="{{ site.dcv_enumerations }}core/preset-template.html?lang=objc&swift" class="otherLinkColour">PresetTemplate</a></li>
-                <li><a href="{{ site.dcv_enumerations }}barcode-reader/qr-code-error-correction-level.html?lang=objc&swift" class="otherLinkColour">QRCodeErrorCorrectionLevel</a></li>
                 <li><a href="{{ site.dcv_enumerations }}core/raster-data-source.html?lang=objc&swift" class="otherLinkColour">RasterDataSource</a></li>
                 <li><a href="{{ site.dcv_enumerations }}core/region-object-element-type.html?lang=objc&swift" class="otherLinkColour">RegionObjectElementType</a></li>
                 <li><a href="{{ site.dcv_enumerations }}core/section-type.html?lang=objc&swift" class="otherLinkColour">SectionType</a></li>
@@ -160,7 +155,7 @@
         </li>
         <li><a>Modules</a>
             <ul>
-                <li><a href="{{ site.dcv_ios_api }}capture-vision-router/capture-vision-router-module.html" class="otherLinkColour">CaptureVisionModule</a></li>
+                <li><a href="{{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/capture-vision-router-module.html" class="otherLinkColour">CaptureVisionModule</a></li>
                 <li><a href="{{ site.dcv_ios_api }}core/basic-structures/core-module.html" class="otherLinkColour">CoreModule</a></li>
                 <li><a href="{{ site.dcv_ios_api }}license/license-module.html" class="otherLinkColour">LicenseModule</a></li>
                 <li><a href="{{ site.dlr_ios_api }}label-recognizer-module.html" class="otherLinkColour">LabelRecognizerModule</a></li>

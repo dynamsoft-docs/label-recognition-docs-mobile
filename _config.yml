@@ -20,6 +20,9 @@ dcv_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
 dcv_enumerations: /capture-vision/docs/core/enums/
 dcv_parameter_reference: /capture-vision/docs/core/parameters/reference/
 
+dce_ios: /camera-enhancer/docs/mobile/programming/ios/
+dce_android: /camera-enhancer/docs/mobile/programming/android/
+
 assets: /label-recognition/docs/mobile/assets/
 edit_icon: /label-recognition/docs/mobile/assets/img-icon/edit-icon.png
 smile_icon: /label-recognition/docs/mobile/assets/img-icon/icon-smile.png
