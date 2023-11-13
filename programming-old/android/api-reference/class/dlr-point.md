@@ -9,6 +9,9 @@ permalink: /programming/android/api-reference/class/dlr-point.html
 
 
 # DLRPoint
+
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v1.x.
+
 Stores an x- and y-coordinate pair in two-dimensional space.
 
 

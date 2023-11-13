@@ -11,6 +11,8 @@ permalink: /programming/android/api-reference/label-recognizer-v2.0.html
 
 # LabelRecognizer
 
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v2.0.0.
+
 ```java
 class com.dynamsoft.dlr.LabelRecognizer
 ```  

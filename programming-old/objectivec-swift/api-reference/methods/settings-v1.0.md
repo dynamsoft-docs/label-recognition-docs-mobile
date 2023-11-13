@@ -9,6 +9,8 @@ permalink: /programming/objectivec-swift/api-reference/methods/settings-v1.0.htm
 
 # iOS API Reference - Settings
 
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v1.x.
+
 | Method               | Description |
 |----------------------|-------------|
   | [`appendCharacterModel`](#appendCharacterModel) | Appends CharacterModel to the SDK object. |

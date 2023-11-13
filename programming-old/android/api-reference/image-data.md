@@ -11,6 +11,8 @@ permalink: /programming/android/api-reference/image-data.html
 
 # ImageData
 
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v2.2.20.
+
 Stores the image data.  
 
 ```java

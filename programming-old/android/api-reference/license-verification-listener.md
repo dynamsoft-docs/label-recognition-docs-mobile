@@ -11,6 +11,8 @@ permalink: /programming/android/api-reference/license-verification-listener.html
 
 # LicenseVerificationListener
 
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v2.2.20.
+
 `LicenseVerificationListener` is the interface to handle callback when message is output by license server.
 
 ```java

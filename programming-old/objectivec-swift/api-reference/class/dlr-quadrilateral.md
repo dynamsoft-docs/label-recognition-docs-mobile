@@ -9,6 +9,9 @@ permalink: /programming/objectivec-swift/api-reference/class/dlr-quadrilateral.h
 
 
 # iDLRQuadrilateral
+
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v1.x.
+
 Stores the quadrilateral.  
 
 

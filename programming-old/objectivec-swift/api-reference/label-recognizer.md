@@ -12,6 +12,8 @@ permalink: /programming/objectivec-swift/api-reference/label-recognizer.html
 
 # DynamsoftLabelRecognizer
 
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v2.2.20.
+
 ```objc
 @interface DynamsoftLabelRecognizer : NSObject 
 ```

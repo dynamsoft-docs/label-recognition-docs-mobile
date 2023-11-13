@@ -11,6 +11,8 @@ permalink: /programming/objectivec-swift/api-reference/license-verification-list
 
 # LicenseVerificationListener
 
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v2.2.20.
+
 `LicenseVerificationListener` is the protocol to handle callback when message is output by license server.
 
 ```objc

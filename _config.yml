@@ -7,9 +7,9 @@ docHomePage: /label-recognition/docs/mobile/introduction/
 enumerations: /label-recognition/docs/core/parameters/enum/
 parameters-reference: /label-recognition/docs/core/parameters/reference/
 
-android: /label-recognition/docs/mobile/programming/android/
-android-api: /label-recognition/docs/mobile/programming/android/api-reference/
-android-release-notes: /label-recognition/docs/mobile/programming/android/release-notes/
+dlr_android: /label-recognition/docs/mobile/programming/android/
+dlr_android_api: /label-recognition/docs/mobile/programming/android/api-reference/
+dlr_android_release_notes: /label-recognition/docs/mobile/programming/android/release-notes/
 
 dlr_ios: /label-recognition/docs/mobile/programming/objectivec-swift/
 dlr_ios_api: /label-recognition/docs/mobile/programming/objectivec-swift/api-reference/

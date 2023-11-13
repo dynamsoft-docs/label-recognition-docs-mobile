@@ -12,6 +12,8 @@ permalink: /programming/android/api-reference/quadrilateral-v2.0.html
 
 # Quadrilateral
 
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v2.0.0.
+
 Stores the quadrilateral.  
 
 ```java

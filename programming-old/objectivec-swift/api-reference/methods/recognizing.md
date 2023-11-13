@@ -9,6 +9,8 @@ permalink: /programming/objectivec-swift/api-reference/methods/recognizing.html
 
 # iOS API Reference - Recognizing
 
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v1.x.
+
 | Method               | Description |
 |----------------------|-------------|
   | [`recognizeByBuffer`](#recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |

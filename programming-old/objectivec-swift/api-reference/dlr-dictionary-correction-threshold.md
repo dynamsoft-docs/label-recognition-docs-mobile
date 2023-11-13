@@ -12,6 +12,8 @@ permalink: /programming/objectivec-swift/api-reference/dlr-dictionary-correction
 
 # iDLRDictionaryCorrectionThreshold
 
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v2.2.20.
+
 Stores the dictionary correction threshold.
 
 ```objc

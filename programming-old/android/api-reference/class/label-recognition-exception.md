@@ -8,7 +8,10 @@ permalink: /programming/android/api-reference/class/label-recognition-exception.
 ---
 
 
-# LabelRecognitionException 
+# LabelRecognitionException
+
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v1.x.
+
 Exception for signalling label recognition errors.
   
 

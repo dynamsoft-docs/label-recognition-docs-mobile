@@ -9,6 +9,9 @@ permalink: /programming/objectivec-swift/api-reference/class/dlr-line-result.htm
 
 
 # iDLRLineResult
+
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v1.x.
+
 Stores the line result.
   
 
