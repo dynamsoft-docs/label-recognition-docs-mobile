@@ -11,6 +11,8 @@ permalink: /programming/objectivec-swift/api-reference/license-manager.html
 
 # DynamsoftLicenseManager
 
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v2.2.20.
+
 The DynamsoftLicenseManager class unlocks the Dynamsoft SDK with a purchased full license or a provided trial license to allow you to develop your application.
 
 ```objc

@@ -9,6 +9,9 @@ permalink: /programming/objectivec-swift/api-reference/class/dlr-image-data.html
 
 
 # iDLRImageData
+
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v1.x.
+
 Stores the image data.  
 
 

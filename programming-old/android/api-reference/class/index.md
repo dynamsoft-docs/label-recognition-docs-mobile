@@ -10,6 +10,9 @@ permalink: /programming/android/api-reference/class/index.html
 
 # Dynamsoft Label Recognition - Android Structs
 
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v1.x.
+
+
 - [`DMLTSConnectionParameters`](dm-lts-connection-parameters.md)
 - [`DLRCharacterResult`](dlr-character-result.md)		
 - [`DLRImageData`](dlr-image-data.md)		

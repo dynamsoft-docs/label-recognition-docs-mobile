@@ -9,6 +9,8 @@ permalink: /programming/objectivec-swift/api-reference/methods/initialization.ht
 
 # iOS API Reference - Initialization
 
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v1.x.
+
 | Method               | Description |
 |----------------------|-------------|
   | [`init`](#init) | Create an instance of Dynamsoft Label Recognition. |

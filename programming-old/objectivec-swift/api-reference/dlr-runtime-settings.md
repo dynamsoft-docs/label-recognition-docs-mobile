@@ -12,6 +12,8 @@ permalink: /programming/objectivec-swift/api-reference/dlr-runtime-settings.html
 
 # iDLRRuntimeSettings
 
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v2.2.20.
+
 Defines a struct to configure the text recognizer runtime settings. These settings control the text recognition process.
   
 ```objc

@@ -11,6 +11,8 @@ permalink: /programming/objectivec-swift/api-reference/label-result-listener.htm
 
 # LabelResultListener
 
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v2.2.20.
+
 `LabelResultListener` is the protocol to handle callback when label recognition results are output.
 
 ```objc

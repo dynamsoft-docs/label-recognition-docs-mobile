@@ -12,6 +12,8 @@ permalink: /programming/android/api-reference/dlr-license-verification-listener.
 
 # DLRLicenseVerificationListener
 
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v2.2.20.
+
 A delegate to handle callback when Dynamsoft License Server returns.
 
 ```java

@@ -12,6 +12,8 @@ permalink: /programming/android/api-reference/dm-lts-connection-parameters.html
 
 # DMDLSConnectionParameters
 
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v2.2.20.
+
 Defines a struct to configure the parameters to connect to license tracking server.  
 
 ```java

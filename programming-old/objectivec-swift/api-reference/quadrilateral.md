@@ -11,6 +11,8 @@ permalink: /programming/objectivec-swift/api-reference/quadrilateral.html
 
 # iQuadrilateral
 
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v2.2.20.
+
 Stores the quadrilateral.  
 
 ```objc

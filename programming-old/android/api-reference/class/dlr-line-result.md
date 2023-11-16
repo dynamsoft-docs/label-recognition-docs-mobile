@@ -9,6 +9,9 @@ permalink: /programming/android/api-reference/class/dlr-line-result.html
 
 
 # DLRLineResult
+
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v1.x.
+
 Stores the line result.
   
 

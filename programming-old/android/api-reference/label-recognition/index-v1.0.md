@@ -10,6 +10,8 @@ permalink: /programming/android/api-reference/label-recognition/index-v1.0.html
 
 # Dynamsoft Label Recognition - CLabelRecognition Class
 
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v1.x.
+
 ## General
    
   | Method               | Description |

@@ -13,7 +13,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-1-v1.2.1.html
 
 ### New
 
-- Added a new property [`products`]({{ site.objectivec-swift-api }}class/dlr-lts-connection-parameters.html#products) to `iDLRLTSConnectionParameters`.
+- Added a new property [`products`]({{ site.dlr_ios_api }}class/dlr-lts-connection-parameters.html#products) to `iDLRLTSConnectionParameters`.
 - Added a new enumeration [`EnumProduct`]({{ site.enumerations }}other-enums.html#product).
 
 ### Fixed
@@ -46,7 +46,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-1-v1.2.1.html
 
 - Added parameters [`LineSpecification.FirstPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#firstpoint), [`LineSpecification.SecondPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#secondpoint), [`LineSpecification.ThirdPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#thirdpoint), and [`LineSpecification.FourthPoint`]({{ site.parameters-reference }}line-specification/parameter-control.html#fourthpoint) to specify the coordinates of a line.
 
-- Added a new API [`appendSettingsFromFile`]({{ site.objectivec-swift-api }}methods/settings.html#appendsettingsfromfile) to allow appending settings directly from a JSON file.
+- Added a new API [`appendSettingsFromFile`]({{ site.dlr_ios_api }}methods/settings.html#appendsettingsfromfile) to allow appending settings directly from a JSON file.
 
 ### Improved
 

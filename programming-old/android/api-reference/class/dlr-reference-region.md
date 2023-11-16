@@ -9,6 +9,9 @@ permalink: /programming/android/api-reference/class/dlr-reference-region.html
 
 
 # DLRReferenceRegion
+
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v1.x.
+
 Stores the reference region information.  
   
 

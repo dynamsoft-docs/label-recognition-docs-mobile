@@ -9,6 +9,9 @@ permalink: /programming/objectivec-swift/api-reference/class/dlr-lts-connection-
 
 
 # iDLRLTSConnectionParameters
+
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v1.x.
+
 Defines a class to configure the parameters to connect to license tracking server.  
 
 

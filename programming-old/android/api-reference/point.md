@@ -12,6 +12,8 @@ permalink: /programming/android/api-reference/point.html
 
 # Point
 
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v2.2.20.
+
 Stores an x- and y-coordinate pair in two-dimensional space.
 
 ```java
