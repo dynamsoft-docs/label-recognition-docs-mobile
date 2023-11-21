@@ -37,7 +37,7 @@ class RecognizedTextLinesResult
 
 ### getOriginalImageHashId
 
-Gets the hash ID of the original image.
+Get the hash id of the source image. You can use this ID to get the source image via the [`IntermediateResultManager`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html) class.
 
 ```java
 String getOriginalImageHashId();
@@ -49,7 +49,7 @@ Returns the hash ID of the original image as a string.
 
 ### getOriginalImageTag
 
-Gets the tag of the original image.
+Get the [`ImageTag`]({{ site.dcv_android_api }}core/basic-structures/image-tag.html) of the source image. The image tag contains info about the image such as the image ID and the image capture distance mode.
 
 ```java
 ImageTag getOriginalImageTag();
@@ -57,11 +57,11 @@ ImageTag getOriginalImageTag();
 
 **Return value**
 
-A [`ImageTag`]({{ site.dcv_android_api }}core/basic-structure/image-tag.html) object that contain the image extra info.
+An [`ImageTag`]({{ site.dcv_android_api }}core/basic-structure/image-tag.html) object that contain the image extra info.
 
 ### getItems
 
-Gets all the text line result items that recognized from the image.
+Gets all the text line result(s) recognized from the image/frame in an array of [`DSTextLineResultItem`](text-line-result-item.md).
 
 ```java
 TextLineResultItem[] getItems();
@@ -97,7 +97,7 @@ Returns the error code of the recognition result, or 0 if no error occurred.
 
 ### getErrorMessage
 
-Gets the error message of the recognition result, if an error occurred.
+Get the error message of this result should something go wrong.
 
 ```java
 String getErrorMessage();

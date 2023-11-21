@@ -12,7 +12,7 @@ permalink: /programming/objectivec-swift/api-reference/recognized-text-lines-res
 
 # DSRecognizedTextLinesResult
 
-The `DSRecognizedTextLinesResult` class represents the result of a text recognition process. It provides access to information about the recognized text lines, the original image, and any errors that occurred during the recognition process.
+The `DSRecognizedTextLinesResult` class represents the overall result(s) of a text recognition process. It provides access to information about the recognized text lines, the original image, and any errors that occurred during the recognition process.
 
 ## Definition
 
@@ -37,14 +37,14 @@ class RecognizedTextLinesResult: NSObject
 | -------- | ---- | ----------- |
 | [`originalImageHashId`](#originalimagehashid) | *NSString* | The hash ID of the original image. |
 | [`originalImageTag`](#originalimagetag) | *DSImageTag* | The tag of the original image stores in a [`DSImageTag`]({{ site.dcv_ios_api }}core/basic-structure/image-tag.html) object. |
-| [`items`](#items) | *NSArray<*DSTextLineResultItem*>* | All the text line result items that recognized from the image in an array of [`DSTextLineResultItem`](text-line-result-item.md). |
+| [`items`](#items) | *NSArray<*DSTextLineResultItem*>* | All the text line result(s) that are recognized from the image in an array of [`DSTextLineResultItem`](text-line-result-item.md). |
 | [`rotationTransformMatrix`](#rotationtransformmatrix) | *CGAffineTransform* | The rotation transformation matrix of the original image relative to the rotated image.|
 | [`errorCode`](#errorcode) | *NSInteger* | The error code of the recognition result, if an error occurred. |
 | [`errorMessage`](#errormessage) | *NSString* | The error message of the recognition result, if an error occurred. |
 
 ### originalImageHashId
 
-The hash ID of the original image.
+The hash id of the source image. You can use this ID to get the source image via [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html) class.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -61,7 +61,7 @@ var originalImageHashId: String? { get }
 
 ### originalImageTag
 
-The tag of the original image stores in a [`DSImageTag`]({{ site.dcv_ios_api }}core/basic-structure/image-tag.html) object.
+Returns the [`ImageTag`]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html) of the source image. The image tag contains info about the image such as the image ID and the image capture distance mode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -82,7 +82,7 @@ that contain the image extra info.
 
 ### items
 
-All the text line result items that recognized from the image in an array of [`DSTextLineResultItem`](text-line-result-item.md).
+All the text line result(s) recognized from the image/frame in an array of [`DSTextLineResultItem`](text-line-result-item.md).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -116,7 +116,7 @@ var rotationTransformMatrix: CGAffineTransform { get }
 
 ### errorCode
 
-The error code of the recognition result, if an error occurred.
+Returns the error code of this result should something go wrong.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -133,7 +133,7 @@ var errorCode: Int { get }
 
 ### errorMessage
 
-The error message of the recognition result, if an error occurred.
+Returns the error message of this result should something go wrong.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

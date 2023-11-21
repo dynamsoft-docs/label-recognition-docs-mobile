@@ -12,7 +12,7 @@ permalink: /programming/android/api-reference/text-line-result-item.html
 
 # TextLineResultItem
 
-The `TextLineResultItem` class represents a text line result item recognized by the library. It is derived from `CapturedResultItem`.
+The `TextLineResultItem` class represents a text line result item recognized by the library. It is derived from `CapturedResultItem` and is one of the base units of `RecognizedTextLinesResult`.
 
 ## Definition
 
@@ -37,7 +37,7 @@ class TextLineResultItem extends CapturedResultItem
 
 ### getText
 
-It is used to get the text content of the text line.
+Gets the text content of the individual text line.
 
 ```java
 String getText();

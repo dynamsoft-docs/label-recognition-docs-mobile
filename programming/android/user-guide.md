@@ -103,7 +103,7 @@ The following sample will demonstrate how to create a HelloWorld app for recogni
 >Note:
 >
 >- The following steps are completed in Android Studio 4.2.
->- You can download the similar complete source code from [Here](https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/android/HelloWorld).
+>- You can download the complete source code of the [HelloWorld sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/android/HelloWorld).
 
 ### Create a New Project
 
@@ -116,7 +116,7 @@ The following sample will demonstrate how to create a HelloWorld app for recogni
 
 ### Include the Library
 
-Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section for more details.
+Add the SDK to your new project. Please read [add the SDK](#add-the-sdk) section for more details.
 
 ### Initialize the License
 
@@ -149,10 +149,10 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    >Note:  
    >  
    >- Network connection is required for the license to work.
-   >- The license string here will grant you a time-limited trial license.
-   >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request for an extension.
+   >- The license string here will grant you a 24 hour trial license.
+   >- You can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request your own 30-day trial license or to extend an expired trial license.
 
-### Initialize Camera Module
+### Initialize the Camera Module
 
 1. In the Project window, open **app > res > layout > `activity_main.xml`** and create a DCE camera view section under the root node.
 
@@ -285,7 +285,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
 
 ### Obtain and Display Recognized Results
 
-1. Create a label result listener and register with the label recognizer instance to get recognized label results.
+1. Create a label result listener (`setLabelResultListener`) and register it to the label recognizer instance to get recognized label results.
 
    ```java
    ...
@@ -347,7 +347,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    }
    ```
 
-    The recognition results of SDK are organized into a four-tier structure:
+    The recognition results are organized into a four-tier structure:
     - `DLRResult[]` corresponds to the results of an `image`
     - `DLRResult` corresponds to the result of a `TextArea` (also called Label)
     - `DLRLineResult` corresponds to the result of each `TextLine` in the Label

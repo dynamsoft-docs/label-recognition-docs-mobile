@@ -41,16 +41,16 @@ There are several ways to add the SDK into your project.
 
 ### Add the Library Manually
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, three **framework** files can be found in the **DynamsoftLabelRecognizer\Frameworks** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, three **xcframework** files can be found in the **DynamsoftLabelRecognizer\Frameworks** directory:
 
-   * **DynamsoftLabelRecognizer.framework**
-   * **DynamsoftCore.framework**
-   * **DynamsoftCameraEnhancer.framework**
+   * **DynamsoftLabelRecognizer.xcframework**
+   * **DynamsoftCore.xcframework**
+   * **DynamsoftCameraEnhancer.xcframework**
 
    > Note:
-   > If you want to use iOS Camera SDK or your own sdk to control camera, please ignore **DynamsoftCameraEnhancer.framework** in the following steps.
+   > If you want to use AVFoundation camera library, or your own camera control library, please ignore **DynamsoftCameraEnhancer.xcframework** in the following steps. However, it is recommended to use **DynamsoftCameraEnhancer**.
 
-2. Drag and drop the above **frameworks** into your Xcode project. Make sure to check Copy items if needed and Create groups to copy the framework into your project's folder.
+2. Drag and drop the above **xcframeworks** into your Xcode project. Make sure to check Copy items if needed and Create groups to copy the framework into your project's folder.
 3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for **DynamsoftLabelRecognizer** and **DynamsoftCameraEnhancer**.
 
 ### Add the Frameworks via CocoaPods
@@ -82,8 +82,8 @@ The following sample will demonstrate how to create a HelloWorld app for recogni
 >Note:
 >
 >* The following steps are completed in XCode 12.2
->* You can download the entire Objective-C source code from [here](https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorldObjC)
->* You can download the entire Swift source code from [here](https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorldSwift)
+>* You can download the entire Objective-C source code of the [HelloWorld sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorldObjC)
+>* You can download the entire Swift source code of the [HelloWorld sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorldSwift)
 
 ### Create a New Project
 
@@ -99,11 +99,11 @@ The following sample will demonstrate how to create a HelloWorld app for recogni
 
 ### Include the Library
 
-Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section for more details.
+Add the SDK to your new project. Please read [add the SDK](#add-the-sdk) section for more details.
 
 ### Initialize the License
 
-1. Use the `LicenseManager` class and initialize the license in the file **AppDelegate**.
+1. Use the `LicenseManager` class and initialize the license in **AppDelegate**.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -125,7 +125,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    ```swift
    class AppDelegate: UIResponder, UIApplicationDelegate, LicenseVerificationListener {
       func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-             DynamsoftLicenseManager.initLicense("Put Your License Here",verificationDelegate:self)
+             DynamsoftLicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",verificationDelegate:self)
       }
       func licenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
              // Add code to execute when license verification is approved or failed.
@@ -136,12 +136,12 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    >Note:  
    >  
    >* Network connection is required for the license to work.
-   >* The license string here will grant you a time-limited trial license.
-   >* If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request for an extension.
+   >* The license string here will grant you a 24 hour trial license.
+   >* You can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request your own 30-day trial license or to extend an expired trial license.
 
 ### Initialize the Camera Module
 
-1. Go to the file **ViewController**, create the instances of CameraEnhancer and CameraView.
+1. Create the instances of CameraEnhancer and CameraView in **ViewController**.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -151,6 +151,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    ```objc
    @property (nonatomic, strong) DynamsoftCameraEnhancer *cameraEnhancer;
    @property (nonatomic, strong) DCECameraView *dceView;
+   @interface ViewController ()<LabelResultListener>
    - (void)configureDLR {
       self.dceView = [[DCECameraView alloc] initWithFrame:self.view.bounds];
       self.cameraEnhancer = [[DynamsoftCameraEnhancer alloc] initWithView:self.dceView];
@@ -164,7 +165,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
       var cameraEnhancer: DynamsoftCameraEnhancer!
       var dceView: DCECameraView!
       ...
-      func configureDLR() -> Void {
+      func configureDCE() -> Void {
              dceView = DCECameraView.init(frame: self.view.bounds)
              cameraEnhancer = DynamsoftCameraEnhancer.init(view: self.dceView)
              self.view.addSubview(self.dceView)
@@ -173,7 +174,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    }
    ```
 
-2. Define a scan region for recognition.
+2. Define a scan region for recognition in the same `configureDCE` function.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -181,7 +182,9 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    >
    >1. 
    ```objc
-   - (void)configureDLR {
+   @interface ViewController ()<LabelResultListener>
+   ...
+   - (void)configureDCE {
       ...
       iRegionDefinition *region = [[iRegionDefinition alloc] init];
       region.regionLeft = 5;
@@ -193,21 +196,24 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    ```
    2. 
    ```swift
-   func configureDLR() -> Void {
+   class ViewController: BaseViewController{
       ...
-      let region = iRegionDefinition.init()
-      region.regionLeft = 5
-      region.regionRight = 95
-      region.regionTop = 30
-      region.regionBottom = 50
-      region.regionMeasuredByPercentage = 1
-      try? cameraEnhancer.setScanRegion(region)
+      func configureDCE() -> Void {
+         ...
+         let region = iRegionDefinition.init()
+         region.regionLeft = 5
+         region.regionRight = 95
+         region.regionTop = 30
+         region.regionBottom = 50
+         region.regionMeasuredByPercentage = 1
+         try? cameraEnhancer.setScanRegion(region)
+      }
    }
    ```
 
 ### Initialize the Label Recognizer
 
-1. Create an instance of `DynamsoftLabelRecognizer`, bind it with the instance of `DynamsoftCameraEnhancer`.
+1. Create an instance of `DynamsoftLabelRecognizer`, bind it with the instance of `DynamsoftCameraEnhancer` created previously.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -216,6 +222,8 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    >1. 
    ```objc
    @property (nonatomic, strong) DynamsoftLabelRecognizer *labelRecognizer;
+   @interface ViewController ()<LabelResultListener>
+   ...
    - (void)configureDLR {
       self.labelRecognizer = [[DynamsoftLabelRecognizer alloc] init];
       [self.labelRecognizer setImageSource:self.cameraEnhancer];
@@ -235,7 +243,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
 
 ### Start Recognition Process
 
-1. Setup result callback and start scanning.
+Before we call for the recognition process to start, we must first set up the result callback and then call `startScanning`.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -245,6 +253,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    ```objc
    // Add LabelResultListener to the class.
    @interface ViewController ()<LabelResultListener>
+   ...
    - (void)configureDLR {
       [self.labelRecognizer setLabelResultListener:self];
       [self.labelRecognizer startScanning];
@@ -273,7 +282,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
 
 ### Obtain And Display Recognized Results
 
-1. You can obtain the label recognition results via `labelResultCallback`. Add code to display the label recognition results on the view.
+1. You can obtain the label recognition results via the `labelResultCallback` we implemented in the last step. Add code to display the label recognition results on the view.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -281,6 +290,8 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    >
    >1. 
    ```objc
+   @interface ViewController ()<LabelResultListener>
+   ...
    - (void)labelResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iDLRResult *> *)results {
       if (results.count > 0) {
              [self.labelRecognizer stopScanning];
@@ -305,37 +316,40 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    ```
    2. 
    ```swift
-   func labelResultCallback(_ frameId: Int, imageData: iImageData, results: [iDLRResult]?) {
-      if let results = results {
-             guard results.count > 0 else {
-                return
-             }
-             labelRecognizer.stopScanning()
-             var msgString = ""
-             var index = 0
-             for dlrResult in results {
-                if let dlrLineResults = dlrResult.lineResults {
-                   for lineResult in dlrLineResults {
-                      index+=1
-                      msgString += String(format: "Result %d:%@\n", index, lineResult.text ?? "")
-                   }
-                }
-             }
-             let alertVC = UIAlertController.init(title: "Results", message: msgString, preferredStyle: .alert)
-             let okAction = UIAlertAction.init(title: "OK", style: .default) { _ in
-                self.labelRecognizer.startScanning()
-             }
-             alertVC.addAction(okAction)
-             DispatchQueue.main.async {
-                self.present(alertVC, animated: true, completion: nil)
-             }
+   class ViewController: BaseViewController, LabelResultListener {
+      ...
+      func labelResultCallback(_ frameId: Int, imageData: iImageData, results: [iDLRResult]?) {
+         if let results = results {
+               guard results.count > 0 else {
+                  return
+               }
+               labelRecognizer.stopScanning()
+               var msgString = ""
+               var index = 0
+               for dlrResult in results {
+                  if let dlrLineResults = dlrResult.lineResults {
+                     for lineResult in dlrLineResults {
+                        index+=1
+                        msgString += String(format: "Result %d:%@\n", index, lineResult.text ?? "")
+                     }
+                  }
+               }
+               let alertVC = UIAlertController.init(title: "Results", message: msgString, preferredStyle: .alert)
+               let okAction = UIAlertAction.init(title: "OK", style: .default) { _ in
+                  self.labelRecognizer.startScanning()
+               }
+               alertVC.addAction(okAction)
+               DispatchQueue.main.async {
+                  self.present(alertVC, animated: true, completion: nil)
+               }
+         }
       }
    }
    ```
 
-   The recognition results of SDK are organized into a four-tier structure:
+   The recognition results are organized into a four-tier structure:
 
-   * The array of `iDLRResult` corresponds to the results of an `image`.
+   * The array of `iDLRResult` corresponds to the result(s) of an `image`.
    * `iDLRResult` corresponds to the result of a `TextArea` (also called Label).
    * `iDLRLineResult` corresponds to the result of each `TextLine` in the Label.
    * `iDLRCharacterResult` corresponds to the result of each `Character` in the `TextLine`.
@@ -349,7 +363,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
 
 ### Build and Run the Project
 
-1. Select the device that you want to run your app on.
+1. Select the device that you want to run your app on. Please note that in order to test the camera input, a real device will need to be used.
 2. Run the project, then your app will be installed on your device.
 
 >Note:

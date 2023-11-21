@@ -12,7 +12,7 @@ permalink: /programming/objectivec-swift/api-reference/text-line-result-item.htm
 
 # DSTextLineResultItem
 
-The `DSTextLineResultItem` class represents a text line result item recognized by the library. It is derived from `DSCapturedResultItem`.
+The `DSTextLineResultItem` class represents a text line result item recognized by the library. It is derived from `DSCapturedResultItem` and is one of the base units of `DSRecognizedTextLinesResult`.
 
 ## Definition
 
@@ -44,7 +44,7 @@ class TextLineResultItem: CapturedResultItem
 
 ### text
 
-It is used to get the text content of the text line.
+Returns the text content of the individual text line.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
