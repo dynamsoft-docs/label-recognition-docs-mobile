@@ -21,6 +21,7 @@ permalink: /programming/objectivec-swift/user-guide.html
     * [Initialize the License](#initialize-the-license)
     * [Initialize the Camera Module](#initialize-the-camera-module)
     * [Initialize the Capture Vision Router](#initialize-the-capture-vision-router)
+    * [Receive the Text Line Recognition Results](#receive-the-text-line-recognition-results)
     * [Display the Recognized Textline Results](#display-the-recognized-textline-results)
     * [Configure viewWillAppear, viewDidLoad](#configure-viewwillappear-viewdidload)
     * [Build and Run the Project](#build-and-run-the-project)
@@ -401,17 +402,17 @@ class ViewController: UIViewController, CapturedResultReceiver {
           cvr.startCapturing(PresetTemplate.recognizeTextLines.rawValue) {
              [unowned self] isSuccess, error in
              if let error = error {
-                    self.displayError(msg: error.localizedDescription)
+                self.displayError(msg: error.localizedDescription)
              }
           }
    }
    override func viewDidLoad() {
-      super.viewDidLoad()
-      self.view.backgroundColor = .white
-      // Initialize CaptureVisionRouter, CameraEnhancer and the text view you created.
-      configureCVR()
-      configureDCE()
-      setupUI()
+          super.viewDidLoad()
+          self.view.backgroundColor = .white
+          // Initialize CaptureVisionRouter, CameraEnhancer and the text view you created.
+          configureCVR()
+          configureDCE()
+          setupUI()
    }
    private func displayError(_ title: String = "", msg: String, _ acTitle: String = "OK", completion: ConfirmCompletion? = nil) {
           DispatchQueue.main.async {
@@ -431,5 +432,5 @@ class ViewController: UIViewController, CapturedResultReceiver {
 >Note:
 >
 >* You can get the source code of the HelloWord app from the following link
->  * <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorldObjC" target="_blank">Objective-C</a>
->  * <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorldSwift" target="_blank">Swift</a>
+>* View the entire Objective-C source code from [ReadTextLinesWithCameraEnhancerObjc sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancerObjc/)
+>* View the entire Swift source code from [ReadTextLinesWithCameraEnhancer sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancer/)
