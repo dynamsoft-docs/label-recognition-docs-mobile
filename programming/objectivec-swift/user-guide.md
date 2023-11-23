@@ -8,18 +8,22 @@ needGenerateH3Content: true
 permalink: /programming/objectivec-swift/user-guide.html
 ---
 
-# User Guide - iOS
+# Dynamsoft Label Recognizer - Android User Guide
 
-* [Requirements](#requirements)
-* [Add the SDK](#add-the-sdk)
-* [Build Your First Application](#build-your-first-application)
-  * [Create a New Project](#create-a-new-project)
-  * [Include the Library](#include-the-library)
-  * [Initialize Camera Module](#initialize-the-camera-module)
-  * [Initialize Label Recognizer](#initialize-the-label-recognizer)
-  * [Start Recognition Process](#start-recognition-process)
-  * [Obtain and Display Recognized Result](#obtain-and-display-recognized-results)
-  * [Build and Run the Project](#build-and-run-the-project)
+* [Dynamsoft Label Recognizer - Android User Guide](#dynamsoft-label-recognizer---android-user-guide)
+  * [Requirements](#requirements)
+  * [Add the xcframeworks](#add-the-xcframeworks)
+    * [Add the xcframeworks Manually](#add-the-xcframeworks-manually)
+    * [Add the xcframeworks via CocoaPods](#add-the-xcframeworks-via-cocoapods)
+  * [Build Your First Application](#build-your-first-application)
+    * [Create a New Project](#create-a-new-project)
+    * [Include the Library](#include-the-library)
+    * [Initialize the License](#initialize-the-license)
+    * [Initialize the Camera Module](#initialize-the-camera-module)
+    * [Initialize the Capture Vision Router](#initialize-the-capture-vision-router)
+    * [Display the Recognized Textline Results](#display-the-recognized-textline-results)
+    * [Configure viewWillAppear, viewDidLoad](#configure-viewwillappear-viewdidload)
+    * [Build and Run the Project](#build-and-run-the-project)
 
 ## Requirements
 
@@ -29,42 +33,51 @@ permalink: /programming/objectivec-swift/user-guide.html
 * Environment: Xcode 7.1 - 11.5 and above.  
 * Recommended: macOS 10.15.4+, Xcode 11.5+, iOS 11+
 
-## Add the SDK
+## Add the xcframeworks
 
-The Dynamsoft Label Recognizer (DLR) iOS SDK comes with three modules:
+The Dynamsoft Label Recognizer (DLR) iOS SDK comes with seven libraries:
 
-* **DynamsoftLabelRecognizer.framework**: Main module. Provides APIs to recognize text from image files and camera video.
-* **DynamsoftCore.framework**: The core library of Dynamsoft's SDKs, including common basic structure and license related APIs.
-* **DynamsoftCameraEnhancer.framework** (Optional): Dynamsoft Camera Enhancer (DCE) module for getting video frames from mobile cameras. Provides APIs for camera control, camera preview, and other advanced features.
+| File | Description |
+|---------|-------------|
+| `DynamsoftCaptureVisionRouter.xcframework` | The Capture Vision Router library is used to interact with image-processing and semantic-processing products in the applications. It accepts an image source and returns processing results which may contain final results or intermediate results. |
+| `DynamsoftLabelRecognizer.xcframework` | The Dynamsoft Label Recognizer library, which includes label localization and text recognition algorithm and related APIs. |
+| `DynamsoftCore.xcframework` | The core library, which includes common basic structures and intermediate result related APIs. |
+| `DynamsoftImageProcessing.xcframework` | The image processing library, which incorporates a collection of basic and specialized image processing algorithms.  |
+| `DynamsoftLicense.xcframework` | The license library, which includes license related APIs. |
+| `DynamsoftCameraEnhancer.xcframework`(Optional) | The <a href="/camera-enhancer/docs/mobile/programming/android/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. |
+| `DynamsoftUtility.xcframework`(Optional) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc. |
 
-There are several ways to add the SDK into your project.
+There are two ways to add the libraries into your project - **Manually** and **Via the CocaPods**.
 
-### Add the Library Manually
+### Add the xcframeworks Manually
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, three **framework** files can be found in the **DynamsoftLabelRecognizer\Frameworks** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, seven **xcframework** files can be found in the **\dynamsoft-label-recognizer-ios-{version number}\Dynamsoft\Frameworks** directory:
 
-   * **DynamsoftLabelRecognizer.framework**
-   * **DynamsoftCore.framework**
-   * **DynamsoftCameraEnhancer.framework**
+   * **DynamsoftCaptureVisionRouter.xcframework**
+   * **DynamsoftLabelRecognizer.xcframework**
+   * **DynamsoftCore.xcframework**
+   * **DynamsoftImageProcessing.xcframework**
+   * **DynamsoftLicense.xcframework**
+   * **DynamsoftUtility.xcframework**
+   * **DynamsoftCameraEnhancer.xcframework**
 
    > Note:
    > If you want to use iOS Camera SDK or your own sdk to control camera, please ignore **DynamsoftCameraEnhancer.framework** in the following steps.
 
-2. Drag and drop the above **frameworks** into your Xcode project. Make sure to check Copy items if needed and Create groups to copy the framework into your project's folder.
-3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for **DynamsoftLabelRecognizer** and **DynamsoftCameraEnhancer**.
+2. Drag and drop the above **xcframeworks** into your Xcode project. Make sure to check Copy items if needed and create groups to copy the **xcframeworks** into your project's folder.
+3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for all the **xcframeworks**.
 
-### Add the Frameworks via CocoaPods
+### Add the xcframeworks via CocoaPods
 
 1. Add the frameworks in your **Podfile**, replace `TargetName` with your real target name.
 
    ```pod
-   target 'TargetName' do
-   use_frameworks!
+   target '{Your project name}' do
+     use_frameworks!
 
-   pod 'DynamsoftLabelRecognizer','2.2.20'
-   
-   # Remove the following line if you want to use iOS AVFoundation framework or your own sdk to control camera.   
-   pod 'DynamsoftCameraEnhancer','3.0.1'
+     pod 'DynamsoftLabelRecognizer','3.0.20'
+     pod 'DynamsoftCaptureVisionRouter','2.0.21'
+     pod 'DynamsoftCameraEnhancer','4.0.1'
 
    end
    ```
@@ -81,9 +94,9 @@ The following sample will demonstrate how to create a HelloWorld app for recogni
 
 >Note:
 >
->* The following steps are completed in XCode 12.2
->* You can download the entire Objective-C source code from [here](https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorldObjC)
->* You can download the entire Swift source code from [here](https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorldSwift)
+>* The following steps are completed in XCode 13.4
+>* View the entire Objective-C source code from [ReadTextLinesWithCameraEnhancerObjc sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancerObjc/)
+>* View the entire Swift source code from [ReadTextLinesWithCameraEnhancer sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancer/)
 
 ### Create a New Project
 
@@ -99,7 +112,7 @@ The following sample will demonstrate how to create a HelloWorld app for recogni
 
 ### Include the Library
 
-Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section for more details.
+Add the SDK to your new project. Please read [Add the xcframeworks](#add-the-xcframeworks) section for more details.
 
 ### Initialize the License
 
@@ -111,24 +124,29 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    >
    >1. 
    ```objc
-   @interface AppDelegate ()<LicenseVerificationListener>
-   ...
    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-      ...
-      [DynamsoftLicenseManager initLicense:@"Put Your License Here" verificationDelegate:self];
+      [DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+      return YES;
    }
-   - (void)licenseVerificationCallback:(bool)isSuccess error:(NSError *)error {
-      // Add code to execute when license verification is approved or failed.
+   - (void)onLicenseVerified:(BOOL)isSuccess error:(NSError *)error {
+      if (error != nil) {
+             NSString *msg = error.localizedDescription;
+             NSLog(@"erver license verify failed, error:%@", msg);
+      }
    }
    ```
    2. 
    ```swift
-   class AppDelegate: UIResponder, UIApplicationDelegate, LicenseVerificationListener {
-      func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-             DynamsoftLicenseManager.initLicense("Put Your License Here",verificationDelegate:self)
-      }
-      func licenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
-             // Add code to execute when license verification is approved or failed.
+   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+      LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate:self)
+      return true
+   }
+   func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
+      if(error != nil)
+      {
+             if let msg = error?.localizedDescription {
+                print("Server license verify failed, error:\(msg)")
+             }
       }
    }
    ```
@@ -143,209 +161,267 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
 
 1. Go to the file **ViewController**, create the instances of CameraEnhancer and CameraView.
 
-   <div class="sample-code-prefix"></div>
-   >- Objective-C
-   >- Swift
-   >
-   >1. 
-   ```objc
-   @property (nonatomic, strong) DynamsoftCameraEnhancer *cameraEnhancer;
-   @property (nonatomic, strong) DCECameraView *dceView;
-   - (void)configureDLR {
-      self.dceView = [[DCECameraView alloc] initWithFrame:self.view.bounds];
-      self.cameraEnhancer = [[DynamsoftCameraEnhancer alloc] initWithView:self.dceView];
-      [self.view addSubview:self.dceView];
-      [self.cameraEnhancer open];
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, strong) DSCameraEnhancer *dce;
+@property (nonatomic, strong) DSCameraView *dceView;
+- (void)configureDCE {
+   _dceView = [[DSCameraView alloc] initWithFrame:self.view.bounds];
+   _dceView.scanLaserVisible = YES;
+   [self.view addSubview:_dceView];
+   DSDrawingLayer *dlrDrawingLayer = [_dceView getDrawingLayer:DSDrawingLayerIdDLR];
+   dlrDrawingLayer.visible = YES;
+   _dce = [[DSCameraEnhancer alloc] initWithView:_dceView];
+   [_dce open];
+   // Set a scan region to restrict the scan area.
+   DSRect *region = [[DSRect alloc] init];
+   region.top = 0.4;
+   region.bottom = 0.6;
+   region.left = 0.1;
+   region.right = 0.9;
+   region.measuredInPercentage = YES;
+   [_dce setScanRegion:region error:nil];
+}
+```
+2. 
+```swift
+class ViewController: BaseViewController{
+   private var dce: CameraEnhancer!
+   private var dceView: CameraView!
+   private func configureDCE() -> Void {
+          dceView = CameraView(frame: self.view.bounds)
+          dceView.scanLaserVisible = true
+          self.view.addSubview(dceView)
+          let dlrDrawingLayer = dceView.getDrawingLayer(DrawingLayerId.DLR.rawValue)
+          dlrDrawingLayer?.visible = true
+          dce = CameraEnhancer(view: dceView)
+          dce.open()
+          // Set a scan region to restrict the scan area.
+          let region = Rect()
+          region.top = 0.4
+          region.bottom = 0.6
+          region.left = 0.1
+          region.right = 0.9
+          region.measuredInPercentage = true
+          try? dce.setScanRegion(region)
    }
-   ```
-   2. 
-   ```swift
-   class ViewController: BaseViewController{
-      var cameraEnhancer: DynamsoftCameraEnhancer!
-      var dceView: DCECameraView!
-      ...
-      func configureDLR() -> Void {
-             dceView = DCECameraView.init(frame: self.view.bounds)
-             cameraEnhancer = DynamsoftCameraEnhancer.init(view: self.dceView)
-             self.view.addSubview(self.dceView)
-             cameraEnhancer.open()
-      }
-   }
-   ```
+}
+```
 
-2. Define a scan region for recognition.
-
-   <div class="sample-code-prefix"></div>
-   >- Objective-C
-   >- Swift
-   >
-   >1. 
-   ```objc
-   - (void)configureDLR {
-      ...
-      iRegionDefinition *region = [[iRegionDefinition alloc] init];
-      region.regionLeft = 5;
-      region.regionRight = 95;
-      region.regionTop = 30;
-      region.regionBottom = 50;
-      region.regionMeasuredByPercentage = 1;
-   }
-   ```
-   2. 
-   ```swift
-   func configureDLR() -> Void {
-      ...
-      let region = iRegionDefinition.init()
-      region.regionLeft = 5
-      region.regionRight = 95
-      region.regionTop = 30
-      region.regionBottom = 50
-      region.regionMeasuredByPercentage = 1
-      try? cameraEnhancer.setScanRegion(region)
-   }
-   ```
-
-### Initialize the Label Recognizer
+### Initialize the Capture Vision Router
 
 1. Create an instance of `DynamsoftLabelRecognizer`, bind it with the instance of `DynamsoftCameraEnhancer`.
 
-   <div class="sample-code-prefix"></div>
-   >- Objective-C
-   >- Swift
-   >
-   >1. 
-   ```objc
-   @property (nonatomic, strong) DynamsoftLabelRecognizer *labelRecognizer;
-   - (void)configureDLR {
-      self.labelRecognizer = [[DynamsoftLabelRecognizer alloc] init];
-      [self.labelRecognizer setImageSource:self.cameraEnhancer];
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, strong) DSCaptureVisionRouter *cvr;
+...
+- (void)configureCVR {
+   _cvr = [[DSCaptureVisionRouter alloc] init];
+   // Set DCE as the input.
+   [_cvr setInput:_dce error:nil];
+}
+```
+2. 
+```swift
+class ViewController: BaseViewController{
+   private var cvr: CaptureVisionRouter!
+   ...
+   private func configureCVR() -> Void {
+          cvr = CaptureVisionRouter()
+          // Set DCE as the input.
+          try? cvr.setInput(dce)
    }
-   ```
-   2. 
-   ```swift
-   class ViewController: BaseViewController{
-      var labelRecognizer: DynamsoftLabelRecognizer!
-      ...
-      func configureDLR() -> Void {
-             labelRecognizer = DynamsoftLabelRecognizer.init()
-             labelRecognizer.setImageSource(self.cameraEnhancer)
-      }
+}
+```
+
+### Receive the Text Line Recognition Results
+
+Setup result callback and start scanning.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+// Add DSCapturedResultReceiver to the class.
+@interface ViewController ()<DSCapturedResultReceiver>
+- (void)configureCVR {
+   ...
+   [_cvr addResultReceiver:self];
+}
+- (void)onRecognizedTextLinesReceived:(DSRecognizedTextLinesResult *)result {
+   if (result.items != nil) {
+          // Parse results.
+          int index = 0;
+          NSMutableString *resultText = [NSMutableString string];
+          for (DSTextLineResultItem *dlrLineResults in result.items) {
+             index++;
+             [resultText appendString:[NSString stringWithFormat:@"Result %d:%@\n", index, dlrLineResults.text != nil ? dlrLineResults.text : @""]];
+          }
+          dispatch_async(dispatch_get_main_queue(), ^{
+             self.resultView.text = [NSString stringWithFormat:@"Results(%d)\n%@", (int)result.items.count, resultText];
+          });
    }
-   ```
-
-### Start Recognition Process
-
-1. Setup result callback and start scanning.
-
-   <div class="sample-code-prefix"></div>
-   >- Objective-C
-   >- Swift
-   >
-   >1. 
-   ```objc
-   // Add LabelResultListener to the class.
-   @interface ViewController ()<LabelResultListener>
-   - (void)configureDLR {
-      [self.labelRecognizer setLabelResultListener:self];
-      [self.labelRecognizer startScanning];
+}
+```
+2. 
+```swift
+// Add CapturedResultReceiver to the class.
+class ViewController: UIViewController, CapturedResultReceiver {
+   ...
+   private func configureCVR() -> Void {
+          ...
+          // Add a CaptureResultReceiver to receive results.
+          cvr.addResultReceiver(self)
    }
-   - (void)labelResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iDLRResult *> *)results {
-      // Add your code to execute on results are received.
+   func onRecognizedTextLinesReceived(_ result: RecognizedTextLinesResult) {
+          guard let items = result.items else { return }
+          // Parse Results.
+          var resultText = ""
+          var index = 0
+          for dlrLineResults in items {
+             index+=1
+             resultText += String(format: "Result %d:%@\n", index, dlrLineResults.text ?? "")
+          }
+          DispatchQueue.main.async {
+             self.resultView.text = String(format: "Results(%d)\n", items.count) + resultText
+          }
    }
-   ```
-   2. 
-   ```swift
-   // Add LabelResultListener to the class.
-   class ViewController: BaseViewController, LabelResultListener {
-      ...
-      func configureDLR() -> Void {
-             ...
-             // Set result listener.
-             labelRecognizer.setLabelResultListener(self)
-             // Start the label recognition thread.
-             labelRecognizer.startScanning()
-      }
-      func labelResultCallback(_ frameId: Int, imageData: iImageData, results: [iDLRResult]?) {
-             // Add your code to execute on results are received.
-      }
+}
+```
+
+### Display the Recognized Textline Results
+
+Create a text view to display the text line recognition results.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, strong) UITextView *resultView;
+...
+- (UITextView *)resultView {
+   if (!_resultView) {
+          CGFloat left = 0.0;
+          CGFloat width = self.view.bounds.size.width;
+          CGFloat height = self.view.bounds.size.height / 2.5;
+          CGFloat top = self.view.bounds.size.height - height;
+          _resultView = [[UITextView alloc] initWithFrame:CGRectMake(left, top, width, height)];
+          _resultView.layer.backgroundColor = [UIColor clearColor].CGColor;
+          _resultView.layoutManager.allowsNonContiguousLayout = NO;
+          _resultView.font = [UIFont systemFontOfSize:14.0 weight:UIFontWeightMedium];
+          _resultView.textColor = [UIColor whiteColor];
+          _resultView.textAlignment = NSTextAlignmentCenter;
    }
-   ```
+   return _resultView;
+}
+- (void)setupUI {
+   [self.view addSubview:self.resultView];
+}
+```
+2. 
+```swift
+class ViewController: UIViewController, CapturedResultReceiver {
+   ...
+   lazy var resultView: UITextView = {
+          let left = 0.0
+          let width = self.view.bounds.size.width
+          let height = self.view.bounds.size.height / 2.5
+          let top = self.view.bounds.size.height - height
+          resultView = UITextView(frame: CGRect(x: left, y: top , width: width, height: height))
+          resultView.layer.backgroundColor = UIColor.clear.cgColor
+          resultView.layoutManager.allowsNonContiguousLayout = false
+          resultView.isEditable = false
+          resultView.isSelectable = false
+          resultView.font = UIFont.systemFont(ofSize: 14.0, weight: .medium)
+          resultView.textColor = UIColor.white
+          resultView.textAlignment = .center
+          return resultView
+   }()
+   private func setupUI() -> Void {
+          self.view.addSubview(resultView)
+   }
+}
+```
 
-### Obtain And Display Recognized Results
+### Configure viewWillAppear, viewDidLoad
 
-1. You can obtain the label recognition results via `labelResultCallback`. Add code to display the label recognition results on the view.
-
-   <div class="sample-code-prefix"></div>
-   >- Objective-C
-   >- Swift
-   >
-   >1. 
-   ```objc
-   - (void)labelResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iDLRResult *> *)results {
-      if (results.count > 0) {
-             [self.labelRecognizer stopScanning];
-             NSMutableString *msgString = [NSMutableString string];
-             int index = 0;
-             for (iDLRResult *dlrResult in results) {
-                for (iDLRLineResult *lineResult in dlrResult.lineResults) {
-                   index++;
-                   [msgString appendString:[NSString stringWithFormat:@"Result %d:%@\n", index, lineResult.text]];
-                }
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)viewWillAppear:(BOOL)animated {
+   [super viewWillAppear:animated];
+   weakSelfs(self)
+   // Start capturing when the view appear.
+   [self.cvr startCapturing:DSPresetTemplateRecognizeTextLines completionHandler:^(BOOL isSuccess, NSError * _Nullable error) {
+          if (error != nil) {
+             [weakSelf displayError:error.localizedDescription completion:nil];
+          }
+   }];
+}
+- (void)viewDidLoad {
+   [super viewDidLoad];
+   self.view.backgroundColor = [UIColor whiteColor];
+   // Initialize CaptureVisionRouter, CameraEnhancer and the text view you created.
+   [self configureCVR];
+   [self configureDCE];
+   [self setupUI];
+}
+- (void)displayError:(NSString *)msg completion:(nullable ConfirmCompletion)completion {
+   dispatch_async(dispatch_get_main_queue(), ^{
+          UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:msg preferredStyle: UIAlertControllerStyleAlert];
+          UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+             if (completion) completion();
+          }];
+          [alert addAction:action];
+          [self presentViewController:alert animated:YES completion:nil];
+   });
+}
+```
+2. 
+```swift
+class ViewController: UIViewController, CapturedResultReceiver {
+   override func viewWillAppear(_ animated: Bool) {
+          super.viewWillAppear(animated)
+          cvr.startCapturing(PresetTemplate.recognizeTextLines.rawValue) {
+             [unowned self] isSuccess, error in
+             if let error = error {
+                    self.displayError(msg: error.localizedDescription)
              }
-             UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"Result" message:msgString preferredStyle:UIAlertControllerStyleAlert];
-             UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                [self.labelRecognizer startScanning];
-             }];
-             [alertVC addAction:okAction];
-             dispatch_async(dispatch_get_main_queue(), ^{
-                [self presentViewController:alertVC animated:YES completion:nil];
-             });
-      }
+          }
    }
-   ```
-   2. 
-   ```swift
-   func labelResultCallback(_ frameId: Int, imageData: iImageData, results: [iDLRResult]?) {
-      if let results = results {
-             guard results.count > 0 else {
-                return
-             }
-             labelRecognizer.stopScanning()
-             var msgString = ""
-             var index = 0
-             for dlrResult in results {
-                if let dlrLineResults = dlrResult.lineResults {
-                   for lineResult in dlrLineResults {
-                      index+=1
-                      msgString += String(format: "Result %d:%@\n", index, lineResult.text ?? "")
-                   }
-                }
-             }
-             let alertVC = UIAlertController.init(title: "Results", message: msgString, preferredStyle: .alert)
-             let okAction = UIAlertAction.init(title: "OK", style: .default) { _ in
-                self.labelRecognizer.startScanning()
-             }
-             alertVC.addAction(okAction)
-             DispatchQueue.main.async {
-                self.present(alertVC, animated: true, completion: nil)
-             }
-      }
+   override func viewDidLoad() {
+      super.viewDidLoad()
+      self.view.backgroundColor = .white
+      // Initialize CaptureVisionRouter, CameraEnhancer and the text view you created.
+      configureCVR()
+      configureDCE()
+      setupUI()
    }
-   ```
-
-   The recognition results of SDK are organized into a four-tier structure:
-
-   * The array of `iDLRResult` corresponds to the results of an `image`.
-   * `iDLRResult` corresponds to the result of a `TextArea` (also called Label).
-   * `iDLRLineResult` corresponds to the result of each `TextLine` in the Label.
-   * `iDLRCharacterResult` corresponds to the result of each `Character` in the `TextLine`.
-
-   The structure is shown in the figure below:
-
-   <div align="center">
-   <img src="../assets/dlr_result2.png" alt="DLR Result Structure" width="80%"/>
-   <p>Figure 1 – DLR Result Structure</p>
-   </div>
+   private func displayError(_ title: String = "", msg: String, _ acTitle: String = "OK", completion: ConfirmCompletion? = nil) {
+          DispatchQueue.main.async {
+             let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+             alert.addAction(UIAlertAction(title: acTitle, style: .default, handler: { _ in completion?() }))
+             self.present(alert, animated: true, completion: nil)
+          }
+   }
+}
+```
 
 ### Build and Run the Project
 
