@@ -28,11 +28,9 @@ permalink: /programming/objectivec-swift/user-guide.html
 
 ## Requirements
 
-* Operating systems:
-  * macOS 10.11 and above.
-  * iOS 9.0 and above.
-* Environment: Xcode 7.1 - 11.5 and above.  
-* Recommended: macOS 10.15.4+, Xcode 11.5+, iOS 11+
+* Supported OS: iOS 11 or higher (iOS 13 and higher recommended).
+* Supported ABI: arm64 and x86_64.
+* Development Environment: Xcode 13 and above (Xcode 14.1+ recommended).
 
 ## Add the xcframeworks
 
@@ -61,9 +59,6 @@ There are two ways to add the libraries into your project - **Manually** and **V
    * **DynamsoftLicense.xcframework**
    * **DynamsoftUtility.xcframework**
    * **DynamsoftCameraEnhancer.xcframework**
-
-   > Note:
-   > If you want to use iOS Camera SDK or your own sdk to control camera, please ignore **DynamsoftCameraEnhancer.framework** in the following steps.
 
 2. Drag and drop the above **xcframeworks** into your Xcode project. Make sure to check Copy items if needed and create groups to copy the **xcframeworks** into your project's folder.
 3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for all the **xcframeworks**.
@@ -95,7 +90,7 @@ The following sample will demonstrate how to create a HelloWorld app for recogni
 
 >Note:
 >
->* The following steps are completed in XCode 13.4
+>* The following steps are completed in XCode 14.2
 >* View the entire Objective-C source code from [ReadTextLinesWithCameraEnhancerObjc sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancerObjc/)
 >* View the entire Swift source code from [ReadTextLinesWithCameraEnhancer sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancer/)
 
@@ -156,7 +151,7 @@ Add the SDK to your new project. Please read [Add the xcframeworks](#add-the-xcf
    >  
    >* Network connection is required for the license to work.
    >* The license string here will grant you a time-limited trial license.
-   >* If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request for an extension.
+   >* If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dlr&package=mobile" target="_blank">customer portal</a> to request for an extension.
 
 ### Initialize the Camera Module
 
