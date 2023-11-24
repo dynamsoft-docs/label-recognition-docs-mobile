@@ -8,9 +8,9 @@ needGenerateH3Content: true
 permalink: /programming/objectivec-swift/user-guide.html
 ---
 
-# Dynamsoft Label Recognizer - Android User Guide
+# Dynamsoft Label Recognizer - iOS User Guide
 
-* [Dynamsoft Label Recognizer - Android User Guide](#dynamsoft-label-recognizer---android-user-guide)
+* [Dynamsoft Label Recognizer - iOS User Guide](#dynamsoft-label-recognizer---ios-user-guide)
   * [Requirements](#requirements)
   * [Add the xcframeworks](#add-the-xcframeworks)
     * [Add the xcframeworks Manually](#add-the-xcframeworks-manually)
