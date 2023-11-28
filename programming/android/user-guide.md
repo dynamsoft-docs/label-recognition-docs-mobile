@@ -57,9 +57,6 @@ There are two ways to add the libraries into your project - **Manually** and **M
    - **DynamsoftLicense.aar**
    - **DynamsoftUtility.aar**
    - **DynamsoftCameraEnhancer.aar** (Optional)
-      >Note:
-      >
-      >If you want to use Android Camera SDK or your own sdk to control camera, please ignore **DynamsoftCameraEnhancer.aar** in the following steps.
 
 2. Copy the above seven **aar** files to the target directory such as `[App Project Root Path]\app\libs`
 
@@ -144,19 +141,19 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    public class MainActivity extends AppCompatActivity {
       @Override
       protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
-            LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this, (isSuccess, error) -> {
-            if (!isSuccess) {
-               error.printStackTrace();
-               runOnUiThread(new Runnable() {
-                  @Override
-                  public void run() {
-                     Toast ts = Toast.makeText(getBaseContext(), "error: " + error.getMessage(), Toast.LENGTH_LONG);
-                     ts.show();
-                  }
-               });
-            }
+             super.onCreate(savedInstanceState);
+             setContentView(R.layout.activity_main);
+             LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",  this, (isSuccess, error) -> {
+             if (!isSuccess) {
+                error.printStackTrace();
+                runOnUiThread(new Runnable() {
+                   @Override
+                   public void run() {
+                      Toast ts = Toast.makeText(getBaseContext(), "error: " + error.getMessage(), Toast.LENGTH_LONG);
+                      ts.show();
+                   }
+                });
+             }
          });
       }
    }
@@ -166,21 +163,21 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    import com.dynamsoft.license.LicenseManager;
    class MainActivityKt : AppCompatActivity() {
       override fun onCreate(savedInstanceState: Bundle?) {
-         super.onCreate(savedInstanceState)
-         setContentView(R.layout.activity_main_kt)
-         LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this) { isSuccess, error ->
-            if (!isSuccess) {
-               error.printStackTrace()
-               runOnUiThread {
-                  val ts = Toast.makeText(
-                        baseContext,
-                        "error: " + error.message,
-                        Toast.LENGTH_LONG
-                  )
-                  ts.show()
-               }
-            }
-         }
+             super.onCreate(savedInstanceState)
+             setContentView(R.layout.activity_main_kt)
+             LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this) { isSuccess, error ->
+                if (!isSuccess) {
+                   error.printStackTrace()
+                   runOnUiThread {
+                      val ts = Toast.makeText(
+                            baseContext,
+                            "error: " + error.message,
+                            Toast.LENGTH_LONG
+                      )
+                      ts.show()
+                   }
+                }
+             }
       }
    }
    ```
@@ -217,11 +214,11 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
       private CameraEnhancer mCamera;
       @Override
       protected void onCreate(Bundle savedInstanceState) {
-         ...
-         // Add camera view for previewing video.
-         PermissionUtil.requestCameraPermission(this);
-         CameraView cameraView = findViewById(R.id.dce_camera_view);
-         mCamera = new CameraEnhancer(cameraView, this);
+             ...
+             // Add camera view for previewing video.
+             PermissionUtil.requestCameraPermission(this);
+             CameraView cameraView = findViewById(R.id.dce_camera_view);
+             mCamera = new CameraEnhancer(cameraView, this);
       }
    }
    ```
@@ -233,10 +230,10 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    class MainActivityKt : AppCompatActivity() {
       private lateinit var mCamera: CameraEnhancer
       override fun onCreate(savedInstanceState: Bundle?) {
-         ...
-         PermissionUtil.requestCameraPermission(this)
-         val cameraView: CameraView = findViewById(R.id.dce_camera_view)
-         mCamera = CameraEnhancer(cameraView, this)
+             ...
+             PermissionUtil.requestCameraPermission(this)
+             val cameraView: CameraView = findViewById(R.id.dce_camera_view)
+             mCamera = CameraEnhancer(cameraView, this)
       }
    }
    ```
@@ -252,13 +249,13 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    public class MainActivity extends AppCompatActivity {
       @Override
       protected void onCreate(Bundle savedInstanceState) {
-         ...
-         DSRect region = new DSRect(0.1f, 0.4f, 0.9f, 0.6f, true);
-         try {
-            mCamera.setScanRegion(region);
-         } catch (CameraEnhancerException e) {
-            e.printStackTrace();
-         }
+             ...
+             DSRect region = new DSRect(0.1f, 0.4f, 0.9f, 0.6f, true);
+             try {
+                mCamera.setScanRegion(region);
+             } catch (CameraEnhancerException e) {
+                e.printStackTrace();
+             }
       }
    }
    ```
@@ -266,13 +263,13 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    ```kotlin
    class MainActivityKt : AppCompatActivity() {
       override fun onCreate(savedInstanceState: Bundle?) {
-         ...
-         val region = DSRect(0.1f, 0.4f, 0.9f, 0.6f, true)
-         try {
-               mCamera.scanRegion = region
-         } catch (e: CameraEnhancerException) {
-               e.printStackTrace()
-         }
+             ...
+             val region = DSRect(0.1f, 0.4f, 0.9f, 0.6f, true)
+             try {
+                   mCamera.scanRegion = region
+             } catch (e: CameraEnhancerException) {
+                   e.printStackTrace()
+             }
       }
    }
    ```
@@ -294,13 +291,13 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
       private CaptureVisionRouter mRouter;
       @Override
       protected void onCreate(Bundle savedInstanceState) {
-         ...
-         mRouter = new CaptureVisionRouter(this);
-         try {
-            mRouter.setInput(mCamera);
-         } catch (CaptureVisionRouterException e) {
-            throw new RuntimeException(e);
-         }
+             ...
+             mRouter = new CaptureVisionRouter(this);
+             try {
+                mRouter.setInput(mCamera);
+             } catch (CaptureVisionRouterException e) {
+                throw new RuntimeException(e);
+             }
       }
    }
    ```
@@ -311,13 +308,13 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    class MainActivityKt : AppCompatActivity() {
       private lateinit var mRouter: CaptureVisionRouter
       override fun onCreate(savedInstanceState: Bundle?) {
-         ...
-         mRouter = CaptureVisionRouter(this)
-         try {
-            mRouter.setInput(mCamera)
-         } catch (e: CaptureVisionRouterException) {
-            throw RuntimeException(e)
-         }
+             ...
+             mRouter = CaptureVisionRouter(this)
+             try {
+                mRouter.setInput(mCamera)
+             } catch (e: CaptureVisionRouterException) {
+                throw RuntimeException(e)
+             }
       }
    }
    ```
@@ -335,13 +332,13 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    public class MainActivity extends AppCompatActivity {
       @Override
       protected void onCreate(Bundle savedInstanceState) {
-         ...
-         mRouter.addResultReceiver(new CapturedResultReceiver() {
-            @Override
-            public void onRecognizedTextLinesReceived(RecognizedTextLinesResult result) {
-               runOnUiThread(() -> showResults(result.getItems()));
-            }
-         });
+             ...
+             mRouter.addResultReceiver(new CapturedResultReceiver() {
+                @Override
+                public void onRecognizedTextLinesReceived(RecognizedTextLinesResult result) {
+                   runOnUiThread(() -> showResults(result.getItems()));
+                }
+             });
       }
    }
    ```
@@ -351,12 +348,12 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    import com.dynamsoft.dlr.RecognizedTextLinesResult
    class MainActivityKt : AppCompatActivity() {
       override fun onCreate(savedInstanceState: Bundle?) {
-         ...
-         mRouter.addResultReceiver(object : CapturedResultReceiver {
-            override fun onRecognizedTextLinesReceived(result: RecognizedTextLinesResult) {
-               showResults(result.items)
-            }
-         })
+             ...
+             mRouter.addResultReceiver(object : CapturedResultReceiver {
+                override fun onRecognizedTextLinesReceived(result: RecognizedTextLinesResult) {
+                   showResults(result.items)
+                }
+             })
       }
    }
    ```
@@ -375,31 +372,31 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
       ...
       @Override
       public void onResume() {
-         try {
-            mCamera.open();
-         } catch (CameraEnhancerException e) {
-            e.printStackTrace();
-         }
-         mRouter.startCapturing(EnumPresetTemplate.PT_RECOGNIZE_TEXT_LINES, new CompletionListener() {
-            @Override
-            public void onSuccess() {
-            }
-            @Override
-            public void onFailure(int errorCode, String errorString) {
-               runOnUiThread(() -> Toast.makeText(MainActivity.this, errorString, Toast.LENGTH_SHORT).show());
-            }
-         });
-         super.onResume();
+             try {
+                mCamera.open();
+             } catch (CameraEnhancerException e) {
+                e.printStackTrace();
+             }
+             mRouter.startCapturing(EnumPresetTemplate.PT_RECOGNIZE_TEXT_LINES, new CompletionListener() {
+                @Override
+                public void onSuccess() {
+                }
+                @Override
+                public void onFailure(int errorCode, String errorString) {
+                   runOnUiThread(() -> Toast.makeText(MainActivity.this, errorString, Toast.LENGTH_SHORT).show());
+                }
+             });
+             super.onResume();
       }
       @Override
       public void onPause() {
-         try {
-            mCamera.close();
-         } catch (CameraEnhancerException e) {
-            e.printStackTrace();
-         }
-         mRouter.stopCapturing();
-         super.onPause();
+             try {
+                mCamera.close();
+             } catch (CameraEnhancerException e) {
+                e.printStackTrace();
+             }
+             mRouter.stopCapturing();
+             super.onPause();
       }
    }
    ```
@@ -410,35 +407,35 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    public class MainActivity extends AppCompatActivity {
       ...
       public override fun onResume() {
-         try {
-            mCamera.open()
-         } catch (e: CameraEnhancerException) {
-            e.printStackTrace()
-         }
-         mRouter.startCapturing(
-            EnumPresetTemplate.PT_RECOGNIZE_TEXT_LINES,
-            object : CompletionListener {
-                override fun onSuccess() {}
-                override fun onFailure(errorCode: Int, errorString: String) {
-                    runOnUiThread {
-                        Toast.makeText(
-                            this@MainActivity,
-                            errorString,
-                            Toast.LENGTH_SHORT
-                        ).show()
+             try {
+                mCamera.open()
+             } catch (e: CameraEnhancerException) {
+                e.printStackTrace()
+             }
+             mRouter.startCapturing(
+                EnumPresetTemplate.PT_RECOGNIZE_TEXT_LINES,
+                object : CompletionListener {
+                    override fun onSuccess() {}
+                    override fun onFailure(errorCode: Int, errorString: String) {
+                        runOnUiThread {
+                           Toast.makeText(
+                              this@MainActivity,
+                              errorString,
+                              Toast.LENGTH_SHORT
+                           ).show()
+                        }
                     }
-                }
-            })
-         super.onResume()
+                })
+             super.onResume()
       }
       public override fun onPause() {
-         try {
-            mCamera.close()
-         } catch (e: CameraEnhancerException) {
-            e.printStackTrace()
-         }
-         mRouter.stopCapturing()
-         super.onPause()
+             try {
+                mCamera.close()
+             } catch (e: CameraEnhancerException) {
+                e.printStackTrace()
+             }
+             mRouter.stopCapturing()
+             super.onPause()
       }
    }
    ```
@@ -476,17 +473,17 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
       private TextView tvRes;
       @Override
       protected void onCreate(Bundle savedInstanceState) {
-         ...
-         tvRes = findViewById(R.id.tv_res);
+             ...
+             tvRes = findViewById(R.id.tv_res);
       }
       private void showResults(TextLineResultItem[] results) {
-         StringBuilder resultBuilder = new StringBuilder();
-         if (results != null) {
-            for (TextLineResultItem result : results) {
-               resultBuilder.append(result.getText()).append("\n\n");
-            }
-         }
-         runOnUiThread(() -> tvRes.setText(resultBuilder.toString()));
+             StringBuilder resultBuilder = new StringBuilder();
+             if (results != null) {
+                for (TextLineResultItem result : results) {
+                   resultBuilder.append(result.getText()).append("\n\n");
+                }
+             }
+             runOnUiThread(() -> tvRes.setText(resultBuilder.toString()));
       }
    }
    ```
@@ -497,17 +494,17 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
       ...
       private lateinit var tvRes: TextView
       override fun onCreate(savedInstanceState: Bundle?) {
-         ...
-         tvRes = findViewById(R.id.tv_res)
+             ...
+             tvRes = findViewById(R.id.tv_res)
       }
       private fun showResults(results: Array<TextLineResultItem>?) {
-         val resultBuilder = StringBuilder()
-         if (results != null) {
-            for (result in results) {
-                  resultBuilder.append(result.text).append("\n\n")
-            }
-         }
-         runOnUiThread { tvRes.text = resultBuilder.toString() }
+             val resultBuilder = StringBuilder()
+             if (results != null) {
+                for (result in results) {
+                      resultBuilder.append(result.text).append("\n\n")
+                }
+             }
+             runOnUiThread { tvRes.text = resultBuilder.toString() }
       }
    }
    ```

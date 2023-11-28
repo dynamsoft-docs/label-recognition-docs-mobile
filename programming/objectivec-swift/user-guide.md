@@ -8,31 +8,29 @@ needGenerateH3Content: true
 permalink: /programming/objectivec-swift/user-guide.html
 ---
 
-# Dynamsoft Label Recognizer - Android User Guide
+# Dynamsoft Label Recognizer - iOS User Guide
 
-* [Dynamsoft Label Recognizer - Android User Guide](#dynamsoft-label-recognizer---android-user-guide)
-  * [Requirements](#requirements)
-  * [Add the xcframeworks](#add-the-xcframeworks)
-    * [Add the xcframeworks Manually](#add-the-xcframeworks-manually)
-    * [Add the xcframeworks via CocoaPods](#add-the-xcframeworks-via-cocoapods)
-  * [Build Your First Application](#build-your-first-application)
-    * [Create a New Project](#create-a-new-project)
-    * [Include the Library](#include-the-library)
-    * [Initialize the License](#initialize-the-license)
-    * [Initialize the Camera Module](#initialize-the-camera-module)
-    * [Initialize the Capture Vision Router](#initialize-the-capture-vision-router)
-    * [Receive the Text Line Recognition Results](#receive-the-text-line-recognition-results)
-    * [Display the Recognized Textline Results](#display-the-recognized-textline-results)
-    * [Configure viewWillAppear, viewDidLoad](#configure-viewwillappear-viewdidload)
-    * [Build and Run the Project](#build-and-run-the-project)
+- [Dynamsoft Label Recognizer - iOS User Guide](#dynamsoft-label-recognizer---ios-user-guide)
+  - [Requirements](#requirements)
+  - [Add the xcframeworks](#add-the-xcframeworks)
+    - [Add the xcframeworks Manually](#add-the-xcframeworks-manually)
+    - [Add the xcframeworks via CocoaPods](#add-the-xcframeworks-via-cocoapods)
+  - [Build Your First Application](#build-your-first-application)
+    - [Create a New Project](#create-a-new-project)
+    - [Include the Library](#include-the-library)
+    - [Initialize the License](#initialize-the-license)
+    - [Initialize the Camera Module](#initialize-the-camera-module)
+    - [Initialize the Capture Vision Router](#initialize-the-capture-vision-router)
+    - [Receive the Text Line Recognition Results](#receive-the-text-line-recognition-results)
+    - [Display the Recognized Textline Results](#display-the-recognized-textline-results)
+    - [Configure viewWillAppear, viewDidLoad](#configure-viewwillappear-viewdidload)
+    - [Build and Run the Project](#build-and-run-the-project)
 
 ## Requirements
 
-* Operating systems:
-  * macOS 10.11 and above.
-  * iOS 9.0 and above.
-* Environment: Xcode 7.1 - 11.5 and above.  
-* Recommended: macOS 10.15.4+, Xcode 11.5+, iOS 11+
+- Supported OS: iOS 11 or higher (iOS 13 and higher recommended).
+- Supported ABI: arm64 and x86_64.
+- Development Environment: Xcode 13 and above (Xcode 14.1+ recommended).
 
 ## Add the xcframeworks
 
@@ -45,7 +43,7 @@ The Dynamsoft Label Recognizer (DLR) iOS SDK comes with seven libraries:
 | `DynamsoftCore.xcframework` | The core library, which includes common basic structures and intermediate result related APIs. |
 | `DynamsoftImageProcessing.xcframework` | The image processing library, which incorporates a collection of basic and specialized image processing algorithms.  |
 | `DynamsoftLicense.xcframework` | The license library, which includes license related APIs. |
-| `DynamsoftCameraEnhancer.xcframework`(Optional) | The <a href="/camera-enhancer/docs/mobile/programming/android/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. |
+| `DynamsoftCameraEnhancer.xcframework`(Optional) | The <a href="/camera-enhancer/docs/mobile/programming/ios/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. |
 | `DynamsoftUtility.xcframework`(Optional) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc. |
 
 There are two ways to add the libraries into your project - **Manually** and **Via the CocaPods**.
@@ -83,7 +81,7 @@ There are two ways to add the libraries into your project - **Manually** and **V
    end
    ```
 
-2. Execute the pod command to install the frameworks and generate workspace(**HelloWorld.xcworkspace**):
+2. Execute the pod command to install the frameworks and generate workspace(**{Your project name}.xcworkspace**):
 
    ```bash
    pod install
@@ -95,9 +93,9 @@ The following sample will demonstrate how to create a HelloWorld app for recogni
 
 >Note:
 >
->* The following steps are completed in XCode 13.4
->* View the entire Objective-C source code from [ReadTextLinesWithCameraEnhancerObjc sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancerObjc/)
->* View the entire Swift source code from [ReadTextLinesWithCameraEnhancer sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancer/)
+>- The following steps are completed in XCode 14.2
+>- View the entire Objective-C source code from [ReadTextLinesWithCameraEnhancerObjc sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancerObjc/)
+>- View the entire Swift source code from [ReadTextLinesWithCameraEnhancer sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancer/)
 
 ### Create a New Project
 
@@ -154,9 +152,9 @@ Add the SDK to your new project. Please read [Add the xcframeworks](#add-the-xcf
 
    >Note:  
    >  
-   >* Network connection is required for the license to work.
-   >* The license string here will grant you a 24 hour trial license.
-   >* You can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request your own 30-day trial license or to extend an expired trial license.
+   >- Network connection is required for the license to work.
+   >- The license string here will grant you a time-limited trial license.
+   >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dlr&package=mobile" target="_blank">customer portal</a> to request for an extension.
 
 ### Initialize the Camera Module
 
@@ -215,7 +213,7 @@ class ViewController: BaseViewController{
 
 ### Initialize the Capture Vision Router
 
-1. Create an instance of `DynamsoftLabelRecognizer`, bind it with the instance of `DynamsoftCameraEnhancer` created previously.
+1. Create an instance of `CaptureVisionRouter` and bind it with the instance of `DynamsoftCameraEnhancer`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -431,6 +429,6 @@ class ViewController: UIViewController, CapturedResultReceiver {
 
 >Note:
 >
->* You can get the source code of the HelloWord app from the following link
->* View the entire Objective-C source code from [ReadTextLinesWithCameraEnhancerObjc sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancerObjc/)
->* View the entire Swift source code from [ReadTextLinesWithCameraEnhancer sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancer/)
+>- You can get the source code of the HelloWord app from the following link
+>- View the entire Objective-C source code from [ReadTextLinesWithCameraEnhancerObjc sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancerObjc/)
+>- View the entire Swift source code from [ReadTextLinesWithCameraEnhancer sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancer/)
