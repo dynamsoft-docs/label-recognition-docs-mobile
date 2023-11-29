@@ -45,7 +45,7 @@ The Dynamsoft Label Recognizer SDK has been split into multiple libraries from t
     }
     ```
 
-    >Note: Please view [user guide](user-guide/user-guide.md#add-the-libraries-via-maven) for the correct version number.
+    >Note: Please view [user guide](user-guide.md#add-the-libraries-via-maven) for the correct version number.
 
 ### Update the License Activation Code
 
@@ -141,13 +141,13 @@ The following properties are replaced by similar properties under `SimplifiedLab
 
 | PublicRuntimeSettings Property | SimplifiedLabelRecognizerSettings Property | Template File Parameter |
 | ------------------------------- | ----------------------------------------- | ----------------------- |
-| `characterModelName` | [`characterModelName`]({{ site.android_api }}simplified-label-recognizer-settings.html#charactermodelname) | [`LabelRecognizerTaskSetting.CharacterModelName`]({{ site.dcv_parameters_reference }}label-recognizer-task-settings/character-model-name.html?lproduct=dlr&repoType=core){:target="_blank"} |
-| `maxThreadCount` | [`maxThreadsInOneTask`]({{ site.android_api }}simplified-label-recognizer-settings.html#maxthreadsinonetask) | [`LabelRecognizerTaskSetting.MaxThreadsInOneTask`]({{ site.dcv_parameters_reference }}label-recognizer-task-settings/max-threads-in-one-task.html?lproduct=dlr&repoType=core){:target="_blank"} |
+| `characterModelName` | [`characterModelName`]({{ site.dlr_android_api }}simplified-label-recognizer-settings.html#charactermodelname) | [`LabelRecognizerTaskSetting.CharacterModelName`]({{ site.dcv_parameters_reference }}label-recognizer-task-settings/character-model-name.html?lproduct=dlr&repoType=core){:target="_blank"} |
+| `maxThreadCount` | [`maxThreadsInOneTask`]({{ site.dlr_android_api }}simplified-label-recognizer-settings.html#maxthreadsinonetask) | [`LabelRecognizerTaskSetting.MaxThreadsInOneTask`]({{ site.dcv_parameters_reference }}label-recognizer-task-settings/max-threads-in-one-task.html?lproduct=dlr&repoType=core){:target="_blank"} |
 
 | FurtherModes Property | SimplifiedLabelRecognizerSettings Property | Template File Parameter |
 | ---------------------- | ----------------------------------------- | ----------------------- |
-| `grayscaleTransformationModes` | [`grayscaleTransformationModes`]({{ site.android_api }}simplified-label-recognizer-settings.html#grayscaletransformationmodes) | [`ImageParameter.GrayscaleTransformationModes`]({{ site.dcv_parameters_reference }}image-parameter/grayscale-enhancement-modes.html?lproduct=dlr&repoType=core){:target="_blank"} |
-| `grayscaleEnhancementModes` | [`grayscaleEnhancementModes`]({{ site.android_api }}simplified-label-recognizer-settings.html#grayscaleenhancementmodes) | [`ImageParameter.GrayscaleEnhancementModes`]({{ site.dcv_parameters_reference }}image-parameter/grayscale-transformation-modes.html?lproduct=dlr&repoType=core){:target="_blank"} |
+| `grayscaleTransformationModes` | [`grayscaleTransformationModes`]({{ site.dlr_android_api }}simplified-label-recognizer-settings.html#grayscaletransformationmodes) | [`ImageParameter.GrayscaleTransformationModes`]({{ site.dcv_parameters_reference }}image-parameter/grayscale-enhancement-modes.html?lproduct=dlr&repoType=core){:target="_blank"} |
+| `grayscaleEnhancementModes` | [`grayscaleEnhancementModes`]({{ site.dlr_android_api }}simplified-label-recognizer-settings.html#grayscaleenhancementmodes) | [`ImageParameter.GrayscaleEnhancementModes`]({{ site.dcv_parameters_reference }}image-parameter/grayscale-transformation-modes.html?lproduct=dlr&repoType=core){:target="_blank"} |
 
 #### Migrate to Template File
 
