@@ -5,7 +5,7 @@ description: The LabelRecognizerModule class defines general functions in the la
 keywords: label recognizer module, Android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: LabelRecognizerModule Class
+breadcrumbText: LabelRecognizerModule
 permalink: /programming/android/api-reference/label-recognizer-module.html
 ---
 

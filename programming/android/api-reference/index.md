@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Android API Reference - Main Page
-description: This is the main page of Dynamsoft Label Recognizer SDK API Reference for Android Language.
-keywords: label recognition, api reference, Android
+title: Dynamsoft Label Recognizer Android API Reference
+description: This is the index of Dynamsoft Label Recognizer Android API Reference.
+keywords: label recognizer, api reference, Android
 permalink: /programming/android/api-reference/index.html
 ---
 
