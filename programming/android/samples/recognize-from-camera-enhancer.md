@@ -46,16 +46,16 @@ If only one text line recognizing result is required in one scan, you can stop t
 ```java
 @Override
 public void onRecognizedTextLinesReceived(RecognizedTextLinesResult result) {
-    if (result != null && result.getItems() != null && result.getItems().length > 0){
-        runOnUiThread(() -> mRouter.stopCapturing());
-    }
+   if (result != null && result.getItems() != null && result.getItems().length > 0){
+          runOnUiThread(() -> mRouter.stopCapturing());
+   }
 }
 ```
 2. 
 ```kotlin
 override fun onRecognizedTextLinesReceived(result: RecognizedTextLinesResult) {
-    if (result?.items != null && result.items.isNotEmpty()) {
-        runOnUiThread { mRouter.stopCapturing() }
-    }
+   if (result?.items != null && result.items.isNotEmpty()) {
+          runOnUiThread { mRouter.stopCapturing() }
+   }
 }
 ```
