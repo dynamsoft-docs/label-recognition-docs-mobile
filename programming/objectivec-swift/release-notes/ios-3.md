@@ -4,7 +4,7 @@ title: iOS SDK Release Notes 3.x - Dynamsoft Label Recognizer
 description: This is the release notes page of Dynamsoft Label Recognizer for iOS SDK version 3.x.
 keywords: release notes, ios
 needAutoGenerateSidebar: false
-permalink: /programming/android/release-notes/ios-3.html
+permalink: /programming/objectivec-swift/release-notes/ios-3.html
 ---
 
 # DLR Release Notes - iOS 3.x

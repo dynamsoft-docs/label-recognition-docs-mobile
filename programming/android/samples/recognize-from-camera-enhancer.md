@@ -8,7 +8,7 @@ needAutoGenerateSidebar: true
 
 # RecognizeTextLinesWithCameraEnhancer
 
-This sample illustrates how to recognize text lines from the video streaming. In this sample, you can read how to use [`DynamsoftCameraEnhancer`]({{ site.dce_ios }}) to capture the video streaming.
+This sample illustrates how to recognize text lines from the video streaming. In this sample, you can read how to use [`DynamsoftCameraEnhancer`]({{ site.dce_android }}){:target="_blank"} to capture the video streaming.
 
 **View the sample code**
 
