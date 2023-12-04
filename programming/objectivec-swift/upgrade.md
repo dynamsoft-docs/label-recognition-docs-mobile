@@ -27,20 +27,25 @@ The Dynamsoft Label Recognizer SDK has been split into multiple libraries from t
   - `DynamsoftCore.xcframework`
   - `DynamsoftLicense.xcframework`
   - `DynamsoftCameraEnhancer.xcframework`(optional)
+  - `DynamsoftUtility.xcframework`(optional)
 
 - Remote Dependency(CocoaPods)
   update **Podfile**:
 
-    ```pod
-    target '{Your project name}' do
-    use_frameworks!
+   ```pod
+   target '{Your project name}' do
+      use_frameworks!
 
-    pod 'DynamsoftLabelRecognizer','3.0.20'
-    pod 'DynamsoftCaptureVisionRouter','2.0.21'
-    pod 'DynamsoftCameraEnhancer','4.0.1'
+      pod 'DynamsoftLabelRecognizer','3.0.20'
+      pod 'DynamsoftCaptureVisionRouter','2.0.21'
+      pod 'DynamsoftCore','3.0.20'
+      pod 'DynamsoftImageProcessing','2.0.21'
+      pod 'DynamsoftLicense','3.0.20'
+      pod 'DynamsoftCameraEnhancer','4.0.2'
+      pod 'DynamsoftUtility','1.0.21'
 
-    end
-    ```
+   end
+   ```
 
     >Note: Please view [user guide](user-guide.md#add-the-xcframeworks-via-cocoapods) for the correct version number.
 
