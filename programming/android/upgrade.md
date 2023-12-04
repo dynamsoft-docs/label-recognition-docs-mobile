@@ -27,6 +27,7 @@ The Dynamsoft Label Recognizer SDK has been split into multiple libraries from t
   - `DynamsoftCore.aar`
   - `DynamsoftLicense.aar`
   - `DynamsoftCameraEnhancer.aar`(optional)
+  - `DynamsoftUtility.aar`(optional)
 
     ```groovy
     dependencies {
@@ -41,7 +42,11 @@ The Dynamsoft Label Recognizer SDK has been split into multiple libraries from t
     dependencies {
         implementation 'com.dynamsoft:dynamsoftcapturevisionrouter:{version-number}'
         implementation 'com.dynamsoft:dynamsoftlabelrecognizer:{version-number}'
-        implementation 'com.dynamsoft:dynamsoftcameraenhancer:{version-number}' //optional
+        implementation 'com.dynamsoft:dynamsoftcameraenhancer:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftimageprocessing:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftcore:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftlicense:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftutility:{version-number}'
     }
     ```
 

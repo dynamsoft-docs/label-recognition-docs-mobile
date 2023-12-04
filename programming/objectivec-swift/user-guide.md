@@ -73,7 +73,11 @@ There are two ways to add the libraries into your project - **Manually** and **V
 
      pod 'DynamsoftLabelRecognizer','3.0.20'
      pod 'DynamsoftCaptureVisionRouter','2.0.21'
-     pod 'DynamsoftCameraEnhancer','4.0.1'
+     pod 'DynamsoftCore','3.0.20'
+     pod 'DynamsoftImageProcessing','2.0.21'
+     pod 'DynamsoftLicense','3.0.20'
+     pod 'DynamsoftCameraEnhancer','4.0.2'
+     pod 'DynamsoftUtility','1.0.21'
 
    end
    ```
