@@ -75,7 +75,7 @@ There are two ways to add the libraries into your project - **Manually** and **V
      pod 'DynamsoftCaptureVisionRouter','2.0.21'
      pod 'DynamsoftCore','3.0.20'
      pod 'DynamsoftImageProcessing','2.0.21'
-     pod 'DynamsoftLicense','3.0.20'
+     pod 'DynamsoftLicense','3.0.30'
      pod 'DynamsoftCameraEnhancer','4.0.2'
      pod 'DynamsoftUtility','1.0.21'
 

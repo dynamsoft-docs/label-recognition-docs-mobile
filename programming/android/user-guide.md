@@ -100,7 +100,7 @@ There are two ways to add the libraries into your project - **Manually** and **M
       implementation 'com.dynamsoft:dynamsoftlabelrecognizer:3.0.20'
       implementation 'com.dynamsoft:dynamsoftimageprocessing:2.0.21'
       implementation 'com.dynamsoft:dynamsoftcore:3.0.20'
-      implementation 'com.dynamsoft:dynamsoftlicense:3.0.20'
+      implementation 'com.dynamsoft:dynamsoftlicense:3.0.30'
       implementation 'com.dynamsoft:dynamsoftcameraenhancer:4.0.2'
       implementation 'com.dynamsoft:dynamsoftutility:1.0.21'
    }
