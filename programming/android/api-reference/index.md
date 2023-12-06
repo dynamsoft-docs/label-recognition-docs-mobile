@@ -80,7 +80,6 @@ permalink: /programming/android/api-reference/index.html
 - [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html)
 - [`ImageTag`]({{ site.dcv_android_api }}core/basic-structures/image-tag.html)
 - [`FileImageTag`]({{ site.dcv_android_api }}core/basic-structures/file-image-tag.html)
-- [`PDFReadingParameter`]({{ site.dcv_android_api }}core/basic-structures/pdf-reading-parameter.html)
 
 ## Modules
 
@@ -102,7 +101,6 @@ permalink: /programming/android/api-reference/index.html
 - [`ImageSourceState`]({{ site.dcv_enumerations}}core/image-source-state.html?src=android&&lang=android)
 - [`ImageTagType`]({{ site.dcv_enumerations}}core/image-tag-type.html?src=android&&lang=android)
 - [`IntermediateResultUnitType`]({{ site.dcv_enumerations}}core/intermediate-result-unit-type.html?src=android&&lang=android)
-- [`PDFReadingMode`]({{ site.dcv_enumerations}}core/pdf-reading-mode.html?src=android&&lang=android)
 - [`PresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?src=android&&lang=android)
 - [`RegionObjectElementType`]({{ site.dcv_enumerations}}core/region-object-element-type.html?src=android&&lang=android)
 - [`SectionType`]({{ site.dcv_enumerations}}core/section-type.html?src=android&&lang=android)

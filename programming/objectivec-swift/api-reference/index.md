@@ -80,7 +80,6 @@ permalink: /programming/objectivec-swift/api-reference/index.html
 - [`DSImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html)
 - [`DSImageTag`]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html)
 - [`DSFileImageTag`]({{ site.dcv_ios_api }}core/basic-structures/file-image-tag.html)
-- [`DSPDFReadingParameter`]({{ site.dcv_ios_api }}core/basic-structures/pdf-reading-parameter.html)
 
 ## Modules
 
@@ -102,7 +101,6 @@ permalink: /programming/objectivec-swift/api-reference/index.html
 - [`DSImageSourceState`]({{ site.dcv_enumerations}}core/image-source-state.html?src=objc,swift&&lang=objc,swift)
 - [`DSImageTagType`]({{ site.dcv_enumerations}}core/image-tag-type.html?src=objc,swift&&lang=objc,swift)
 - [`DSIntermediateResultUnitType`]({{ site.dcv_enumerations}}core/intermediate-result-unit-type.html?src=objc,swift&&lang=objc,swift)
-- [`DSPDFReadingMode`]({{ site.dcv_enumerations}}core/pdf-reading-mode.html?src=objc,swift&&lang=objc,swift)
 - [`DSDSPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?src=objc,swift&&lang=objc,swift)
 - [`DSRegionObjectElementType`]({{ site.dcv_enumerations}}core/region-object-element-type.html?src=objc,swift&&lang=objc,swift)
 - [`DSSectionType`]({{ site.dcv_enumerations}}core/section-type.html?src=objc,swift&&lang=objc,swift)
