@@ -13,7 +13,7 @@ The iOS Helloworld sample shows how to create the simplest video streaming text 
 
 View the sample:
 
-- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/Objective-C/HelloWorldObjC" target="_blank">HelloWorld (Objective-C)</a>
-- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/Swift/HelloWorldSwift" target="_blank">HelloWorld (Swift)</a>
+- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/v2.2.20/ios/Objective-C/HelloWorldObjC" target="_blank">HelloWorld (Objective-C)</a>
+- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/v2.2.20/ios/Swift/HelloWorldSwift" target="_blank">HelloWorld (Swift)</a>
 
 For more details about how to get started with Dynamsoft Label Recognizer, please view the [user guide](user-guide.md).
