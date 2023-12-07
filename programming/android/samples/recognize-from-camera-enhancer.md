@@ -12,8 +12,8 @@ This sample illustrates how to recognize text lines from the video streaming. In
 
 **View the sample code**
 
-* <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/main/android/HelloWorld/ReadTextLinesWithCameraEnhancer/" target="_blank">RecognizeTextLineWithCameraEnahcner Sample (Java)</a>
-* <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/main/android/HelloWorld/ReadTextLinesWithCameraEnhancerKt/" target="_blank">RecognizeTextLineWithCameraEnahcner Sample (Kotlin)</a>
+* <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/android/HelloWorld/ReadTextLinesWithCameraEnhancer/" target="_blank">RecognizeTextLineWithCameraEnahcner Sample (Java)</a>
+* <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/android/HelloWorld/ReadTextLinesWithCameraEnhancerKt/" target="_blank">RecognizeTextLineWithCameraEnahcner Sample (Kotlin)</a>
 
 There are some basic concepts that are helpful on understanding the SDK.
 

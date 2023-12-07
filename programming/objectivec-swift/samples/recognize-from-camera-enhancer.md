@@ -12,8 +12,8 @@ This sample illustrates how to recognize text lines from the video streaming. In
 
 **View the sample code**
 
-* <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancer/" target="_blank">RecognizeTextLineWithCameraEnahcner Sample (Swift)</a>
-* <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancerObjc/" target="_blank">RecognizeTextLineWithCameraEnahcner Sample (Objective-C)</a>
+* <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorld/ReadTextLinesWithCameraEnhancer/" target="_blank">RecognizeTextLineWithCameraEnahcner Sample (Swift)</a>
+* <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/HelloWorld/ReadTextLinesWithCameraEnhancerObjc/" target="_blank">RecognizeTextLineWithCameraEnahcner Sample (Objective-C)</a>
 
 There are some basic concepts that are helpful on understanding the SDK.
 
