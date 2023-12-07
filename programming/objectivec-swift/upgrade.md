@@ -12,7 +12,7 @@ permalink: /programming/objectivec-swift/upgrade.html
 
 ## From Version 2.x to 3.x
 
-Dynamsoft Label Recognizer SDK has been refactored to integrate with [`DynamsoftCaptureVision (DCV)`]({{ site.dcv_introduction }}) architecture. To upgrade from version 2.x or earlier to 3.x, we recommend you to follow the [User Guide](user-guide.md) and re-write your codes.
+Dynamsoft Label Recognizer SDK has been refactored to integrate with [`DynamsoftCaptureVision (DCV)`]({{ site.dcv_introduction }}){:target="_blank"} architecture. To upgrade from version 2.x or earlier to 3.x, we recommend you to follow the [User Guide](user-guide.md) and re-write your codes.
 
 ### Update the Libraries to 3.x Version
 
