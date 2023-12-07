@@ -11,6 +11,8 @@ permalink: /programming/objectivec-swift/api-reference/dlr-license-verification-
 
 # DLRLicenseVerificationDelegate
 
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v2.2.20.
+
 A delegate to handle callback when Dynamsoft License Server returns.
 
 ```objc

@@ -9,6 +9,8 @@ permalink: /programming/android/api-reference/label-recognition/recognizing-v1.0
 
 # Android API Reference - Recognizing
 
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v1.x.
+
 | Method               | Description |
 |----------------------|-------------|
   | [`recognizeByBuffer`](#recognizebybuffer) | Recognizes text from memory buffer containing image pixels in defined format. |

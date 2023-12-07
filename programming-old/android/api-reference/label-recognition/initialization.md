@@ -9,12 +9,14 @@ permalink: /programming/android/api-reference/label-recognition/initialization.h
 
 # Android API Reference - Initialization
 
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v1.x.
+
 | Method               | Description |
 |----------------------|-------------|
-  | [`LabelRecognition`](#labelrecognition) | Initialization of `LabelRecognition` object.|
-  | [`destroy`](#destroy) | Destroys an instance of `LabelRecognition` object.|   
-  | [`initLicense`](#initlicense) | Sets product key and activates the SDK. |
-  | [`initLicenseFromLTS`](#initlicensefromlts) | Initializes the label recognition license and connects to the specified server for online verification. |
+| [`LabelRecognition`](#labelrecognition-initialization) | Initialization of `LabelRecognition` object.|
+| [`destroy`](#destroy) | Destroys an instance of `LabelRecognition` object.|
+| [`initLicense`](#initlicense) | Sets product key and activates the SDK. |
+| [`initLicenseFromLTS`](#initlicensefromlts) | Initializes the label recognition license and connects to the specified server for online verification. |
 
   ---
 

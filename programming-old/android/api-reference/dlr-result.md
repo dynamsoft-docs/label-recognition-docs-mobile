@@ -11,6 +11,9 @@ permalink: /programming/android/api-reference/dlr-result.html
 
 
 # DLRResult
+
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v2.2.20.
+
 Stores the recognized result.
 
 ```java

@@ -5,9 +5,12 @@ description: This is a supplement to the user guide page of Dynamsoft Label Reco
 keywords: a, user guide supplement
 needAutoGenerateSidebar: true
 permalink: /programming/objectivec-swift/user-guide-code-snippets.html
+ignore: true
 ---
 
 #  Dynamsoft Label Recognizer - iOS User Guide Code Snippets
+
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v1.2.1.
 
 ## Load Photo from Photo Gallery and OCR
 The following code snippet showcases a simple application that contains three main components: an image viewer, a button to load a photo from the photo gallery, and another button to OCR the photo.

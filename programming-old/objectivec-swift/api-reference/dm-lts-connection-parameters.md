@@ -12,6 +12,8 @@ permalink: /programming/objectivec-swift/api-reference/dm-lts-connection-paramet
 
 # iDMDLSConnectionParameters
 
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v2.2.20.
+
 Defines a class to configure the parameters to connect to license tracking server.  
 
 ```objc

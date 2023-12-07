@@ -10,6 +10,8 @@ permalink: /programming/objectivec-swift/api-reference/class/index-v1.2.html
 
 # Dynamsoft Label Recognition - Classes
 
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v1.x.
+
 - [`iDMLTSConnectionParameters`](dm-lts-connection-parameters.md)
 - [`iDLRCharacterResult`](dlr-character-result.md)		
 - [`iDLRImageData`](dlr-image-data.md)		

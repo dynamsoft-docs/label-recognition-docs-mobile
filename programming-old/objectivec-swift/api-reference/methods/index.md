@@ -10,6 +10,8 @@ permalink: /programming/objectivec-swift/api-reference/methods/index.html
 
 # Dynamsoft Label Recognition - iOS Methods
 
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v1.x.
+
 ## General
    
   | Method               | Description |

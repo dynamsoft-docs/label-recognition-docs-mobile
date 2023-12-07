@@ -7,13 +7,22 @@ docHomePage: /label-recognition/docs/mobile/introduction/
 enumerations: /label-recognition/docs/core/parameters/enum/
 parameters-reference: /label-recognition/docs/core/parameters/reference/
 
-android: /label-recognition/docs/mobile/programming/android/
-android-api: /label-recognition/docs/mobile/programming/android/api-reference/
-android-release-notes: /label-recognition/docs/mobile/programming/android/release-notes/
+dlr_android: /label-recognition/docs/mobile/programming/android/
+dlr_android_api: /label-recognition/docs/mobile/programming/android/api-reference/
+dlr_android_release_notes: /label-recognition/docs/mobile/programming/android/release-notes/
 
-objectivec-swift: /label-recognition/docs/mobile/programming/objectivec-swift/
-objectivec-swift-api: /label-recognition/docs/mobile/programming/objectivec-swift/api-reference/
-objectivec-swift-release-notes: /label-recognition/docs/mobile/programming/objectivec-swift/release-notes/
+dlr_ios: /label-recognition/docs/mobile/programming/objectivec-swift/
+dlr_ios_api: /label-recognition/docs/mobile/programming/objectivec-swift/api-reference/
+dlr_ios_release_notes: /label-recognition/docs/mobile/programming/objectivec-swift/release-notes/
+
+dcv_android_api: /capture-vision/docs/mobile/programming/android/api-reference/
+dcv_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
+dcv_enumerations: /capture-vision/docs/core/enums/
+dcv_parameter_reference: /capture-vision/docs/core/parameters/reference/
+dcv_introduction: /capture-vision/docs/core/introduction/
+
+dce_ios: /camera-enhancer/docs/mobile/programming/ios/
+dce_android: /camera-enhancer/docs/mobile/programming/android/
 
 assets: /label-recognition/docs/mobile/assets/
 edit_icon: /label-recognition/docs/mobile/assets/img-icon/edit-icon.png

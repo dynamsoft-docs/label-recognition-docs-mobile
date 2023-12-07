@@ -9,6 +9,9 @@ permalink: /programming/android/api-reference/class/dlr-runtime-settings.html
 
 
 # DLRRuntimeSettings
+
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v1.x.
+
 Defines a struct to configure the text recognizer runtime settings. These settings control the text recognition process.
   
 

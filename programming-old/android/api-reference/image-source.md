@@ -11,6 +11,8 @@ permalink: /programming/android/api-reference/image-source.html
 
 # ImageSource
 
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v2.2.20.
+
 Interface for producers of images. It can be implemented by programmers to support other image sources, such as external cameras or image filesets.
 
 ```java

@@ -9,6 +9,8 @@ permalink: /programming/android/api-reference/label-recognition/settings.html
 
 # Android API Reference - Settings
 
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v1.x.
+
 | Method               | Description |
 |----------------------|-------------|
   | [`appendCharacterModelBuffer`](#appendcharactermodelbuffer) | Appends CharacterModel to the SDK object. |

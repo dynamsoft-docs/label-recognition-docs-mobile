@@ -12,6 +12,8 @@ permalink: /programming/android/api-reference/label-recognizer-exception.html
 
 # LabelRecognizerException
 
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v2.2.20.
+
 Exception for signalling label recognition errors.
   
 ```java

@@ -9,6 +9,8 @@ permalink: /programming/android/api-reference/label-recognition/general.html
 
 # Android API Reference - General
 
+> You are viewing a history document page of Dynamsoft Label Recognizer Android v1.x.
+
 | Method               | Description |
 |----------------------|-------------|
 | [`getVersion`](#getversion) | Returns the version number string for the SDK. |

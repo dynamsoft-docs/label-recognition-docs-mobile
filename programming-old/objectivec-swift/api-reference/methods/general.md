@@ -9,6 +9,8 @@ permalink: /programming/objectivec-swift/api-reference/methods/general.html
 
 # iOS API Reference - General
 
+> You are viewing a history document page of Dynamsoft Label Recognizer iOS v1.x.
+
 | Method               | Description |
 |----------------------|-------------|
 | [`getVersion`](#getversion) | Returns the version number string for the SDK. |
