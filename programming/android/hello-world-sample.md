@@ -13,6 +13,6 @@ The Android Helloworld sample shows how to create the simplest video streaming t
 
 View the sample:
 
-- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/android/HelloWorld" target="_blank">HelloWorld (Android)</a>
+- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/v2.2.20/android/HelloWorld" target="_blank">HelloWorld (Android)</a>
 
 For more details about how to get started with Dynamsoft Label Recognizer, please view the [user guide](user-guide.md).
