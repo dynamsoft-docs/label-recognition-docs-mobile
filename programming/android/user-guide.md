@@ -116,8 +116,8 @@ In this section, we are going to explain how to create a Hello World implementat
 >
 >- Android Studio 2022.3.1 is used here in this guide.
 >- You can get similar source code from
->    - <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/main/android/HelloWorld/ReadTextLinesWithCameraEnhancer" target="_blank">ReadTextLinesWithCameraEnhancer Sample (Java)</a>
->    - <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/main/android/HelloWorld/ReadTextLinesWithCameraEnhancerKt" target="_blank">ReadTextLinesWithCameraEnhancer Sample (Kotlin)</a>
+>    - <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/android/HelloWorld/ReadTextLinesWithCameraEnhancer" target="_blank">ReadTextLinesWithCameraEnhancer Sample (Java)</a>
+>    - <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/android/HelloWorld/ReadTextLinesWithCameraEnhancerKt" target="_blank">ReadTextLinesWithCameraEnhancer Sample (Kotlin)</a>
 
 ### Create a New Project
 

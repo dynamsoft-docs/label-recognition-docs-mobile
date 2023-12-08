@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Core iOS Class - iQuadrilateral
-description: This page shows the iQuadrilateral class of Dynamsoft Core for iOS SDK.
+description: This page shows the iQuadrilateral class of Dynamsoft Label Recognizer iOS Edition v1.x.
 keywords: iQuadrilateral, class, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
