@@ -431,5 +431,5 @@ class ViewController: UIViewController, CapturedResultReceiver {
 >Note:
 >
 >- You can get the source code of the HelloWord app from the following link
->- View the entire Objective-C source code from [ReadTextLinesWithCameraEnhancerObjc sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancerObjc/)
->- View the entire Swift source code from [ReadTextLinesWithCameraEnhancer sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancer/)
+>- View the entire Objective-C source code from [ReadTextLinesWithCameraEnhancerObjc sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/master/ios/HelloWorld/ReadTextLinesWithCameraEnhancerObjc/)
+>- View the entire Swift source code from [ReadTextLinesWithCameraEnhancer sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/master/ios/HelloWorld/ReadTextLinesWithCameraEnhancer/)
