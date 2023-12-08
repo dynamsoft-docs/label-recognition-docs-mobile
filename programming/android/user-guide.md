@@ -522,5 +522,5 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
 
 You can also download the full source code of all the steps above:
 
-- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/main/android/HelloWorld/ReadTextLinesWithCameraEnhancer" target="_blank">ReadTextLinesWithCameraEnhancer Sample (Java)</a>
-- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/main/android/HelloWorld/ReadTextLinesWithCameraEnhancerkt" target="_blank">ReadTextLinesWithCameraEnhancer Sample (Kotlin)</a>
+- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/android/HelloWorld/ReadTextLinesWithCameraEnhancer" target="_blank">ReadTextLinesWithCameraEnhancer Sample (Java)</a>
+- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/android/HelloWorld/ReadTextLinesWithCameraEnhancerKt" target="_blank">ReadTextLinesWithCameraEnhancer Sample (Kotlin)</a>
