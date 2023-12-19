@@ -98,8 +98,11 @@ There are two ways to add the libraries into your project - **Manually** and **M
    dependencies {
       implementation 'com.dynamsoft:dynamsoftcapturevisionrouter:2.0.21'
       implementation 'com.dynamsoft:dynamsoftlabelrecognizer:3.0.20'
-      implementation 'com.dynamsoft:dynamsoftcameraenhancer:4.0.1'
-      implementation 'com.dynamsoft:dynamsoftutility:1.0.20'
+      implementation 'com.dynamsoft:dynamsoftimageprocessing:2.0.21'
+      implementation 'com.dynamsoft:dynamsoftcore:3.0.20'
+      implementation 'com.dynamsoft:dynamsoftlicense:3.0.30'
+      implementation 'com.dynamsoft:dynamsoftcameraenhancer:4.0.2'
+      implementation 'com.dynamsoft:dynamsoftutility:1.0.21'
    }
    ```
 
@@ -111,8 +114,10 @@ In this section, we are going to explain how to create a Hello World implementat
 
 >Note:
 >
->- The following steps are completed in Android Studio 4.2.
->- You can download the complete source code of the [HelloWorld sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/android/HelloWorld).
+>- Android Studio 2022.3.1 is used here in this guide.
+>- You can get similar source code from
+>    - <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/android/HelloWorld/ReadTextLinesWithCameraEnhancer" target="_blank">ReadTextLinesWithCameraEnhancer Sample (Java)</a>
+>    - <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/android/HelloWorld/ReadTextLinesWithCameraEnhancerKt" target="_blank">ReadTextLinesWithCameraEnhancer Sample (Kotlin)</a>
 
 ### Create a New Project
 
@@ -517,5 +522,5 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
 
 You can also download the full source code of all the steps above:
 
-- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/main/android/HelloWorld/ReadTextLinesWithCameraEnhancer" target="_blank">ReadTextLinesWithCameraEnhancer Sample (Java)</a>
-- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/main/android/HelloWorld/ReadTextLinesWithCameraEnhancerkt" target="_blank">ReadTextLinesWithCameraEnhancer Sample (Kotlin)</a>
+- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/android/HelloWorld/ReadTextLinesWithCameraEnhancer" target="_blank">ReadTextLinesWithCameraEnhancer Sample (Java)</a>
+- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/android/HelloWorld/ReadTextLinesWithCameraEnhancerKt" target="_blank">ReadTextLinesWithCameraEnhancer Sample (Kotlin)</a>

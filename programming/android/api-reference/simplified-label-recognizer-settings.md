@@ -1,17 +1,17 @@
 ---
 layout: default-layout
-title: struct SimplifiedLabelRecognizerSettings - Dynamsoft Capture Vision C++ Edition API Reference
-description: This page shows the SimplifiedLabelRecognizerSettings struct of the CCaptureVisionRouter class of the Dynamsoft Capture Vision C++ Edition.
-keywords: struct, c++, SimplifiedLabelRecognizerSettings
+title: SimplifiedLabelRecognizerSettings - Dynamsoft Label Recognizer Android Edition API Reference
+description: The SimplifiedLabelRecognizerSettings contains label recognition setting of Dynamsoft Label Recognizer Android edition
+keywords: Android, SimplifiedLabelRecognizerSettings
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: CVR C++ SimplifiedLabelRecognizerSettings Struct
+breadcrumbText: SimplifiedLabelRecognizerSettings
 permalink: /programming/android/api-reference/simplified-label-recognizer-settings.html
 ---
 
 # SimplifiedLabelRecognizerSettings
 
-The `SimplifiedLabelRecognizerSettings` struct contains settings for label recognition. It is a sub-parameter of `SimplifiedCaptureVisionSettings`
+The `SimplifiedLabelRecognizerSettings` class contains settings for label recognition. It is a sub-parameter of `SimplifiedCaptureVisionSettings`
 
 ```java
 class SimplifiedLabelRecognizerSettings

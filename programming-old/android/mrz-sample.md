@@ -13,7 +13,7 @@ MRZScanner sample shows you how to develop with Dynamsoft Label Recognizer to cr
 
 View the sample:
 
-- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/android/MRZScanner" target="_blank">MRZScanner (Android)</a>
+- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/v2.2.20/android/MRZScanner" target="_blank">MRZScanner (Android)</a>
 
 In the MRZScanner sample, we include an additional library **MRZLib**, which is developed from Dynamsoft Label Recognizer. MRZ models or parameters are preset in the library. As a result, you don't need to add additional settings.
 

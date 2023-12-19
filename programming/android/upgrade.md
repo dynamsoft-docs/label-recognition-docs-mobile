@@ -12,7 +12,7 @@ permalink: /programming/android/upgrade.html
 
 ## From Version 2.x to 3.x
 
-Dynamsoft Label Recognizer SDK has been refactored to integrate with [`DynamsoftCaptureVision (DCV)`]({{ site.dcv_introduction }}) architecture. To upgrade from version 2.x or earlier to 3.x, we recommend you to follow the [User Guide](user-guide.md) and re-write your codes.
+Dynamsoft Label Recognizer SDK has been refactored to integrate with [`DynamsoftCaptureVision (DCV)`]({{ site.dcv_introduction }}){:target="_blank"} architecture. To upgrade from version 2.x or earlier to 3.x, we recommend you to follow the [User Guide](user-guide.md) and re-write your codes.
 
 ### Update the Libraries to 3.x Version
 
@@ -27,6 +27,7 @@ The Dynamsoft Label Recognizer SDK has been split into multiple libraries from t
   - `DynamsoftCore.aar`
   - `DynamsoftLicense.aar`
   - `DynamsoftCameraEnhancer.aar`(optional)
+  - `DynamsoftUtility.aar`(optional)
 
     ```groovy
     dependencies {
@@ -41,11 +42,15 @@ The Dynamsoft Label Recognizer SDK has been split into multiple libraries from t
     dependencies {
         implementation 'com.dynamsoft:dynamsoftcapturevisionrouter:{version-number}'
         implementation 'com.dynamsoft:dynamsoftlabelrecognizer:{version-number}'
-        implementation 'com.dynamsoft:dynamsoftcameraenhancer:{version-number}' //optional
+        implementation 'com.dynamsoft:dynamsoftcameraenhancer:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftimageprocessing:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftcore:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftlicense:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftutility:{version-number}'
     }
     ```
 
-    >Note: Please view [user guide](user-guide/user-guide.md#add-the-libraries-via-maven) for the correct version number.
+    >Note: Please view [user guide](user-guide.md#add-the-libraries-via-maven) for the correct version number.
 
 ### Update the License Activation Code
 
@@ -141,13 +146,13 @@ The following properties are replaced by similar properties under `SimplifiedLab
 
 | PublicRuntimeSettings Property | SimplifiedLabelRecognizerSettings Property | Template File Parameter |
 | ------------------------------- | ----------------------------------------- | ----------------------- |
-| `characterModelName` | [`characterModelName`]({{ site.android_api }}simplified-label-recognizer-settings.html#charactermodelname) | [`LabelRecognizerTaskSetting.CharacterModelName`]({{ site.dcv_parameters_reference }}label-recognizer-task-settings/character-model-name.html?lproduct=dlr&repoType=core){:target="_blank"} |
-| `maxThreadCount` | [`maxThreadsInOneTask`]({{ site.android_api }}simplified-label-recognizer-settings.html#maxthreadsinonetask) | [`LabelRecognizerTaskSetting.MaxThreadsInOneTask`]({{ site.dcv_parameters_reference }}label-recognizer-task-settings/max-threads-in-one-task.html?lproduct=dlr&repoType=core){:target="_blank"} |
+| `characterModelName` | [`characterModelName`]({{ site.dlr_android_api }}simplified-label-recognizer-settings.html#charactermodelname) | [`LabelRecognizerTaskSetting.CharacterModelName`]({{ site.dcv_parameters_reference }}label-recognizer-task-settings/character-model-name.html?lproduct=dlr&repoType=core){:target="_blank"} |
+| `maxThreadCount` | [`maxThreadsInOneTask`]({{ site.dlr_android_api }}simplified-label-recognizer-settings.html#maxthreadsinonetask) | [`LabelRecognizerTaskSetting.MaxThreadsInOneTask`]({{ site.dcv_parameters_reference }}label-recognizer-task-settings/max-threads-in-one-task.html?lproduct=dlr&repoType=core){:target="_blank"} |
 
 | FurtherModes Property | SimplifiedLabelRecognizerSettings Property | Template File Parameter |
 | ---------------------- | ----------------------------------------- | ----------------------- |
-| `grayscaleTransformationModes` | [`grayscaleTransformationModes`]({{ site.android_api }}simplified-label-recognizer-settings.html#grayscaletransformationmodes) | [`ImageParameter.GrayscaleTransformationModes`]({{ site.dcv_parameters_reference }}image-parameter/grayscale-enhancement-modes.html?lproduct=dlr&repoType=core){:target="_blank"} |
-| `grayscaleEnhancementModes` | [`grayscaleEnhancementModes`]({{ site.android_api }}simplified-label-recognizer-settings.html#grayscaleenhancementmodes) | [`ImageParameter.GrayscaleEnhancementModes`]({{ site.dcv_parameters_reference }}image-parameter/grayscale-transformation-modes.html?lproduct=dlr&repoType=core){:target="_blank"} |
+| `grayscaleTransformationModes` | [`grayscaleTransformationModes`]({{ site.dlr_android_api }}simplified-label-recognizer-settings.html#grayscaletransformationmodes) | [`ImageParameter.GrayscaleTransformationModes`]({{ site.dcv_parameters_reference }}image-parameter/grayscale-enhancement-modes.html?lproduct=dlr&repoType=core){:target="_blank"} |
+| `grayscaleEnhancementModes` | [`grayscaleEnhancementModes`]({{ site.dlr_android_api }}simplified-label-recognizer-settings.html#grayscaleenhancementmodes) | [`ImageParameter.GrayscaleEnhancementModes`]({{ site.dcv_parameters_reference }}image-parameter/grayscale-transformation-modes.html?lproduct=dlr&repoType=core){:target="_blank"} |
 
 #### Migrate to Template File
 

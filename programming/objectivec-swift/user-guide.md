@@ -76,7 +76,11 @@ There are two ways to add the libraries into your project - **Manually** and **V
 
      pod 'DynamsoftLabelRecognizer','3.0.20'
      pod 'DynamsoftCaptureVisionRouter','2.0.21'
-     pod 'DynamsoftCameraEnhancer','4.0.1'
+     pod 'DynamsoftCore','3.0.20'
+     pod 'DynamsoftImageProcessing','2.0.21'
+     pod 'DynamsoftLicense','3.0.30'
+     pod 'DynamsoftCameraEnhancer','4.0.2'
+     pod 'DynamsoftUtility','1.0.21'
 
    end
    ```
@@ -94,8 +98,8 @@ The following sample will demonstrate how to create a HelloWorld app for recogni
 >Note:
 >
 >- The following steps are completed in XCode 14.2
->- View the entire Objective-C source code from [ReadTextLinesWithCameraEnhancerObjc sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancerObjc/)
->- View the entire Swift source code from [ReadTextLinesWithCameraEnhancer sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancer/)
+>- View the entire Objective-C source code from [ReadTextLinesWithCameraEnhancerObjc sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/master/ios/HelloWorld/ReadTextLinesWithCameraEnhancerObjc/)
+>- View the entire Swift source code from [ReadTextLinesWithCameraEnhancer sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/master/ios/HelloWorld/ReadTextLinesWithCameraEnhancer/)
 
 ### Create a New Project
 
@@ -430,5 +434,5 @@ class ViewController: UIViewController, CapturedResultReceiver {
 >Note:
 >
 >- You can get the source code of the HelloWord app from the following link
->- View the entire Objective-C source code from [ReadTextLinesWithCameraEnhancerObjc sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancerObjc/)
->- View the entire Swift source code from [ReadTextLinesWithCameraEnhancer sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/main/ios/HelloWorld/ReadTextLinesWithCameraEnhancer/)
+>- View the entire Objective-C source code from [ReadTextLinesWithCameraEnhancerObjc sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/master/ios/HelloWorld/ReadTextLinesWithCameraEnhancerObjc/)
+>- View the entire Swift source code from [ReadTextLinesWithCameraEnhancer sample](https://github.com/Dynamsoft/label-recognizer-mobile-samples/blob/master/ios/HelloWorld/ReadTextLinesWithCameraEnhancer/)

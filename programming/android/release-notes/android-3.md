@@ -9,19 +9,8 @@ permalink: /programming/android/release-notes/android-3.html
 
 # DLR Release Notes - Android 3.x
 
-## 3.0.20 (09/29/2022)
+## 3.0.20 (12/07/2023)
 
-### New
+{%- include release-notes/product-highlight-3.0.0.md -%}
 
-* Added ...
-
-### Improved
-
-* Improved ...
-
-### Changed
-
-* Updated the dependency of DynamsoftCaptureVisionRouter to v2.0.20. View the [changes of DynamsoftCaptureVisionRouter v2.0.20]().
-* Updated the dependency of DynamsoftCore to v3.0.20. View the [changes of DynamsoftCore v3.0.20]().
-* Updated the dependency of DynamsoftImageProcessing to v3.0.20. View the [changes of DynamsoftImageProcessing v3.0.20]().
-* Updated the dependency of DynamsoftLicense to v2.0.20. View the [changes of DynamsoftLicense v2.0.20]().
+The APIs of Dynamsoft Label Recognizer are comprehensively updated. Please follow the view [upgrade instructions]{{ site.dlr_android }}upgrade.html to update your code.

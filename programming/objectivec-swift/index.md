@@ -16,9 +16,8 @@ permalink: /programming/objectivec-swift/index.html
 
 ## Samples
 
-- [Samples](samples.md)
-  - [HelloWorld](hello-world-sample.md)
-  - [MRZScanner](mrz-sample.md)
+- Samples
+  - [HelloWorld](samples/recognize-from-camera-enhancer.md)
 
 ## API Reference
 

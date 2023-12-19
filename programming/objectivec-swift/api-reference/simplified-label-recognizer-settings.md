@@ -1,17 +1,17 @@
 ---
 layout: default-layout
-title: struct DSSimplifiedLabelRecognizerSettings - Dynamsoft Capture Vision C++ Edition API Reference
-description: This page shows the DSSimplifiedLabelRecognizerSettings struct of the CCaptureVisionRouter class of the Dynamsoft Capture Vision C++ Edition.
-keywords: struct, c++, DSSimplifiedLabelRecognizerSettings
+title: Class DSSimplifiedLabelRecognizerSettings - Dynamsoft Label Recognizer iOS Edition API Reference
+description: The DSSimplifiedLabelRecognizerSettings class contains label recognition settings of Dynamsoft Label Recognizer iOS Edition.
+keywords: iOS, DSSimplifiedLabelRecognizerSettings
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: CVR C++ DSSimplifiedLabelRecognizerSettings Struct
+breadcrumbText: DSSimplifiedLabelRecognizerSettings
 permalink: /programming/objectivec-swift/api-reference/simplified-label-recognizer-settings.html
 ---
 
 # DSSimplifiedLabelRecognizerSettings
 
-The `DSSimplifiedLabelRecognizerSettings` struct contains settings for label recognition. It is a sub-parameter of `DSSimplifiedCaptureVisionSettings`
+The `DSSimplifiedLabelRecognizerSettings` class contains settings for label recognition. It is a sub-parameter of `DSSimplifiedCaptureVisionSettings`
 
 ## Definition
 

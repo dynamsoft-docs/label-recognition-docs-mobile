@@ -13,8 +13,8 @@ MRZScanner sample shows you how to develop with Dynamsoft Label Recognizer to cr
 
 View the samples:
 
-- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/Objective-C/MRZScannerObjC" target="_blank">MRZScanner (Objective-C)</a>
-- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/master/ios/Swift/MRZScannerSwift" target="_blank">MRZScanner (Swift)</a>
+- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/v2.2.20/ios/Objective-C/MRZScannerObjC" target="_blank">MRZScanner (Objective-C)</a>
+- <a href="https://github.com/Dynamsoft/label-recognizer-mobile-samples/tree/v2.2.20/ios/Swift/MRZScannerSwift" target="_blank">MRZScanner (Swift)</a>
 
 In the MRZScanner sample, we include an additional library **MRZRecognizer.framework**, which is developed from Dynamsoft Label Recognizer. MRZ models or parameters are preset in the library. As a result, you don't need to add additional settings.
 
