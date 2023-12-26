@@ -37,7 +37,7 @@ class RecognizedTextLinesResult
 
 ### getOriginalImageHashId
 
-Get the hash id of the source image. You can use this ID to get the source image via the [`IntermediateResultManager`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html) class.
+Get the hash id of the original image. You can use this ID to get the original image via the [`IntermediateResultManager`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html) class.
 
 ```java
 String getOriginalImageHashId();
@@ -49,7 +49,7 @@ Returns the hash ID of the original image as a string.
 
 ### getOriginalImageTag
 
-Get the [`ImageTag`]({{ site.dcv_android_api }}core/basic-structures/image-tag.html) of the source image. The image tag contains info about the image such as the image ID and the image capture distance mode.
+Get the [`ImageTag`]({{ site.dcv_android_api }}core/basic-structures/image-tag.html) of the original image. The image tag contains info about the image such as the image ID and the image capture distance mode.
 
 ```java
 ImageTag getOriginalImageTag();

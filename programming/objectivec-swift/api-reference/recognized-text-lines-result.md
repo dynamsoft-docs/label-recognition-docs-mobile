@@ -44,7 +44,7 @@ class RecognizedTextLinesResult: NSObject
 
 ### originalImageHashId
 
-The hash id of the source image. You can use this ID to get the source image via [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html) class.
+The hash id of the original image. You can use this ID to get the original image via [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html) class.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -61,7 +61,7 @@ var originalImageHashId: String? { get }
 
 ### originalImageTag
 
-Returns the [`ImageTag`]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html) of the source image. The image tag contains info about the image such as the image ID and the image capture distance mode.
+Returns the [`ImageTag`]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html) of the original image. The image tag contains info about the image such as the image ID and the image capture distance mode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -75,10 +75,6 @@ Returns the [`ImageTag`]({{ site.dcv_ios_api }}core/basic-structures/image-tag.h
 ```swift
 var originalImageTag: ImageTag? { get }
 ```
-
-**Return value**
-
-that contain the image extra info.
 
 ### items
 

@@ -12,7 +12,7 @@ permalink: /programming/objectivec-swift/api-reference/character-result.html
 
 # DSCharacterResult
 
-The `DSCharacterResult` class represents the result of a character recognition process. It contains the characters recognized (high, medium, and low confidence), their respective confidences, and the location of the character in a quadrilateral shape.
+The `DSCharacterResult` class represents the result of a character recognition process. It contains the characters recognized (high, medium, and low confidence), their respective confidences, and the location of each character in a quadrilateral shape.
 
 ## Definition
 
