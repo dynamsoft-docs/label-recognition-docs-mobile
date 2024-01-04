@@ -36,7 +36,7 @@ class RecognizedTextLinesResult: NSObject
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | [`originalImageHashId`](#originalimagehashid) | *NSString* | The hash ID of the original image. |
-| [`originalImageTag`](#originalimagetag) | *DSImageTag* | The tag of the original image stores in a [`DSImageTag`]({{ site.dcv_ios_api }}core/basic-structure/image-tag.html) object. |
+| [`originalImageTag`](#originalimagetag) | *DSImageTag* | The tag of the original image stores in a [`DSImageTag`]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html) object. |
 | [`items`](#items) | *NSArray<*DSTextLineResultItem*>* | All the text line result(s) that are recognized from the image in an array of [`DSTextLineResultItem`](text-line-result-item.md). |
 | [`rotationTransformMatrix`](#rotationtransformmatrix) | *CGAffineTransform* | The rotation transformation matrix of the original image relative to the rotated image.|
 | [`errorCode`](#errorcode) | *NSInteger* | The error code of the recognition result, if an error occurred. |

@@ -36,13 +36,13 @@ The Dynamsoft Label Recognizer (DLR) Android SDK comes with seven libraries:
 
    | File | Description |
    |---------|-------------|
-   | `DynamsoftCaptureVisionRouter.aar` | The Capture Vision Router library is used to interact with image-processing and semantic-processing products in the applications. It accepts an image source and returns processing results which may contain final results or intermediate results. |
-   | `DynamsoftLabelRecognizer.aar` | The Dynamsoft Label Recognizer library, which includes label localization and text recognition algorithm and related APIs. |
-   | `DynamsoftCore.aar` | The core library, which includes common basic structures and intermediate result related APIs. |
-   | `DynamsoftImageProcessing.aar` | The image processing library, which incorporates a collection of basic and specialized image processing algorithms.  |
-   | `DynamsoftLicense.aar` | The license library, which includes license related APIs. |
-   | `DynamsoftCameraEnhancer.aar`(Optional) | The <a href="/camera-enhancer/docs/mobile/programming/android/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. |
-   | `DynamsoftUtility.aar`(Optional) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc. |
+   | *DynamsoftCaptureVisionRouter.aar* | The Capture Vision Router library is used to interact with image-processing and semantic-processing products in the applications. It accepts an image source and returns processing results which may contain final results or intermediate results. |
+   | *DynamsoftLabelRecognizer.aar* | The Dynamsoft Label Recognizer library, which includes label localization and text recognition algorithm and related APIs. |
+   | *DynamsoftCore.aar* | The core library, which includes common basic structures and intermediate result related APIs. |
+   | *DynamsoftImageProcessing.aar* | The image processing library, which incorporates a collection of basic and specialized image processing algorithms.  |
+   | *DynamsoftLicense.aar* | The license library, which includes license related APIs. |
+   | *DynamsoftCameraEnhancer.aar (Optional)* | The <a href="/camera-enhancer/docs/mobile/programming/android/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. |
+   | *DynamsoftUtility.aar (Optional)* | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc. |
 
 There are two ways to add the libraries into your project - **Manually** and **Maven**.
 
@@ -58,9 +58,9 @@ There are two ways to add the libraries into your project - **Manually** and **M
    - **DynamsoftUtility.aar**
    - **DynamsoftCameraEnhancer.aar** (Optional)
 
-2. Copy the above seven **aar** files to the target directory such as `[App Project Root Path]\app\libs`
+2. Copy the above seven **aar** files to the target directory such as *[App Project Root Path]\app\libs*
 
-3. Open the file `[App Project Root Path]\app\build.gradle` and add the reference in the dependencies:
+3. Open the file *[App Project Root Path]\app\build.gradle* and add the reference in the dependencies:
 
    ```groovy
    dependencies {
@@ -82,7 +82,7 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
 ### Add the Libraries via Maven
 
-1. Open the file `[App Project Root Path]\app\build.gradle` and add the Maven repository:
+1. Open the file *[App Project Root Path]\app\build.gradle* and add the Maven repository:
 
    ```groovy
    repositories {

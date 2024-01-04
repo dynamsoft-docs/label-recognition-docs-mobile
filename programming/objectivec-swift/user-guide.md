@@ -38,19 +38,19 @@ The Dynamsoft Label Recognizer (DLR) iOS SDK comes with seven libraries:
 
 | File | Description |
 |---------|-------------|
-| `DynamsoftCaptureVisionRouter.xcframework` | The Capture Vision Router library is used to interact with image-processing and semantic-processing products in the applications. It accepts an image source and returns processing results which may contain final results or intermediate results. |
-| `DynamsoftLabelRecognizer.xcframework` | The Dynamsoft Label Recognizer library, which includes label localization and text recognition algorithm and related APIs. |
-| `DynamsoftCore.xcframework` | The core library, which includes common basic structures and intermediate result related APIs. |
-| `DynamsoftImageProcessing.xcframework` | The image processing library, which incorporates a collection of basic and specialized image processing algorithms.  |
-| `DynamsoftLicense.xcframework` | The license library, which includes license related APIs. |
-| `DynamsoftCameraEnhancer.xcframework`(Optional) | The <a href="/camera-enhancer/docs/mobile/programming/ios/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. |
-| `DynamsoftUtility.xcframework`(Optional) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc. |
+| *DynamsoftCaptureVisionRouter.xcframework* | The Capture Vision Router library is used to interact with image-processing and semantic-processing products in the applications. It accepts an image source and returns processing results which may contain final results or intermediate results. |
+| *DynamsoftLabelRecognizer.xcframework* | The Dynamsoft Label Recognizer library, which includes label localization and text recognition algorithm and related APIs. |
+| *DynamsoftCore.xcframework* | The core library, which includes common basic structures and intermediate result related APIs. |
+| *DynamsoftImageProcessing.xcframework* | The image processing library, which incorporates a collection of basic and specialized image processing algorithms.  |
+| *DynamsoftLicense.xcframework* | The license library, which includes license related APIs. |
+| *DynamsoftCameraEnhancer.xcframework (Optional)* | The <a href="/camera-enhancer/docs/mobile/programming/ios/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. |
+| *DynamsoftUtility.xcframework (Optional)* | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc. |
 
 There are two ways to add the libraries into your project - **Manually** and **Via the CocaPods**.
 
 ### Add the xcframeworks Manually
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, seven **xcframework** files can be found in the **\dynamsoft-label-recognizer-ios-{version number}\Dynamsoft\Frameworks** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, seven **xcframework** files can be found in the **Dynamsoft/Frameworks** directory: 
 
    * **DynamsoftCaptureVisionRouter.xcframework**
    * **DynamsoftLabelRecognizer.xcframework**
@@ -62,6 +62,8 @@ There are two ways to add the libraries into your project - **Manually** and **V
 
    > Note:
    > If you want to use AVFoundation camera library, or your own camera control library, please ignore **DynamsoftCameraEnhancer.xcframework** in the following steps. However, it is recommended to use **DynamsoftCameraEnhancer**.
+   > Inside the *Dynamsoft/Resources/Samples* folder, you will find the HelloWorld samples that you can use as reference when building your own application.
+   > You can rename the *Dynamsoft* folder to a name more specific to the Label Recognizer if you would like.
 
 2. Drag and drop the above **xcframeworks** into your Xcode project. Make sure to check Copy items if needed and create groups to copy the **xcframeworks** into your project's folder.
 3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for all the **xcframeworks**.
