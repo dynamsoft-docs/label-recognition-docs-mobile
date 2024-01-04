@@ -12,7 +12,7 @@ permalink: /programming/objectivec-swift/api-reference/text-line-result-item.htm
 
 # DSTextLineResultItem
 
-The `DSTextLineResultItem` class represents a text line result item recognized by the library. It is derived from `DSCapturedResultItem`.
+The `DSTextLineResultItem` class represents a single text line result item recognized by the library. It is derived from `DSCapturedResultItem` and is one of the base units of `DSRecognizedTextLinesResult`.
 
 ## Definition
 
@@ -44,7 +44,7 @@ class TextLineResultItem: CapturedResultItem
 
 ### text
 
-It is used to get the text content of the text line.
+Returns the text content of the individual text line.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -61,7 +61,7 @@ var text: String? { get }
 
 ### location
 
-It is used to get the location of the text line in the form of a quadrilateral.
+It is used to get the location of the text line in the form of a [DSQuadrilateral]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -78,7 +78,7 @@ var location: Quadrilateral? { get }
 
 ### confidence
 
-It is used to get the confidence of the text line recognition result.
+Returns the confidence of the individual text line recognition result.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -95,7 +95,7 @@ var confidence: Int { get }
 
 ### characterResults
 
-Get all the characters in the text line. Each character is represented by a [`CharacterResult`](character-result.md) object.
+Returns all the characters in the text line. Each character is represented by a [`CharacterResult`](character-result.md) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

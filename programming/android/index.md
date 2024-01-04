@@ -25,5 +25,6 @@ permalink: /programming/android/index.html
 
 ## Release Notes
 
-- [Version 2.x](release-notes/android-2.md)
-- [Version 1.x](release-notes/android-1.md)
+- [Version 3.x](release-notes/android-3.html)
+- [Version 2.x](release-notes/android-2.html)
+- [Version 1.x](release-notes/android-1.html)
