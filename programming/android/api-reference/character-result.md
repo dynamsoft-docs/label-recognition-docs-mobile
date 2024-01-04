@@ -12,7 +12,7 @@ permalink: /programming/android/api-reference/character-result.html
 
 # CharacterResult
 
-The `CharacterResult` class represents the result of a character recognition process. It contains the characters recognized (high, medium, and low confidence), their respective confidences, and the location of each character in a quadrilateral shape.
+The `CharacterResult` class represents the result of a character recognition process. It contains the characters recognized (high, medium, and low confidence), their respective confidences, and the location of the character in a quadrilateral shape.
 
 ## Definition
 
