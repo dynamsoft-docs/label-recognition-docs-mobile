@@ -12,7 +12,7 @@ permalink: /programming/android/api-reference/text-line-result-item.html
 
 # TextLineResultItem
 
-The `TextLineResultItem` class represents a text line result item recognized by the library. It is derived from `CapturedResultItem`.
+The `TextLineResultItem` class represents a single text line result item recognized by the library. It is derived from `CapturedResultItem` and is one of the base items of `RecognizedTextLinesResult`.
 
 ## Definition
 
@@ -37,7 +37,7 @@ class TextLineResultItem extends CapturedResultItem
 
 ### getText
 
-It is used to get the text content of the text line.
+Gets the text content of the individual text line.
 
 ```java
 String getText();
@@ -49,7 +49,7 @@ Returns the text content of the text line.
 
 ### getLocation
 
-It is used to get the location of the text line in the form of a quadrilateral.
+It is used to get the location of the text line in the form of a [Quadrilateral]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html).
 
 ```java
 Quadrilateral getLocation();
@@ -61,7 +61,7 @@ Returns the location of the text line in the form of a quadrilateral.
 
 ### getConfidence
 
-It is used to get the confidence of the text line recognition result.
+Gets the confidence of the individual text line recognition result.
 
 ```java
 int getConfidence();
@@ -73,7 +73,7 @@ Returns the confidence of the text line recognition result.
 
 ### getCharacterResults
 
-Get all the characters in the text line. Each character is represented by a [`CharacterResult`](character-result.md) object.
+Returns all the characters in the text line. Each character is represented by a [`CharacterResult`](character-result.md) object.
 
 ```java
 CharacterResult[] getCharacterResults();

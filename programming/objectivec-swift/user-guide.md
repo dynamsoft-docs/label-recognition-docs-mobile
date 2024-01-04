@@ -50,7 +50,7 @@ There are two ways to add the libraries into your project - **Manually** and **V
 
 ### Add the xcframeworks Manually
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, seven **xcframework** files can be found in the **\dynamsoft-label-recognizer-ios-{version number}\Dynamsoft\Frameworks** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/survey/dlr/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, seven **xcframework** files can be found in the **Dynamsoft/Frameworks** directory:
 
    - **DynamsoftCaptureVisionRouter.xcframework**
    - **DynamsoftLabelRecognizer.xcframework**
@@ -116,7 +116,7 @@ Add the SDK to your new project. Please read [Add the xcframeworks](#add-the-xcf
 
 ### Initialize the License
 
-1. Use the `LicenseManager` class and initialize the license in the file **AppDelegate**.
+1. Use the `LicenseManager` class and initialize the license in **AppDelegate**.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -159,7 +159,7 @@ Add the SDK to your new project. Please read [Add the xcframeworks](#add-the-xcf
 
 ### Initialize the Camera Module
 
-1. Go to the file **ViewController**, create the instances of CameraEnhancer and CameraView.
+1. Create the instances of CameraEnhancer and CameraView in **ViewController**.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -214,7 +214,7 @@ class ViewController: BaseViewController{
 
 ### Initialize the Capture Vision Router
 
-1. Create an instance of `CaptureVisionRouter`, bind it with the instance of `DynamsoftCameraEnhancer`.
+1. Create an instance of `CaptureVisionRouter` and bind it with the instance of `DynamsoftCameraEnhancer`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

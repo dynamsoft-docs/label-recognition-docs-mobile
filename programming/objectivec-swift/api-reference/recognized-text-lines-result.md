@@ -12,7 +12,7 @@ permalink: /programming/objectivec-swift/api-reference/recognized-text-lines-res
 
 # DSRecognizedTextLinesResult
 
-The `DSRecognizedTextLinesResult` class represents the result of a text recognition process. It provides access to information about the recognized text lines, the original image, and any errors that occurred during the recognition process.
+The `DSRecognizedTextLinesResult` class represents the overall result(s) of a text recognition process. It provides access to information about the recognized text lines, the original image, and any errors that occurred during the recognition process.
 
 ## Definition
 
@@ -76,10 +76,6 @@ The tag of the original image stores in a [`DSImageTag`]({{ site.dcv_ios_api }}c
 var originalImageTag: ImageTag? { get }
 ```
 
-**Return value**
-
-that contain the image extra info.
-
 ### items
 
 All the text line result items that recognized from the image in an array of [`DSTextLineResultItem`](text-line-result-item.md).
@@ -116,7 +112,7 @@ var rotationTransformMatrix: CGAffineTransform { get }
 
 ### errorCode
 
-The error code of the recognition result, if an error occurred.
+Returns the error code of this result should something go wrong.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -133,7 +129,7 @@ var errorCode: Int { get }
 
 ### errorMessage
 
-The error message of the recognition result, if an error occurred.
+Returns the error message of this result should something go wrong.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
