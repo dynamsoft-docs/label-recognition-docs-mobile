@@ -25,5 +25,6 @@ permalink: /programming/objectivec-swift/index.html
 
 ## Release Notes
 
+- [Version 3.x](release-notes/ios-3.md)
 - [Version 2.x](release-notes/ios-2.md)
 - [Version 1.x](release-notes/ios-1.md)

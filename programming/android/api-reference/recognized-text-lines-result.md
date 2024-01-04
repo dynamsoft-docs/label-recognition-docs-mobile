@@ -57,7 +57,7 @@ ImageTag getOriginalImageTag();
 
 **Return value**
 
-A [`ImageTag`]({{ site.dcv_android_api }}core/basic-structure/image-tag.html) object that contain the image extra info.
+A [`ImageTag`]({{ site.dcv_android_api }}core/basic-structures/image-tag.html) object that contain the image extra info.
 
 ### getItems
 
