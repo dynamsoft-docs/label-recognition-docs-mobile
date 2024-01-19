@@ -426,8 +426,7 @@ class ViewController: UIViewController, CapturedResultReceiver {
 
 ### Build and Run the Project
 
-1. Before deploying the project 
-2. Select the device that you want to run your app on.
+1. Before deploying the project, select the device that you want to run your app on.
 2. Run the project, then your app will be installed on your device.
 
 >Note:
