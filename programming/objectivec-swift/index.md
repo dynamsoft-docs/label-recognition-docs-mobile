@@ -12,19 +12,19 @@ permalink: /programming/objectivec-swift/index.html
 
 ## Getting Started
 
-- [User Guide](user-guide.md)
+- [User Guide](user-guide.html)
 
 ## Samples
 
 - Samples
-  - [HelloWorld](samples/recognize-from-camera-enhancer.md)
+  - [HelloWorld](samples/recognize-from-camera-enhancer.html)
 
 ## API Reference
 
-- [API Reference](api-reference/index.md)
+- [API Reference](api-reference/index.html)
 
 ## Release Notes
 
-- [Version 3.x](release-notes/ios-3.md)
-- [Version 2.x](release-notes/ios-2.md)
-- [Version 1.x](release-notes/ios-1.md)
+- [Version 3.x](release-notes/ios-3.html)
+- [Version 2.x](release-notes/ios-2.html)
+- [Version 1.x](release-notes/ios-1.html)
