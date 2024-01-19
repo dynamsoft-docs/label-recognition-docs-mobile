@@ -10,18 +10,17 @@ permalink: /programming/android/user-guide.html
 
 # Dynamsoft Label Recognizer - Android User Guide
 
-- [Dynamsoft Label Recognizer - Android User Guide](#dynamsoft-label-recognizer---android-user-guide)
-  - [Requirements](#requirements)
-  - [Add the Libraries](#add-the-libraries)
-    - [Add the Libraries Manually](#add-the-libraries-manually)
-    - [Add the Libraries via Maven](#add-the-libraries-via-maven)
-  - [Build Your First Application](#build-your-first-application)
-    - [Create a New Project](#create-a-new-project)
-    - [Include the Library](#include-the-library)
-    - [Initialize the License](#initialize-the-license)
-    - [Initialize Camera Module](#initialize-camera-module)
-    - [Initialize Capture Vision Router](#initialize-capture-vision-router)
-    - [Display Recognized Textline Results](#display-recognized-textline-results)
+- [Requirements](#requirements)
+- [Add the Libraries](#add-the-libraries)
+   - [Add the Libraries Manually](#add-the-libraries-manually)
+   - [Add the Libraries via Maven](#add-the-libraries-via-maven)
+- [Build Your First Application](#build-your-first-application)
+   - [Create a New Project](#create-a-new-project)
+   - [Include the Library](#include-the-library)
+   - [Initialize the License](#initialize-the-license)
+   - [Initialize Camera Module](#initialize-camera-module)
+   - [Initialize Capture Vision Router](#initialize-capture-vision-router)
+   - [Display Recognized Textline Results](#display-recognized-textline-results)
     - [Build and Run the Project](#build-and-run-the-project)
 
 ## Requirements
@@ -36,15 +35,15 @@ The Dynamsoft Label Recognizer (DLR) Android SDK comes with seven libraries:
 
    | File | Description |
    |---------|-------------|
-   | `DynamsoftCaptureVisionRouter.aar` | The Capture Vision Router library is used to interact with image-processing and semantic-processing products in the applications. It accepts an image source and returns processing results which may contain final results or intermediate results. |
-   | `DynamsoftLabelRecognizer.aar` | The Dynamsoft Label Recognizer library, which includes label localization and text recognition algorithm and related APIs. |
-   | `DynamsoftCore.aar` | The core library, which includes common basic structures and intermediate result related APIs. |
-   | `DynamsoftImageProcessing.aar` | The image processing library, which incorporates a collection of basic and specialized image processing algorithms.  |
-   | `DynamsoftLicense.aar` | The license library, which includes license related APIs. |
-   | `DynamsoftCameraEnhancer.aar`(Optional) | The <a href="/camera-enhancer/docs/mobile/programming/android/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. |
-   | `DynamsoftUtility.aar`(Optional) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc. |
+   | *DynamsoftCaptureVisionRouter.aar* | The Capture Vision Router library is used to interact with image-processing and semantic-processing products in the applications. It accepts an image source and returns processing results which may contain final results or intermediate results. |
+   | *DynamsoftLabelRecognizer.aar* | The Dynamsoft Label Recognizer library, which includes label localization and text recognition algorithm and related APIs. |
+   | *DynamsoftCore.aar* | The core library, which includes common basic structures and intermediate result related APIs. |
+   | *DynamsoftImageProcessing.aar* | The image processing library, which incorporates a collection of basic and specialized image processing algorithms.  |
+   | *DynamsoftLicense.aar* | The license library, which includes license related APIs. |
+   | *DynamsoftCameraEnhancer.aar* (Optional) | The <a href="/camera-enhancer/docs/mobile/programming/android/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. |
+   | *DynamsoftUtility.aar* (Optional) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc. |
 
-There are two ways to add the libraries into your project - **Manually** and **Maven**.
+There are two ways to add the libraries into your project - **Manually** or via **Maven**.
 
 ### Add the Libraries Manually
 
@@ -56,11 +55,11 @@ There are two ways to add the libraries into your project - **Manually** and **M
    - **DynamsoftImageProcessing.aar**
    - **DynamsoftLicense.aar**
    - **DynamsoftUtility.aar**
-   - **DynamsoftCameraEnhancer.aar** (Optional)
+   - **DynamsoftCameraEnhancer.aar**
 
-2. Copy the above seven **aar** files to the target directory such as `[App Project Root Path]\app\libs`
+2. Copy the above seven **aar** files to the target directory such as *[App Project Root Path]\app\libs*
 
-3. Open the file `[App Project Root Path]\app\build.gradle` and add the reference in the dependencies:
+3. Open the file *[App Project Root Path]\app\build.gradle* and add the reference in the dependencies:
 
    ```groovy
    dependencies {
@@ -82,7 +81,7 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
 ### Add the Libraries via Maven
 
-1. Open the file `[App Project Root Path]\app\build.gradle` and add the Maven repository:
+1. Open the file *[App Project Root Path]\app\build.gradle* and add the Maven repository:
 
    ```groovy
    repositories {
@@ -130,7 +129,7 @@ In this section, we are going to explain how to create a Hello World implementat
 
 ### Include the Library
 
-Add the SDK to your new project. Please read [Add the Libraries](#add-the-libraries) section for more details.
+To add the SDK to your new project, please read [add the libraries](#add-the-libraries) section for more details.
 
 ### Initialize the License
 
@@ -204,7 +203,7 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
         android:layout_height="match_parent"/>
     ```
 
-2. Import the dynamsoft camera module, initialize the camera view and bind to the created Camera Enhancer instance in the file `MainActivity.java`.
+2. Import the dynamsoft camera module, initialize the `CameraView` and bind to the created `CameraEnhancer` instance in the file `MainActivity.java`.
 
    <div class="sample-code-prefix"></div>
    >- Java
@@ -363,7 +362,7 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    }
    ```
 
-3. Override the `MainActivity.onResume` and `MainActivity.onPause` functions to start/stop video text recognition. After starting recognition, the sdk will automatically recognize text in video frames from the Camera Enhancer, then send the recognized textline results to the callback.
+3. Override the `MainActivity.onResume` and `MainActivity.onPause` functions to start and stop video text recognition, respectively. After starting recognition, the library will automatically recognize text in video frames from the Camera Enhancer, then send the recognized text line results to the callback.
 
    <div class="sample-code-prefix"></div>
    >- Java

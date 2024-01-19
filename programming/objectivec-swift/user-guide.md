@@ -10,27 +10,26 @@ permalink: /programming/objectivec-swift/user-guide.html
 
 # Dynamsoft Label Recognizer - iOS User Guide
 
-- [Dynamsoft Label Recognizer - iOS User Guide](#dynamsoft-label-recognizer---ios-user-guide)
-  - [Requirements](#requirements)
-  - [Add the xcframeworks](#add-the-xcframeworks)
-    - [Add the xcframeworks Manually](#add-the-xcframeworks-manually)
-    - [Add the xcframeworks via CocoaPods](#add-the-xcframeworks-via-cocoapods)
-  - [Build Your First Application](#build-your-first-application)
-    - [Create a New Project](#create-a-new-project)
-    - [Include the Library](#include-the-library)
-    - [Initialize the License](#initialize-the-license)
-    - [Initialize the Camera Module](#initialize-the-camera-module)
-    - [Initialize the Capture Vision Router](#initialize-the-capture-vision-router)
-    - [Receive the Text Line Recognition Results](#receive-the-text-line-recognition-results)
-    - [Display the Recognized Textline Results](#display-the-recognized-textline-results)
-    - [Configure viewWillAppear, viewDidLoad](#configure-viewwillappear-viewdidload)
-    - [Build and Run the Project](#build-and-run-the-project)
+- [Requirements](#requirements)
+- [Add the xcframeworks](#add-the-xcframeworks)
+   - [Add the xcframeworks Manually](#add-the-xcframeworks-manually)
+   - [Add the xcframeworks via CocoaPods](#add-the-xcframeworks-via-cocoapods)
+- [Build Your First Application](#build-your-first-application)
+   - [Create a New Project](#create-a-new-project)
+   - [Include the Library](#include-the-library)
+   - [Initialize the License](#initialize-the-license)
+   - [Initialize the Camera Module](#initialize-the-camera-module)
+   - [Initialize the Capture Vision Router](#initialize-the-capture-vision-router)
+   - [Receive the Text Line Recognition Results](#receive-the-text-line-recognition-results)
+   - [Display the Recognized Textline Results](#display-the-recognized-textline-results)
+   - [Configure viewWillAppear, viewDidLoad](#configure-viewwillappear-viewdidload)
+   - [Build and Run the Project](#build-and-run-the-project)
 
 ## Requirements
 
-- Supported OS: iOS 11 or higher (iOS 13 and higher recommended).
+- Supported OS: iOS 11+ (iOS 13+ recommended).
 - Supported ABI: arm64 and x86_64.
-- Development Environment: Xcode 13 and above (Xcode 14.1+ recommended).
+- Development Environment: Xcode 13+ (Xcode 14.1+ recommended).
 
 ## Add the xcframeworks
 
@@ -38,15 +37,15 @@ The Dynamsoft Label Recognizer (DLR) iOS SDK comes with seven libraries:
 
 | File | Description |
 |---------|-------------|
-| `DynamsoftCaptureVisionRouter.xcframework` | The Capture Vision Router library is used to interact with image-processing and semantic-processing products in the applications. It accepts an image source and returns processing results which may contain final results or intermediate results. |
-| `DynamsoftLabelRecognizer.xcframework` | The Dynamsoft Label Recognizer library, which includes label localization and text recognition algorithm and related APIs. |
-| `DynamsoftCore.xcframework` | The core library, which includes common basic structures and intermediate result related APIs. |
-| `DynamsoftImageProcessing.xcframework` | The image processing library, which incorporates a collection of basic and specialized image processing algorithms.  |
-| `DynamsoftLicense.xcframework` | The license library, which includes license related APIs. |
-| `DynamsoftCameraEnhancer.xcframework`(Optional) | The <a href="/camera-enhancer/docs/mobile/programming/ios/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. |
-| `DynamsoftUtility.xcframework`(Optional) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc. |
+| *DynamsoftCaptureVisionRouter.xcframework* | The Capture Vision Router library is used to interact with image-processing and semantic-processing products in the applications. It accepts an image source and returns processing results which may contain final results or intermediate results. |
+| *DynamsoftLabelRecognizer.xcframework* | The Dynamsoft Label Recognizer library, which includes label localization and text recognition algorithm and related APIs. |
+| *DynamsoftCore.xcframework* | The core library, which includes common basic structures and intermediate result related APIs. |
+| *DynamsoftImageProcessing.xcframework* | The image processing library, which incorporates a collection of basic and specialized image processing algorithms.  |
+| *DynamsoftLicense.xcframework* | The license library, which includes license related APIs. |
+| *DynamsoftCameraEnhancer.xcframework* (Optional) | The <a href="/camera-enhancer/docs/mobile/programming/ios/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. |
+| *DynamsoftUtility.xcframework* (Optional) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc. |
 
-There are two ways to add the libraries into your project - **Manually** and **Via the CocaPods**.
+There are two ways to add the libraries into your project - **Manually** or via **CocaPods**.
 
 ### Add the xcframeworks Manually
 
@@ -65,7 +64,7 @@ There are two ways to add the libraries into your project - **Manually** and **V
 
 ### Add the xcframeworks via CocoaPods
 
-1. Add the frameworks in your **Podfile**, replace `TargetName` with your real target name.
+1. Add the frameworks in your **Podfile**, replace *TargetName* with your real target name.
 
    ```pod
    target '{Your project name}' do
@@ -100,19 +99,19 @@ The following sample will demonstrate how to create a HelloWorld app for recogni
 
 ### Create a New Project
 
-1. Open XCode and select New Project… in the File > New > New Project… menu to create a new project.
+1. Open XCode and select *Create a new Xcode Project* or in the *File > New > Project* menu to create a new project.
 
 2. Select **iOS -> App** for your application.
 
 3. Input your product name (Helloworld), interface (StoryBoard) and language (Objective-C/Swift)
 
-4. Click on the **Next** button and select the location to save the project.
+4. Click on **Next** and select the location to save the project.
 
-5. Click on the **Create** button to finish.
+5. Click on **Create** to finish  creating the new project.
 
 ### Include the Library
 
-Add the SDK to your new project. Please read [Add the xcframeworks](#add-the-xcframeworks) section for more details.
+To add the SDK to your new project, please read [add the xcframeworks](#add-the-xcframeworks) section for more details.
 
 ### Initialize the License
 
@@ -159,7 +158,7 @@ Add the SDK to your new project. Please read [Add the xcframeworks](#add-the-xcf
 
 ### Initialize the Camera Module
 
-1. Create the instances of CameraEnhancer and CameraView in **ViewController**.
+1. Create the instances of `CameraEnhancer` and `CameraView` in **ViewController**.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -214,7 +213,7 @@ class ViewController: BaseViewController{
 
 ### Initialize the Capture Vision Router
 
-1. Create an instance of `CaptureVisionRouter` and bind it with the instance of `DynamsoftCameraEnhancer`.
+Create an instance of `CaptureVisionRouter` and bind it with the already created instance of `DynamsoftCameraEnhancer`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -245,7 +244,7 @@ class ViewController: BaseViewController{
 
 ### Receive the Text Line Recognition Results
 
-Setup result callback and start scanning.
+Set up result callback in order to receive the text line recognition results after the camera is opened and the scanning starts.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -302,7 +301,7 @@ class ViewController: UIViewController, CapturedResultReceiver {
 
 ### Display the Recognized Textline Results
 
-Create a text view to display the text line recognition results.
+Now that we created the result receiver, let's now create a text view to display the text line recognition results that's referenced in the result callback.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -357,6 +356,8 @@ class ViewController: UIViewController, CapturedResultReceiver {
 ```
 
 ### Configure viewWillAppear, viewDidLoad
+
+Time to configure these core functions that will connect everything together. All of the configuration code such as the *configureCVR* and *configureDCE* goes in *viewDidLoad*. While *viewWillAppear* contains the method that will open the camera and start scanning.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -425,7 +426,7 @@ class ViewController: UIViewController, CapturedResultReceiver {
 
 ### Build and Run the Project
 
-1. Select the device that you want to run your app on.
+1. Before deploying the project, select the device that you want to run your app on.
 2. Run the project, then your app will be installed on your device.
 
 >Note:
