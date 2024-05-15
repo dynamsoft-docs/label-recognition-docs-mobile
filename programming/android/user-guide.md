@@ -95,7 +95,7 @@ There are two ways to add the libraries into your project - **Manually** or via 
 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:dynamsoftlabelrecognizerbundle:3.2.2000'
+      implementation 'com.dynamsoft:dynamsoftlabelrecognizerbundle:3.2.3000'
    }
    ```
 

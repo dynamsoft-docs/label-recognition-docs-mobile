@@ -39,8 +39,6 @@ class SimplifiedLabelRecognizerSettings
 | [`maxThreadsInOneTask`](#maxthreadsinonetask) | *int* | Set the maximum available threads count in one label recognition task. |
 | [`scaleDownThreshold`](#scaledownthreshold) | *int* | Set the threshold for image shrinking when dealing with large images. |
 
-## Method Details
-
 ### toJSON
 
 Transform the current `SimplifiedLabelRecognizerSettings` object to a JSON string.
@@ -64,8 +62,6 @@ static SimplifiedLabelRecognizerSettings fromJSON(String jsonString);
 **Return Value**
 
 The generated `SimplifiedLabelRecognizerSettings` object.
-
-## Attribute Details
 
 ### grayscaleTransformationModes
 

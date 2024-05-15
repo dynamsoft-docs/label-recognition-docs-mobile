@@ -70,7 +70,7 @@ There are two ways to add the libraries into your project - **Manually** or via 
    target '{Your project name}' do
      use_frameworks!
 
-     pod 'DynamsoftLabelRecognizer','3.2.2000'
+     pod 'DynamsoftLabelRecognizer','3.2.3000'
 
    end
    ```
