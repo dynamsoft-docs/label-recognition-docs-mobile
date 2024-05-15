@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: LocalizedTextLineElement - Dynamsoft Label Recognizer Android Edition
-description: The class LocalizedTextLineElement of Dynamsoft Label Recognizer represents a localized text line element.
+description: The class LocalizedTextLineElement of Dynamsoft Label Recognizer Android edition represents a localized text line element.
 keywords: Localized text line element
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -26,16 +26,27 @@ class LocalizedTextLineElement extends RegionObjectElement
 
 *Inheritance:* [RegionObjectElement]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) -> LocalizedTextLineElement
 
-## Methods Summary
+## Methods
 
 | Method | Description |
 | ------ | ----------- |
-| [`getCharacterQuads`](#getcharacterquads) | Gets the quadrilaterals of all characters in the text line. |
-| [`getRowNumber`](#getrownumber) | Gets the row number of the text line. |
+| [`getCharacterQuads`](#getcharacterquads) | Returns the `Quadrilaterals` for each character in the text line. |
+| [`getRowNumber`](#getrownumber) | Returns the row number of the text line, starting from 1. |
+
+The following methods are inherited from the `RegionObjectElement` class:
+
+| Method | Description |
+|------- |-------------|
+| [`getLocation`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#getlocation) | Returns the location of the region object, represented as a quadrilateral. |
+| [`setLocation`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#setlocation) | Sets the location of the region object. |
+| [`getReferencedElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#getreferencedelement) | Returns the referenced element that supports the capturing of this element. |
+| [`getRegionObjectElementType`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | Returns the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcv_enumerations }}core/region-object-element-type.html?lang=objc,swift). |
+
+
 
 ### getCharacterQuads
 
-Gets the quadrilaterals of all characters in the text line.
+Returns the `Quadrilaterals` for each character in the text line.
 
 ```java
 Quadrilateral[] getCharacterQuads()
@@ -43,11 +54,11 @@ Quadrilateral[] getCharacterQuads()
 
 **Return value**
 
-Returns an array of quadrilaterals.
+The `Quadrilaterals` for each character in the text line.
 
 ### getRowNumber
 
-Gets the row number of the text line.
+Returns the row number of the text line, starting from 1.
 
 ```java
 int getRowNumber()
@@ -55,4 +66,4 @@ int getRowNumber()
 
 **Return value**
 
-Returns the row number of the text line.
+The row number of the text line.

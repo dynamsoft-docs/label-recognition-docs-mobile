@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSCharacterResult - Dynamsoft Label Recognizer iOS Edition
-description: The class DSCharacterResult of Dynamsoft Label Recognizer represents the result of a character recognition process.
+description: The class DSCharacterResult of Dynamsoft Label Recognizer iOS edition represents the result of a character recognition process.
 keywords: Character result
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -31,14 +31,14 @@ The `DSCharacterResult` class represents the result of a character recognition p
 class CharacterResult: NSObject
 ```
 
-## Property Summary
+## Properties
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | [`characterH`](#characterh) | *unichar* | The character with high confidence. |
 | [`characterM`](#characterm) | *unichar* | The character with medium confidence. |
 | [`characterL`](#characterl) | *unichar* | The character with low confidence. |
-| [`location`](#location) | *Quadrilateral* | The location of the character in a quadrilateral shape. |
+| [`location`](#location) | *DSQuadrilateral \** | The location of the character in a quadrilateral shape. |
 | [`characterHConfidence`](#characterhconfidence) | *NSInteger* | The confidence of the character with high confidence. |
 | [`characterMConfidence`](#charactermconfidence) | *NSInteger* | The confidence of the character with medium confidence. |
 | [`characterLConfidence`](#characterlconfidence) | *NSInteger* | The confidence of the character with low confidence. |

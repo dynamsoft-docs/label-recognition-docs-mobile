@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSLocalizedTextLineElement - Dynamsoft Label Recognizer iOS Edition
-description: The class DSLocalizedTextLineElement of Dynamsoft Label Recognizer represents a localized text line element.
+description: The class DSLocalizedTextLineElement of Dynamsoft Label Recognizer iOS edition represents a localized text line element.
 keywords: Localized text line element
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -33,11 +33,11 @@ class LocalizedTextLineElement: RegionObjectElement
 
 *Inheritance:* [DSRegionObjectElement]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html) -> DSLocalizedTextLineElement
 
-## Property Summary
+## Properties
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| [`characterQuads`](#characterquads) | *NSArray<*DSQuadrilateral*>* | The quadrilaterals of all characters in the text line. |
+| [`characterQuads`](#characterquads) | *NSArray<DSQuadrilateral \*> \** | The quadrilaterals of all characters in the text line. |
 | [`rowNumber`](#rownumber) | *NSInteger* | The row number of the text line. |
 
 ### characterQuads

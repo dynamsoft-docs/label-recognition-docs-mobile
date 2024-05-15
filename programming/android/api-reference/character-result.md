@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: CharacterResult - Dynamsoft Label Recognizer Android Edition
-description: The class CharacterResult of Dynamsoft Label Recognizer represents the result of a character recognition process.
+description: The class CharacterResult of Dynamsoft Label Recognizer Android edition represents the result of a character recognition process.
 keywords: Character result
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -24,21 +24,21 @@ The `CharacterResult` class represents the result of a character recognition pro
 class CharacterResult
 ```
 
-## Methods Summary
+## Methods
 
 | Method | Description |
 | ------ | ----------- |
-| [`getCharacterH`](#getcharacterh) | Get the character with high confidence. |
-| [`getCharacterM`](#getcharacterm) | Get the character with medium confidence. |
-| [`getCharacterL`](#getcharacterl) | Get the character with low confidence. |
-| [`getLocation`](#getlocation) | Get the location of the character in a quadrilateral shape. |
-| [`getCharacterHConfidence`](#getcharacterhconfidence) | Get the confidence of the character with high confidence. |
-| [`getCharacterMConfidence`](#getcharactermconfidence) | Get the confidence of the character with medium confidence. |
-| [`getCharacterLConfidence`](#getcharacterlconfidence) | Get the confidence of the character with low confidence. |
+| [`getCharacterH`](#getcharacterh) | Returns the highest confidence character recognized. |
+| [`getCharacterM`](#getcharacterm) | Returns the medium confidence character recognized. |
+| [`getCharacterL`](#getcharacterl) | Returns the lowest confidence character recognized. |
+| [`getLocation`](#getlocation) | Returns the location of the recognized character within the image.  |
+| [`getCharacterHConfidence`](#getcharacterhconfidence) | Returns the confidence score for the highest confidence character. |
+| [`getCharacterMConfidence`](#getcharactermconfidence) | Returns the confidence score for the medium confidence character. |
+| [`getCharacterLConfidence`](#getcharacterlconfidence) | Returns the confidence score for the lowest confidence character. |
 
 ### getCharacterH
 
-Get the character with high confidence.
+Returns the highest confidence character recognized.
 
 ```java
 char getCharacterH();
@@ -46,7 +46,7 @@ char getCharacterH();
 
 ### getCharacterM
 
-Get the character with medium confidence.
+Returns the medium confidence character recognized.
 
 ```java
 char getCharacterM();
@@ -54,7 +54,7 @@ char getCharacterM();
 
 ### getCharacterL
 
-Get the character with low confidence.
+Returns the lowest confidence character recognized.
 
 ```java
 char getCharacterL();
@@ -62,7 +62,7 @@ char getCharacterL();
 
 ### getLocation
 
-Get the location of the character in a quadrilateral shape.
+Returns the location of the recognized character within the image.
 
 ```java
 Quadrilateral getLocation();
@@ -70,7 +70,7 @@ Quadrilateral getLocation();
 
 ### getCharacterHConfidence
 
-Get the confidence of the character with high confidence.
+Returns the confidence score for the highest confidence character.
 
 ```java
 int getCharacterHConfidence();
@@ -78,7 +78,7 @@ int getCharacterHConfidence();
 
 ### getCharacterMConfidence
 
-Get the confidence of the character with medium confidence.
+Returns the confidence score for the medium confidence character.
 
 ```java
 int characterMConfidence();
@@ -86,7 +86,7 @@ int characterMConfidence();
 
 ### getCharacterLConfidence
 
-Get the confidence of the character with low confidence.
+Returns the confidence score for the lowest confidence character.
 
 ```java
 int characterLConfidence();

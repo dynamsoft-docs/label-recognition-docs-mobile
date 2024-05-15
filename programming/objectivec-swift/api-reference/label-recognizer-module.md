@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSLabelRecognizerModule - Dynamsoft Label Recognizer iOS Edition
-description: The DSLabelRecognizerModule class defines general functions in the label recognizer module.
+description: The DSLabelRecognizerModule class of Dynamsoft Label Recognizer iOS edition defines general functions in the label recognizer module.
 keywords: label recognizer module, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -30,13 +30,13 @@ The `DSLabelRecognizerModule` class defines general functions in the label recog
 class LabelRecognizerModule: NSObject
 ```
 
-## Methods Summary
+## Methods
 
 | Method | Description |
 | ------ | ----------- |
 | [getVersion](#getversion) | Get the version of the label recognizer module. |
 
-## getVersion
+### getVersion
 
 Get the version of the label recognizer module.
 

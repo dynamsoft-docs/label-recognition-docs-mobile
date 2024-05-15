@@ -7,6 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: DSTextLineResultItem
+permalink: /programming/objectivec-swift/api-reference/text-line-result-item-v3.0.20.html
 ---
 
 # DSTextLineResultItem
@@ -36,11 +37,10 @@ class TextLineResultItem: CapturedResultItem
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| [`text`](#text) | *NSString \** | The text content of the text line. |
-| [`location`](#location) | *DSQuadrilateral \** | The location of the text line in the form of a quadrilateral. |
+| [`text`](#text) | *NSString* | The text content of the text line. |
+| [`location`](#location) | *DSQuadrilateral* | The location of the text line in the form of a quadrilateral. |
 | [`confidence`](#confidence) | *NSInteger* | The confidence of the text line recognition result. |
-| [`characterResults`](#characterresults) | *NSArray<DSCharacterResult \*> \** | All the characters in the text line. Each character is represented by a [`CharacterResult`](character-result.md) object. |
-| [`specificationName`](#specificationname) | *NSString \** | the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`. |
+| [`characterResults`](#characterresults) | *NSArray<*DSCharacterResult*>* | All the characters in the text line. Each character is represented by a [`CharacterResult`](character-result.md) object. |
 
 ### text
 
@@ -108,21 +108,4 @@ Returns all the characters in the text line. Each character is represented by a 
 2. 
 ```swift
 var charResult: [CharacterResult]? { get }
-```
-
-### specificationName
-
-The name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, readonly, assign) NSString* specificationName;
-```
-2. 
-```swift
-var specificationName: String { get }
 ```

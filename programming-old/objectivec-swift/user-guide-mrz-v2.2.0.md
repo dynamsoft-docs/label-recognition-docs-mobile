@@ -5,7 +5,7 @@ description: This is the user guide page of Dynamsoft MRZ Recognizer for iOS SDK
 keywords: iOS, swift, objective-c, user guide
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /programming/objectivec-swift/user-guide-mrz-v2.2.20.html
+permalink: /programming/objectivec-swift/user-guide-mrz-v2.2.0.html
 ---
 
 # MRZ Scanner Solution for iOS - User Guide
