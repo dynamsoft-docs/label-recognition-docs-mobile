@@ -38,8 +38,8 @@ dnt_icon: /label-recognition/docs/mobile/assets/img-icon/icon-dnt.svg
 
 dcp_android: /code-parser/docs/mobile/programming/android/
 dcp_android_api: /code-parser/docs/mobile/programming/android/api-reference/
-dcp_ios: /code-parser/docs/mobile/programming/objectivec-swift/
-dcp_ios_api: /code-parser/docs/mobile/programming/objectivec-swift/api-reference/
+dcp_ios: /code-parser/docs/mobile/programming/ios/
+dcp_ios_api: /code-parser/docs/mobile/programming/ios/api-reference/
 
 
 useVersionTree: true
