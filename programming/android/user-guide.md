@@ -39,6 +39,7 @@ The Dynamsoft Label Recognizer (DLR) Android SDK comes with seven libraries:
    | *DynamsoftLabelRecognizer.aar* | The Dynamsoft Label Recognizer library, which includes label localization and text recognition algorithm and related APIs. |
    | *DynamsoftCore.aar* | The core library, which includes common basic structures and intermediate result related APIs. |
    | *DynamsoftImageProcessing.aar* | The image processing library, which incorporates a collection of basic and specialized image processing algorithms.  |
+   | *DynamsoftNeuralNetwork.aar* | The library includes deep neural network algorithms. |
    | *DynamsoftLicense.aar* | The license library, which includes license related APIs. |
    | *DynamsoftCameraEnhancer.aar* (Optional) | The <a href="/camera-enhancer/docs/mobile/programming/android/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. |
    | *DynamsoftUtility.aar* (Optional) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc. |
