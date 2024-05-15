@@ -7,7 +7,6 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: TextLineResultItem
-permalink: /programming/android/api-reference/text-line-result-item.html
 ---
 
 # TextLineResultItem

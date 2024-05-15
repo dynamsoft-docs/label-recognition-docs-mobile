@@ -3,7 +3,6 @@ layout: default-layout
 title: Dynamsoft Label Recognizer iOS API Reference - Main Page
 description: This is the main page of Dynamsoft Label Recognizer SDK API Reference for iOS Language.
 keywords: Label Recognizer, api reference, iOS
-permalink: /programming/ios/api-reference/index.html
 ---
 
 # SDK Overview: Modules and Main APIs

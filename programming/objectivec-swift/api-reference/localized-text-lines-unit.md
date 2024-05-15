@@ -7,7 +7,6 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: DSLocalizedTextLinesUnit
-permalink: /programming/objectivec-swift/api-reference/localized-text-lines-unit.html
 ---
 
 # DSLocalizedTextLinesUnit

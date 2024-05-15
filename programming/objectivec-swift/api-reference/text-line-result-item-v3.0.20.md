@@ -7,7 +7,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: DSTextLineResultItem
-permalink: /programming/objectivec-swift/api-reference/text-line-result-item.html
+permalink: /programming/objectivec-swift/api-reference/text-line-result-item-v3.0.20.html
 ---
 
 # DSTextLineResultItem

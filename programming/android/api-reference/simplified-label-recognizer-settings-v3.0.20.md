@@ -6,7 +6,7 @@ keywords: Android, SimplifiedLabelRecognizerSettings
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: SimplifiedLabelRecognizerSettings
-permalink: /programming/android/api-reference/simplified-label-recognizer-settings.html
+permalink: /programming/android/api-reference/simplified-label-recognizer-settings-v3.0.20.html
 ---
 
 # SimplifiedLabelRecognizerSettings

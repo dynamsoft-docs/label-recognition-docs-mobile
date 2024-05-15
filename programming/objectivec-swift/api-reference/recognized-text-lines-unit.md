@@ -7,7 +7,6 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: DSRecognizedTextLinesUnit
-permalink: /programming/objectivec-swift/api-reference/recognized-text-lines-unit.html
 ---
 
 # DSRecognizedTextLinesUnit

@@ -9,7 +9,7 @@ permalink: /programming/android/release-notes/android-3.html
 
 # DLR Release Notes - Android 3.x
 
-## 2.2.30 (05/15/2024)
+## 3.2.30 (05/15/2024)
 
 ### Highlights
 
