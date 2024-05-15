@@ -5,7 +5,7 @@ description: Follow the upgrade instructions to learn to upgrade Label Recognize
 keywords: updates guide, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /programming/objectivec-swift/upgrade.html
+permalink: /programming/objectivec-swift/upgrade-v3.0.20.html
 ---
 
 # How to Upgrade
@@ -36,7 +36,13 @@ The Dynamsoft Label Recognizer SDK has been split into multiple libraries from t
    target '{Your project name}' do
       use_frameworks!
 
-     pod 'DynamsoftLabelRecognizerBundle','3.2.3000'
+      pod 'DynamsoftLabelRecognizer','3.0.20'
+      pod 'DynamsoftCaptureVisionRouter','2.0.21'
+      pod 'DynamsoftCore','3.0.20'
+      pod 'DynamsoftImageProcessing','2.0.21'
+      pod 'DynamsoftLicense','3.0.30'
+      pod 'DynamsoftCameraEnhancer','4.0.2'
+      pod 'DynamsoftUtility','1.0.21'
 
    end
    ```

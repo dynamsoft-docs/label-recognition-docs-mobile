@@ -5,6 +5,7 @@ description: Follow the upgrade instructions to learn to upgrade Label Recognize
 keywords: updates guide, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+permalink: /programming/android/upgrade-v3.0.20.html
 ---
 
 # How to Upgrade
@@ -39,7 +40,13 @@ The Dynamsoft Label Recognizer SDK has been split into multiple libraries from t
 
     ```groovy
     dependencies {
-       implementation 'com.dynamsoft:dynamsoftlabelrecognizerbundle:3.2.3000'
+        implementation 'com.dynamsoft:dynamsoftcapturevisionrouter:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftlabelrecognizer:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftcameraenhancer:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftimageprocessing:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftcore:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftlicense:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftutility:{version-number}'
     }
     ```
 
