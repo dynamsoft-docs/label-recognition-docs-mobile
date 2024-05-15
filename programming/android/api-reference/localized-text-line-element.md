@@ -42,7 +42,7 @@ The following methods are inherited from the `RegionObjectElement` class:
 | [`getReferencedElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#getreferencedelement) | Returns the referenced element that supports the capturing of this element. |
 | [`getRegionObjectElementType`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | Returns the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcv_enumerations }}core/region-object-element-type.html?lang=objc,swift). |
 
-## Method Details
+
 
 ### getCharacterQuads
 
