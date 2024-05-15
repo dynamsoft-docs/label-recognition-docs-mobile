@@ -41,7 +41,7 @@ The Dynamsoft Label Recognizer (DLR) iOS SDK comes with seven libraries:
 | *DynamsoftLabelRecognizer.xcframework* | The Dynamsoft Label Recognizer library, which includes label localization and text recognition algorithm and related APIs. |
 | *DynamsoftCore.xcframework* | The core library, which includes common basic structures and intermediate result related APIs. |
 | *DynamsoftImageProcessing.xcframework* | The image processing library, which incorporates a collection of basic and specialized image processing algorithms.  |
-| *DynamsoftNeuralNetwork.xcframework* | The library includes deep neural network algorithms.  |
+| *DynamsoftNeuralNetwork.xcframework* | The library includes deep neural network algorithms. |
 | *DynamsoftLicense.xcframework* | The license library, which includes license related APIs. |
 | *DynamsoftCameraEnhancer.xcframework* (Optional) | The <a href="/camera-enhancer/docs/mobile/programming/ios/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. |
 | *DynamsoftUtility.xcframework* (Optional) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc. |
