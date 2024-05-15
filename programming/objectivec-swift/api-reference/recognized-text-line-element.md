@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSRecognizedTextLineElement - Dynamsoft Label Recognizer iOS Edition
-description: The class DSRecognizedTextLineElement of Dynamsoft Label Recognizer represents a line of recognized text in an image.
+description: The class DSRecognizedTextLineElement of Dynamsoft Label Recognizer iOS edition represents a line of recognized text in an image.
 keywords: Recognized text line element
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -33,35 +33,20 @@ class RecognizedTextLineElement: RegionObjectElement
 
 *Inheritance:* [DSRegionObjectElement]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html) -> DSRecognizedTextLineElement
 
-## Property Summary
+## Methods
 
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| [`text`](#text) | *NSString* | The recognized text. |
-| [`confidence`](#confidence) | *NSInteger* | The confidence level of the recognized text. |
-| [`characterResults`](#characterresults) | *NSArray<*DSCharacterResult*>* | All the characters contained by the textline. |
-| [`rowNumber`](#rownumber) | *NSInteger* | The row number of the text line within the image. |
+| Methods | Description |
+| ------- | ----------- |
+| [`getText`](#gettext) | Gets the recognized text. |
+| [`setText`](#settext) | Sets the recognized text. |
+| [`getConfidence`](#getconfidence) | Gets the confidence level of the recognized text. |
+| [`getCharacterResults`](#getcharacterresults) | Gets all the characters contained by the textline. |
+| [`getRowNumber`](#getrownumber) | Gets the row number of the text line within the image. |
+| [`getSpecificationName`](#getspecificationname) | Get the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`. |
 
-### text
+### getText
 
-The recognized text.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nullable, readonly) NSString* text;
-```
-2. 
-```swift
-var text: String? { get }
-```
-
-### confidence
-
-The confidence level of the recognized text.
+Gets the recognized text.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -69,16 +54,20 @@ The confidence level of the recognized text.
 >
 >1. 
 ```objc
-@property (nonatomic, assign, readonly) NSInteger confidence;
+-(NSString*)getText;
 ```
 2. 
 ```swift
-var confidence: String? { get }
+func getText() -> String
 ```
 
-### characterResults
+**Return value**
 
-All the characters contained by the textline in an array of [`DSCharacterResult`](character-result.md).
+Returns the text of the text line.
+
+### setText
+
+Sets the recognized text.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -86,16 +75,24 @@ All the characters contained by the textline in an array of [`DSCharacterResult`
 >
 >1. 
 ```objc
-@property (nonatomic, nullable, readonly) NSArray<DSCharacterResult *>* characterResults;
+-(NSInteger)setText:(NSString *)text;
 ```
 2. 
 ```swift
-var text: [CharacterResult]? { get }
+func setText(_ text: String) -> Int
 ```
 
-### rowNumber
+**Parameter**
 
-The row number of the text line within the image.
+`text`: The text.
+
+**Return value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### getConfidence
+
+Gets the confidence level of the recognized text.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -103,9 +100,76 @@ The row number of the text line within the image.
 >
 >1. 
 ```objc
-@property (nonatomic, assign, readonly) NSInteger rowNumber;
+-(NSInteger)getConfidence;
 ```
 2. 
 ```swift
-var rowNumber: Int { get }
+func getConfidence() -> Int
 ```
+
+**Return value**
+
+Returns the confidence level of the text line.
+
+### getCharacterResults
+
+Gets all the characters contained by the textline in an array of [`DSCharacterResult`](character-result.md).
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(NSArray<DSCharacterResult *>*)getCharacterResults;
+```
+2. 
+```swift
+func getCharacterResults() -> [CharacterResult]
+```
+
+**Return value**
+
+Returns all the characters contained by the textline in an array of [`DSCharacterResult`](character-result.md).
+
+### getRowNumber
+
+Gets the row number of the text line within the image.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(NSInteger)getRowNumber;
+```
+2. 
+```swift
+func getRowNumber() -> Int
+```
+
+**Return value**
+
+Returns the row number of the text line within the image.
+
+### getSpecificationName
+
+Get the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(NSString *)getSpecificationName;
+```
+2. 
+```swift
+func getSpecificationName() -> String
+```
+
+**Return value**
+
+The name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`.

@@ -1,110 +1,63 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer iOS API Reference
-description: This is the index of Dynamsoft Label Recognizer iOS API Reference.
-keywords: label recognizer, api reference, iOS
-permalink: /programming/objectivec-swift/api-reference/index.html
+title: Dynamsoft Label Recognizer iOS API Reference - Main Page
+description: This is the main page of Dynamsoft Label Recognizer SDK API Reference for iOS Language.
+keywords: Label Recognizer, api reference, iOS
+permalink: /programming/ios/api-reference/index.html
 ---
 
-# API Reference - iOS
+# SDK Overview: Modules and Main APIs
 
-## Primary Class
+This page provides an overview of the various modules and highlights the most essential APIs that form the backbone of Dynamsoft Label Recognizer SDK.
 
-- [`DSCaptureVisionRouter`]({{ site.dcv_ios_api }}capture-vision-router/capture-vision-router.html)
+## Modules Summary
 
-## Input
+The Dynamsoft Label Recognizer (DLR) SDK is built on the Dynamsoft Capture Vision (DCV) framework, which includes multiple modules working together to achieve text line recognition. The hierarchical structure diagram below illustrates the various modules of the DLR SDK (with modules at the top depending on those below).
 
-- [`DSDirectoryFetcher`]({{ site.dcv_ios_api }}utility/directory-fetcher.html)
-- [`DSFileFetcher`]({{ site.dcv_ios_api }}utility/file-fetcher.html)
-- [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html)
+<div align="center">
+    <p><img src="../../assets/dcv-dlr-dependency.png" width="70%" alt="region-def"></p>
+    <p>Modules hierarchical of the DLR SDK</p>
+</div>
 
-## Final Results
+The table below describes details the functionalities of these modules:
 
-- [`DSCapturedResultReceiver`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-receiver.html)
-- [`DSCapturedResultItem`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-item.html)
-- [`DSCapturedResult`]({{ site.dcv_ios_api }}core/basic-structures/captured-result.html)
-- [`DSTextLineResultItem`]({{ site.dlr_ios_api }}text-line-result-item.html)
-- [`DSCharacterResult`]({{ site.dlr_ios_api }}character-result.html)
-- [`DSRecognizedTextLinesResult`]({{ site.dlr_ios_api }}recognized-text-lines-result.html)
-- [`DSOriginalImageResultItem`]({{ site.dcv_ios_api }}core/basic-structures/original-image-result-item.html)
+| Module |Description | Mandatory/Optional|
+|:--------|:------------|:---|
+| `DynamsoftCaptureVisionRouter.xcframework`(CVR) | Provides APIs for single/multiple images processing, setting configurations, and other features. | Mandatory|
+| `DynamsoftLabelRecognizer.xcframework`(DLR) | This library mainly provides label recognizing algorithms. It includes APIs for you to configure label recognizing settings and obtaining the text line recognition results. | Mandatory|
+| `DynamsoftCore.xcframework`(Core) | Provides basic structures and intermediate result related APIs. | Mandatory|
+| `DynamsoftImageProcessing.xcframework`(DIP) | This library mainly provides image processing algorithms. | Mandatory|
+| `DynamsoftNeuralNetwork.xcframework`(DNN) | The library includes deep netural network algorithms. | Mandatory |
+| `DynamsoftLicense.xcframework`(License) | Provides license activation or management APIs. | Mandatory|
+| `DynamsoftCameraEnhancer.xcframework`(DCE) | The <a href="/camera-enhancer/docs/mobile/programming/ios/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. | Optional |
+| `DynamsoftCodeParser.xcframework`(DCP) | The [Dynamsoft Code Parser (DCP) SDK]({{ site.dcp_ios }}){:target="_blank"} for parsing the result. You can use this library for processing the Driver's license or VIN. | Optional |
+| `DynamsoftUtility.xcframework`(Utility) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc.  | Optional |
 
-## Final Results Filters
+## Main APIs
 
-- [`DSCapturedResultFilter`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-filter.html)
-- [`DSMultiFrameResultCrossFilter`]({{ site.dcv_ios_api }}utility/multi-frame-result-cross-filter.html)
+### Capture Vision Router
 
-## Intermediate Results
+The main class [`CaptureVisionRouter`]({{ site.dcv_ios_api }}capture-vision-router/capture-vision-router.html) acts as the SDK entry point and provides the following essential APIs:
 
-- [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html)
-- [`DSIntermediateResultReceiver`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-receiver.html)
-- [`DSObservationParameters`]({{ site.dcv_ios_api }}core/intermediate-results/observation-parameters.html)
-- [`DSIntermediateResultExtraInfo`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-extra-info.html)
-- [`DSIntermediateResult`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result.html)
-- [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html)
-- [`DSPredetectedRegionsUnit`]({{ site.dcv_ios_api }}core/intermediate-results/predetected-regions-unit.html)
-- [`DSLocalizedTextLinesUnit`]({{ site.dlr_ios_api }}localized-text-lines-unit.html)
-- [`DSRecognizedTextLinesUnit`]({{ site.dlr_ios_api }}recognized-text-lines-unit.html)
-- [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html)
-- [`DSPredetectedRegionElement`]({{ site.dcv_ios_api }}core/intermediate-results/predetected-region-element.html)
-- [`DSLocalizedTextLineElement`]({{ site.dlr_ios_api }}localized-text-line-element.html)
-- [`DSRecognizedTextLineElement`]({{ site.dlr_ios_api }}recognized-text-line-element.html)
-- [`DSBinaryImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/binary-image-unit.html)
-- [`DSColourImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/colour-image-unit.html)
-- [`DSEnhancedGrayscaleImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/enhanced-grayscale-image-unit.html)
-- [`DSGrayscaleImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/grayscale-image-unit.html)
-- [`DSScaledDownColourImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/scaled-down-colour-image-unit.html)
-- [`DSTextZonesUnit`]({{ site.dcv_ios_api }}core/intermediate-results/text-zones-unit.html)
-- [`DSTextureDetectionResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/texture-detection-result-unit.html)
-- [`DSTextureRemovedBinaryImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/texture-removed-binary-image-unit.html)
-- [`DSTextureRemovedGrayscaleImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html)
-- [`DSTransformedGrayscaleImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/transformed-grayscale-image-unit.html)
+- [Set input]({{ site.dcv_ios_api }}capture-vision-router/multiple-file-processing.html#setinput)
+- [Config Label Recognizer settings]({{ site.dcv_ios_api }}capture-vision-router/settings.html)
+- [Add result receiver]({{ site.dcv_ios_api }}capture-vision-router/multiple-file-processing.html#addresultreceiver)
+- [Start video stream text recognizing]({{ site.dcv_ios_api }}capture-vision-router/multiple-file-processing.html#startcapturing)
 
-## Settings
+### Image Source Adapter
 
-- [`DSSimplifiedCaptureVisionSettings`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html)
-- [`DSSimplifiedLabelRecognizerSettings`]({{ site.dlr_ios_api }}simplified-label-recognizer-settings.html)
+The [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html) class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. It serves as the input for the [`CaptureVisionRouter`]({{ site.dcv_ios_api }}capture-vision-router/capture-vision-router.html). You can either use the typical implementations of [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html) or implement your own.
 
-## State Listener
+Class [`CameraEnhancer`]({{ site.dce_ios }}primary-api/camera-enhancer.html) is one of the typical implementations of [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html). It is a class that not only implements the video frame obtaining APIs but also enable you to improve the video quality by adjusting the camera settings.
 
-- [`DSCaptureStateListener`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/capture-state-listener.html)
-- [`DSImageSourceStateListener`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/image-source-state-listener.html)
+### Captured Result Receiver
 
-## License
+To receive the results of video streaming text recognizing, you need to implement the [`CapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) with the callback method [`onRecognizedTextlinesReceived`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onrecognizedtextlinesreceived). The result you received in the callback method is a [`RecognizedTextlinesResult`](recognized-textlines-result.md) object, which contains all the recognized text lines from the processed video frame.
 
-- [`DSLicenseManager`]({{ site.dcv_ios_api }}license/license-manager.html)
+- [`onRecognizedTextlinesReceived`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onrecognizedtextlinesreceived): The callback method for you to receive the text recognizing results with a [`RecognizedTextlinesResult`](recognized-textlines-result.md) object.
+- [`RecognizedTextlinesResult`](recognized-textlines-result.md): An object that contains all the [`TextLineResultItem`](text-line-result-item.md) that obtained from a video frame.
+- [`TextLineResultItem`](text-line-result-item.md): The basic item that represents a single text line with the decoded text and other information.
 
-## Basic Structure
+### Camera View
 
-- [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html)
-- [`DSQuadrilateral`]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html)
-- [`DSImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html)
-- [`DSImageTag`]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html)
-- [`DSFileImageTag`]({{ site.dcv_ios_api }}core/basic-structures/file-image-tag.html)
-
-## Modules
-
-- [`DSCaptureVisionRouterModule`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/capture-vision-router-module.html)
-- [`DSLabelRecognizerModule`]({{ site.dlr_ios_api }}label-recognizer-module.html)
-- [`DSCoreModule`]({{ site.dcv_ios_api }}core/basic-structures/core-module.html)
-- [`DSLicenseModule`]({{ site.dcv_ios_api }}license/license-module.html)
-- [`DSUtilityModule`]({{ site.dcv_ios_api }}utility/utility-module.html)
-- [`DSImageProcessingModule`]({{ site.dcv_ios_api }}image-processing/image-processing-module.html)
-
-## Enumerations
-
-- [`DSBufferOverflowProtectionMode`]({{ site.dcv_enumerations}}core/buffer-overflow-protection-mode.html?src=objc,swift&&lang=objc,swift)
-- [`DSCapturedResultItemType`]({{ site.dcv_enumerations}}core/captured-result-item-type.html?src=objc,swift&&lang=objc,swift)
-- [`DSErrorCode`]({{ site.dcv_enumerations}}core/error-code.html?src=objc,swift&&lang=objc,swift)
-- [`DSGrayscaleTransformationMode`]({{ site.dcv_enumerations}}core/grayscale-transformation-mode.html?src=objc,swift&&lang=objc,swift)
-- [`DSImageCaptureDistanceMode`]({{ site.dcv_enumerations}}core/image-capture-distance-mode.html?src=objc,swift&&lang=objc,swift)
-- [`DSImagePixelFormat`]({{ site.dcv_enumerations}}core/image-pixel-format.html?src=objc,swift&&lang=objc,swift)
-- [`DSImageSourceState`]({{ site.dcv_enumerations}}core/image-source-state.html?src=objc,swift&&lang=objc,swift)
-- [`DSImageTagType`]({{ site.dcv_enumerations}}core/image-tag-type.html?src=objc,swift&&lang=objc,swift)
-- [`DSIntermediateResultUnitType`]({{ site.dcv_enumerations}}core/intermediate-result-unit-type.html?src=objc,swift&&lang=objc,swift)
-- [`DSDSPresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?src=objc,swift&&lang=objc,swift)
-- [`DSRegionObjectElementType`]({{ site.dcv_enumerations}}core/region-object-element-type.html?src=objc,swift&&lang=objc,swift)
-- [`DSSectionType`]({{ site.dcv_enumerations}}core/section-type.html?src=objc,swift&&lang=objc,swift)
-- [`DSVideoFrameQuality`]({{ site.dcv_enumerations }}core/video-frame-quality.html?src=objc,swift&&lang=objc,swift)
-- [`DSColourChannelUsageType`]({{ site.dcv_enumerations}}core/colour-channel-usage-type.html?src=objc,swift&&lang=objc,swift)
-- [`DSRasterDataSource`]({{ site.dcv_enumerations}}core/raster-data-source.html?src=objc,swift&&lang=objc,swift)
-- [`DSTransformMatrixType`]({{ site.dcv_enumerations}}core/transform-matrix-type.html?src=objc,swift&&lang=objc,swift)
+[`CameraView`]({{ site.dce_ios }}auxiliary-api/dcecameraview.html) is a view class that design for visualizing the real time video streaming and the text recognizing result. If the [`CameraEnhancer`]({{ site.dce_ios }}primary-api/camera-enhancer.html) is set as the input of your CVR, the recognized text lines will be highlighted automatically on the [`CameraView`]({{ site.dce_ios }}auxiliary-api/dcecameraview.html).

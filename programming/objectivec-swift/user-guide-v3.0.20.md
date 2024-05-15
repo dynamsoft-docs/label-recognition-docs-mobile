@@ -5,7 +5,6 @@ description: This is the user guide page of Dynamsoft Label Recognizer for iOS S
 keywords: iOS, swift, objective-c, user guide
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /programming/objectivec-swift/user-guide.html
 ---
 
 # Dynamsoft Label Recognizer - iOS User Guide
@@ -70,7 +69,13 @@ There are two ways to add the libraries into your project - **Manually** or via 
    target '{Your project name}' do
      use_frameworks!
 
-     pod 'DynamsoftLabelRecognizer','3.2.2000'
+     pod 'DynamsoftLabelRecognizer','3.0.20'
+     pod 'DynamsoftCaptureVisionRouter','2.0.21'
+     pod 'DynamsoftCore','3.0.20'
+     pod 'DynamsoftImageProcessing','2.0.21'
+     pod 'DynamsoftLicense','3.0.30'
+     pod 'DynamsoftCameraEnhancer','4.0.2'
+     pod 'DynamsoftUtility','1.0.21'
 
    end
    ```

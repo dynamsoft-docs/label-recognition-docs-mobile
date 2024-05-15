@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: RecognizedTextLineElement - Dynamsoft Label Recognizer Android Edition
-description: The class RecognizedTextLineElement of Dynamsoft Label Recognizer represents a line of recognized text in an image.
+description: The class RecognizedTextLineElement of Dynamsoft Label Recognizer Android edition represents a line of recognized text in an image.
 keywords: Recognized text line element
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -12,7 +12,7 @@ permalink: /programming/android/api-reference/recognized-text-line-element.html
 
 # RecognizedTextLineElement
 
-The `RecognizedTextLineElement` class represents a line of recognized text in an image. It inherits from the [RegionObjectElement]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) class.
+The `RecognizedTextLineElement` class extends the [RegionObjectElement]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) class and represents a recognized text line element.
 
 ## Definition
 
@@ -26,18 +26,20 @@ class RecognizedTextLineElement extends RegionObjectElement
 
 *Inheritance:* [RegionObjectElement]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) -> RecognizedTextLineElement
 
-## Methods Summary
+## Methods
 
 | Method | Description |
 | ------ | ----------- |
-| [`getText`](#gettext) | Gets the recognized text. |
-| [`getConfidence`](#getconfidence) | Gets the confidence level of the recognized text. |
-| [`getCharacterResults`](#getcharacterresults) | Gets all the characters contained by the textline. |
-| [`getRowNumber`](#getrownumber) | Gets the row number of the text line within the image. |
+| [`getText`](#gettext) | Returns the recognized text of the line. |
+| [`getConfidence`](#getconfidence) | Returns the confidence score for the recognized text line. |
+| [`getCharacterResults`](#getcharacterresults) | Returns all the results for individual characters within the text line. |
+| [`getRowNumber`](#getrownumber) | Returns the row number of the text line, starting from 1. |
+| [`setText`](#settext) | Sets the recognized text of the line. |
+| [`getSpecificationName`](#getspecificationname) | Returns the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`. |
 
 ### getText
 
-Gets the recognized text.
+Returns the recognized text of the line.
 
 ```java
 String getText()
@@ -45,11 +47,11 @@ String getText()
 
 **Return value**
 
-Returns the text of the text line.
+The recognized text of the line.
 
 ### getConfidence
 
-Gets the confidence level of the recognized text.
+Returns the confidence score for the recognized text line.
 
 ```java
 int getConfidence()
@@ -57,11 +59,11 @@ int getConfidence()
 
 **Return value**
 
-Returns an integer value representing the confidence level of the recognized text.
+The confidence score for the recognized text line.
 
 ### getCharacterResults
 
-Gets all the characters contained by the textline in an array of [`CharacterResult`](character-result.md).
+Returns all the results for individual characters within the text line, defined by [`CharacterResult`](character-result.md).
 
 ```java
 CharacterResult[] getCharacterResults();
@@ -69,11 +71,11 @@ CharacterResult[] getCharacterResults();
 
 **Return value**
 
-Returns an integer value representing the success of the operation. Zero indicates success, while any other value indicates failure.
+The results for individual characters within the text line, defined by [`CharacterResult`](character-result.md).
 
 ### getRowNumber
 
-Gets the row number of the text line within the image.
+Returns the row number of the text line, starting from 1.
 
 ```java
 int getRowNumber();
@@ -81,4 +83,28 @@ int getRowNumber();
 
 **Return value**
 
-Returns an integer value representing the row number of the text line within the image.
+The row number of the text line, starting from 1.
+
+### setText
+
+Sets the recognized text of the line.
+
+```java
+void setText(String text);
+```
+
+**Parameters**
+
+`text`: The text to be set.
+
+### getSpecificationName
+
+Returns the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`.
+
+```java
+String getSpecificationName();
+```
+
+**Return value**
+
+The name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`.

@@ -9,6 +9,7 @@ permalink: /programming/objectivec-swift/release-notes/index.html
 
 # Release Notes - iOS
 
+- [3.2.30 (05/15/2024)](ios-3.html#3230-05152024)
 - [3.0.20 (12/07/2023)](ios-3.html#3020-12072023)
 - [2.2.20 (09/29/2022)](ios-2.html#2220-09292022)
 - [2.0 (08/26/2021)](ios-2.html#20-08262021)

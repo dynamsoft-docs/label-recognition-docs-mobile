@@ -1,33 +1,35 @@
 ---
 layout: default-layout
-title: Classes - Dynamsoft Label Recognizer iOS API Reference
-description: This page shows all Classes of Dynamsoft Label Recognizer for iOS API Reference.
-keywords: api reference, objective-c, oc, swift
+title: Dynamsoft Label Recognizer Android API Reference
+description: This page shows Android API Reference of Dynamsoft Label Recognizer.
+keywords: api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /programming/objectivec-swift/api-reference/index.html
+permalink: /programming/android/api-reference/index-v2.2.20.html
 ---
 
 
-# API Reference - iOS
+# API Reference - Android 
 
 ## Primary Classes
 
-- [DynamsoftLabelRecognizer](label-recognizer.md)
+- [LabelRecognizer](label-recognizer.md)
 
 ## Auxiliary Classes
 
-- [iQuadrilateral](quadrilateral.md)
-- [iImageData](image-data.md)
-- [iBarcodeResult](barcode-result.md)
-- [iDLRRuntimeSettings](dlr-runtime-settings.md)
-- [iDLRReferenceRegion](dlr-reference-region.md)
-- [iDLRResult](dlr-result.md)
-- [iDLRLineResult](dlr-line-result.md)
-- [iDLRCharacterResult](dlr-character-result.md)
-- [iDLRDictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
-- [iDLRFurtherModes](dlr-further-modes.md)
-- [DLRLicenseVerificationDelegate](dlr-license-verification-delegate.md)
+- [Point](point.md)
+- [Quadrilateral](quadrilateral.md)
+- [ImageData](image-data.md)
+- [BarcodeResult](barcode-result.md)
+- [LabelRecognizerException](label-recognizer-exception.md)
+- [DLRRuntimeSettings](dlr-runtime-settings.md)
+- [DLRReferenceRegion](dlr-reference-region.md)
+- [DLRResult](dlr-result.md)
+- [DLRLineResult](dlr-line-result.md)
+- [DLRCharacterResult](dlr-character-result.md)
+- [DLRDictionaryCorrectionThreshold](dlr-dictionary-correction-threshold.md)
+- [DLRFurtherModes](dlr-further-modes.md)
+- [DLRLicenseVerificationListener](dlr-license-verification-listener.md)
 
 ## Enumerations
 

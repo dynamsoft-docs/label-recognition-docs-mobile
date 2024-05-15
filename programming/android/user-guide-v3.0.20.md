@@ -16,12 +16,11 @@ needGenerateH3Content: true
 - [Build Your First Application](#build-your-first-application)
   - [Create a New Project](#create-a-new-project)
   - [Include the Library](#include-the-library)
-  - [Deploy the CharacterModels](#deploy-the-charactermodels)
   - [Initialize the License](#initialize-the-license)
   - [Initialize the Camera Module](#initialize-the-camera-module)
   - [Initialize Capture Vision Router](#initialize-capture-vision-router)
   - [Display Recognized Textline Results](#display-recognized-textline-results)
-  - [Build and Run the Project](#build-and-run-the-project)
+    - [Build and Run the Project](#build-and-run-the-project)
 
 ## Requirements
 
@@ -95,7 +94,13 @@ There are two ways to add the libraries into your project - **Manually** or via 
 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:dynamsoftlabelrecognizerbundle:3.2.2000'
+      implementation 'com.dynamsoft:dynamsoftcapturevisionrouter:2.0.21'
+      implementation 'com.dynamsoft:dynamsoftlabelrecognizer:3.0.20'
+      implementation 'com.dynamsoft:dynamsoftimageprocessing:2.0.21'
+      implementation 'com.dynamsoft:dynamsoftcore:3.0.20'
+      implementation 'com.dynamsoft:dynamsoftlicense:3.0.30'
+      implementation 'com.dynamsoft:dynamsoftcameraenhancer:4.0.2'
+      implementation 'com.dynamsoft:dynamsoftutility:1.0.21'
    }
    ```
 
@@ -124,16 +129,6 @@ In this section, we are going to explain how to create a Hello World implementat
 ### Include the Library
 
 To add the SDK to your new project, please read [add the libraries](#add-the-libraries) section for more details.
-
-### Deploy the CharacterModels
-
-A `CharacterModel` is a file that trained to support the text line recognition. Before implementing the label recognizing tasks, you have to include the required `CharacterModels` in your project first.
-
-1. Right-click on the **app** folder, click **New->Directory** and select the **src\main\assets** to create an assets folder.
-
-2. Under the assets folder, create a folder named **CharacterModel**
-
-3. Copy your `CharacterModel` file(s) to the assets folder. In this guide we put the **NumberLetter.data** to the `CharacterModel` folder.
 
 ### Initialize the License
 

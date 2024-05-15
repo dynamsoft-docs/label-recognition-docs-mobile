@@ -34,7 +34,6 @@ class TextLineResultItem extends CapturedResultItem
 | [`getLocation`](#getlocation) | Gets the location of the text line in the form of a quadrilateral. |
 | [`getConfidence`](#getconfidence) | Gets the confidence of the text line recognition result. |
 | [`getCharacterResults`](#getcharacterresults) | Get all the characters in the text line. Each character is represented by a [`CharacterResult`](character-result.md) object. |
-| [`getSpecificationName`](#getspecificationname) | Get the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`. |
 
 ### getText
 
@@ -83,15 +82,3 @@ CharacterResult[] getCharacterResults();
 **Return value**
 
 An array of [`CharacterResult`](character-result.md) contains all the characters.
-
-### getSpecificationName
-
-Get the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`.
-
-```java
-String getSpecificationName();
-```
-
-**Return value**
-
-The name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`.

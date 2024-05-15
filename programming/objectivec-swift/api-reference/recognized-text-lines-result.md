@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSRecognizedTextLinesResult - Dynamsoft Label Recognizer iOS Edition
-description: The class DSRecognizedTextLinesResult of Dynamsoft Label Recognizer represents the result of a text recognition process.
+description: The class DSRecognizedTextLinesResult of Dynamsoft Label Recognizer iOS edition represents the result of a text recognition process.
 keywords: Recognized text lines result
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
@@ -31,16 +31,16 @@ The `DSRecognizedTextLinesResult` class represents the overall result(s) of a te
 class RecognizedTextLinesResult: NSObject
 ```
 
-## Property Summary
+## Properties
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| [`originalImageHashId`](#originalimagehashid) | *NSString* | The hash ID of the original image. |
-| [`originalImageTag`](#originalimagetag) | *DSImageTag* | The tag of the original image stores in a [`DSImageTag`]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html) object. |
-| [`items`](#items) | *NSArray<*DSTextLineResultItem*>* | All the text line result items that recognized from the image in an array of [`DSTextLineResultItem`](text-line-result-item.md). |
+| [`originalImageHashId`](#originalimagehashid) | *NSString \** | The hash ID of the original image. |
+| [`originalImageTag`](#originalimagetag) | *DSImageTag \** | The tag of the original image stores in a [`DSImageTag`]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html) object. |
+| [`items`](#items) | *NSArray<DSTextLineResultItem \*> \** | All the text line result items that recognized from the image in an array of [`DSTextLineResultItem`](text-line-result-item.md). |
 | [`rotationTransformMatrix`](#rotationtransformmatrix) | *CGAffineTransform* | The rotation transformation matrix of the original image relative to the rotated image.|
 | [`errorCode`](#errorcode) | *NSInteger* | The error code of the recognition result, if an error occurred. |
-| [`errorMessage`](#errormessage) | *NSString* | The error message of the recognition result, if an error occurred. |
+| [`errorMessage`](#errormessage) | *NSString \** | The error message of the recognition result, if an error occurred. |
 
 ### originalImageHashId
 

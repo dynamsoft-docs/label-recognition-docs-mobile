@@ -1,110 +1,63 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer Android API Reference
-description: This is the index of Dynamsoft Label Recognizer Android API Reference.
-keywords: label recognizer, api reference, Android
+title: Dynamsoft Label Recognizer Android API Reference - Main Page
+description: This is the main page of Dynamsoft Label Recognizer SDK API Reference for Android Language.
+keywords: Label Recognizer, api reference, Android
 permalink: /programming/android/api-reference/index.html
 ---
 
-# API Reference - Android
+# SDK Overview: Modules and Main APIs
 
-## Primary Class
+This page provides an overview of the various modules and highlights the most essential APIs that form the backbone of Dynamsoft Label Recognizer SDK.
 
-- [`CaptureVisionRouter`]({{ site.dcv_android_api }}capture-vision-router/capture-vision-router.html)
+## Modules Summary
 
-## Input
+The Dynamsoft Label Recognizer (DLR) SDK is built on the Dynamsoft Capture Vision (DCV) framework, which includes multiple modules working together to achieve text line recognition. The hierarchical structure diagram below illustrates the various modules of the DLR SDK (with modules at the top depending on those below).
 
-- [`DirectoryFetcher`]({{ site.dcv_android_api }}utility/directory-fetcher.html)
-- [`FileFetcher`]({{ site.dcv_android_api }}utility/file-fetcher.html)
-- [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html)
+<div align="center">
+    <p><img src="../../assets/dcv-dlr-dependency.png" width="70%" alt="region-def"></p>
+    <p>Modules hierarchical of the DLR SDK</p>
+</div>
 
-## Final Results
+The table below describes details the functionalities of these modules:
 
-- [`CapturedResultReceiver`]({{ site.dcv_android_api }}core/basic-structures/captured-result-receiver.html)
-- [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html)
-- [`CapturedResult`]({{ site.dcv_android_api }}core/basic-structures/captured-result.html)
-- [`TextLineResultItem`]({{ site.dlr_android_api }}text-line-result-item.html)
-- [`CharacterResult`]({{ site.dlr_android_api }}character-result.html)
-- [`RecognizedTextLinesResult`]({{ site.dlr_android_api }}recognized-text-lines-result.html)
-- [`OriginalImageResultItem`]({{ site.dcv_android_api }}core/basic-structures/original-image-result-item.html)
+| Module |Description | Mandatory/Optional|
+|:--------|:------------|:---|
+| `DynamsoftCaptureVisionRouter.aar`(CVR) | Provides APIs for single/multiple images processing, setting configurations, and other features. | Mandatory|
+| `DynamsoftLabelRecognizer.aar`(DLR) | This library mainly provides label recognizing algorithms. It includes APIs for you to configure label recognizing settings and obtaining the text line recognition results. | Mandatory|
+| `DynamsoftCore.aar`(Core) | Provides basic structures and intermediate result related APIs. | Mandatory|
+| `DynamsoftImageProcessing.aar`(DIP) | This library mainly provides image processing algorithms. | Mandatory|
+| `DynamsoftNeuralNetwork.aar`(DNN) | The library includes deep netural network algorithms. | Mandatory |
+| `DynamsoftLicense.aar`(License) | Provides license activation or management APIs. | Mandatory|
+| `DynamsoftCameraEnhancer.aar`(DCE) | The <a href="/camera-enhancer/docs/mobile/programming/android/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. | Optional |
+| `DynamsoftCodeParser.aar`(DCP) | The [Dynamsoft Code Parser (DCP) SDK]({{ site.dcp_android }}){:target="_blank"} for parsing the result. You can use this library for processing the Driver's license or VIN. | Optional |
+| `DynamsoftUtility.aar`(Utility) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc.  | Optional |
 
-## Final Results Filters
+## Main APIs
 
-- [`CapturedResultFilter`]({{ site.dcv_android_api }}core/basic-structures/captured-result-filter.html)
-- [`MultiFrameResultCrossFilter`]({{ site.dcv_android_api }}utility/multi-frame-result-cross-filter.html)
+### Capture Vision Router
 
-## Intermediate Results
+The main class [`CaptureVisionRouter`]({{ site.dcv_android_api }}capture-vision-router/capture-vision-router.html) acts as the SDK entry point and provides the following essential APIs:
 
-- [`IntermediateResultManager`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html)
-- [`IntermediateResultReceiver`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-receiver.html)
-- [`ObservationParameters`]({{ site.dcv_android_api }}core/intermediate-results/observation-parameters.html)
-- [`IntermediateResultExtraInfo`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-extra-info.html)
-- [`IntermediateResult`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result.html)
-- [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html)
-- [`PredetectedRegionsUnit`]({{ site.dcv_android_api }}core/intermediate-results/predetected-regions-unit.html)
-- [`LocalizedTextLinesUnit`]({{ site.dlr_android_api }}localized-text-lines-unit.html)
-- [`RecognizedTextLinesUnit`]({{ site.dlr_android_api }}recognized-text-lines-unit.html)
-- [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html)
-- [`PredetectedRegionElement`]({{ site.dcv_android_api }}core/intermediate-results/predetected-region-element.html)
-- [`LocalizedTextLineElement`]({{ site.dlr_android_api }}localized-text-line-element.html)
-- [`RecognizedTextLineElement`]({{ site.dlr_android_api }}recognized-text-line-element.html)
-- [`BinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/binary-image-unit.html)
-- [`ColourImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/colour-image-unit.html)
-- [`EnhancedGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/enhanced-grayscale-image-unit.html)
-- [`GrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/grayscale-image-unit.html)
-- [`ScaledDownColourImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/scaled-down-colour-image-unit.html)
-- [`TextZonesUnit`]({{ site.dcv_android_api }}core/intermediate-results/text-zones-unit.html)
-- [`TextureDetectionResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/texture-detection-result-unit.html)
-- [`TextureRemovedBinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/texture-removed-binary-image-unit.html)
-- [`TextureRemovedGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html)
-- [`TransformedGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/transformed-grayscale-image-unit.html)
+- [Set input]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#setinput)
+- [Config Label Recognizer settings]({{ site.dcv_android_api }}capture-vision-router/settings.html)
+- [Add result receiver]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#addresultreceiver)
+- [Start video stream text recognizing]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#startcapturing)
 
-## Settings
+### Image Source Adapter
 
-- [`SimplifiedCaptureVisionSettings`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html)
-- [`SimplifiedLabelRecognizerSettings`]({{ site.dlr_android_api }}simplified-label-recognizer-settings.html)
+The [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html) class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. It serves as the input for the [`CaptureVisionRouter`]({{ site.dcv_android_api }}capture-vision-router/capture-vision-router.html). You can either use the typical implementations of [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html) or implement your own.
 
-## State Listener
+Class [`CameraEnhancer`]({{ site.dce_android }}primary-api/camera-enhancer.html) is one of the typical implementations of [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html). It is a class that not only implements the video frame obtaining APIs but also enable you to improve the video quality by adjusting the camera settings.
 
-- [`CaptureStateListener`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/capture-state-listener.html)
-- [`ImageSourceStateListener`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/image-source-state-listener.html)
+### Captured Result Receiver
 
-## License
+To receive the results of video streaming text recognizing, you need to implement the [`CapturedResultReceiver`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) with the callback method [`onRecognizedTextlinesReceived`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onrecognizedtextlinesreceived). The result you received in the callback method is a [`RecognizedTextlinesResult`](recognized-text-lines-result.md) object, which contains all the recognized text lines from the processed video frame.
 
-- [`LicenseManager`]({{ site.dcv_android_api }}license/license-manager.html)
+- [`onRecognizedTextlinesReceived`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onrecognizedtextlinesreceived): The callback method for you to receive the text recognizing results with a [`RecognizedTextlinesResult`](recognized-text-lines-result.md) object.
+- [`RecognizedTextlinesResult`](recognized-text-lines-result.md): An object that contains all the [`TextLineResultItem`](text-line-result-item.md) that obtained from a video frame.
+- [`TextLineResultItem`](text-line-result-item.md): The basic item that represents a single text line with the decoded text and other information.
 
-## Basic Structure
+### Camera View
 
-- [`Rect`]({{ site.dcv_android_api }}core/basic-structures/rect.html)
-- [`Quadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html)
-- [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html)
-- [`ImageTag`]({{ site.dcv_android_api }}core/basic-structures/image-tag.html)
-- [`FileImageTag`]({{ site.dcv_android_api }}core/basic-structures/file-image-tag.html)
-
-## Modules
-
-- [`CaptureVisionRouterModule`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/capture-vision-router-module.html)
-- [`LabelRecognizerModule`]({{ site.dlr_android_api }}label-recognizer-module.html)
-- [`CoreModule`]({{ site.dcv_android_api }}core/basic-structures/core-module.html)
-- [`LicenseModule`]({{ site.dcv_android_api }}license/license-module.html)
-- [`UtilityModule`]({{ site.dcv_android_api }}utility/utility-module.html)
-- [`ImageProcessingModule`]({{ site.dcv_android_api }}image-processing/image-processing-module.html)
-
-## Enumerations
-
-- [`BufferOverflowProtectionMode`]({{ site.dcv_enumerations}}core/buffer-overflow-protection-mode.html?src=android&&lang=android)
-- [`CapturedResultItemType`]({{ site.dcv_enumerations}}core/captured-result-item-type.html?src=android&&lang=android)
-- [`ErrorCode`]({{ site.dcv_enumerations}}core/error-code.html?src=android&&lang=android)
-- [`GrayscaleTransformationMode`]({{ site.dcv_enumerations}}core/grayscale-transformation-mode.html?src=android&&lang=android)
-- [`ImageCaptureDistanceMode`]({{ site.dcv_enumerations}}core/image-capture-distance-mode.html?src=android&&lang=android)
-- [`ImagePixelFormat`]({{ site.dcv_enumerations}}core/image-pixel-format.html?src=android&&lang=android)
-- [`ImageSourceState`]({{ site.dcv_enumerations}}core/image-source-state.html?src=android&&lang=android)
-- [`ImageTagType`]({{ site.dcv_enumerations}}core/image-tag-type.html?src=android&&lang=android)
-- [`IntermediateResultUnitType`]({{ site.dcv_enumerations}}core/intermediate-result-unit-type.html?src=android&&lang=android)
-- [`PresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?src=android&&lang=android)
-- [`RegionObjectElementType`]({{ site.dcv_enumerations}}core/region-object-element-type.html?src=android&&lang=android)
-- [`SectionType`]({{ site.dcv_enumerations}}core/section-type.html?src=android&&lang=android)
-- [`VideoFrameQuality`]({{ site.dcv_enumerations }}core/video-frame-quality.html?src=android&&lang=android)
-- [`ColourChannelUsageType`]({{ site.dcv_enumerations}}core/colour-channel-usage-type.html?src=android&&lang=android)
-- [`RasterDataSource`]({{ site.dcv_enumerations}}core/raster-data-source.html?src=android&&lang=android)
-- [`TransformMatrixType`]({{ site.dcv_enumerations}}core/transform-matrix-type.html?src=android&&lang=android)
+[`CameraView`]({{ site.dce_android }}auxiliary-api/dcecameraview.html) is a view class that design for visualizing the real time video streaming and the text recognizing result. If the [`CameraEnhancer`]({{ site.dce_android }}primary-api/camera-enhancer.html) is set as the input of your CVR, the recognized text lines will be highlighted automatically on the [`CameraView`]({{ site.dce_android }}auxiliary-api/dcecameraview.html).

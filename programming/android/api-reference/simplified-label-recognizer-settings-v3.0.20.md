@@ -13,59 +13,20 @@ permalink: /programming/android/api-reference/simplified-label-recognizer-settin
 
 The `SimplifiedLabelRecognizerSettings` class contains settings for label recognition. It is a sub-parameter of `SimplifiedCaptureVisionSettings`
 
-## Definition
-
-*Namespace:* com.dynamsoft.dlr
-
-*Assembly:* DynamsoftLabelRecognizer.aar
-
 ```java
 class SimplifiedLabelRecognizerSettings
 ```
 
-## Methods & Attributes
+## Attributes Summary
 
-| Method               | Description |
-|----------------------|-------------|
-| [`toJSON`](#tojson) | Generate the current `SimplifiedLabelRecognizerSettings` object to a JSON string. |
-| [`fromJSON`](#fromjson) | Generate a `SimplifiedLabelRecognizerSettings` object from a JSON string. |
-
-| Attribute | Type | Description |
-| --------- | ---- | ----------- |
+| Property | Type | Description |
+| -------- | ---- | ----------- |
 | [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *EnumGrayscaleTransformationMode[]* | Set the grayscale transformation modes with an array of enumeration [`GrayscaleTransformationMode`]({{ site.dcv_enumerations}}core/grayscale-transformation-mode.html). |
 | [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *EnumGrayscaleEnhancementMode[]* | Set the grayscale enhancement modes with an array of enumeration [`GrayscaleEnhancementMode`]({{ site.dcv_enumerations}}core/grayscale-enhancement-mode.html). |
 | [`characterModelName`](#charactermodelname) | *String* | Specify a character model by its name. |
 | [`lineStringRegExPattern`](#linestringregexpattern) | *String* | Set the RegEx pattern of the text line string to filter out the unqualified results. |
 | [`maxThreadsInOneTask`](#maxthreadsinonetask) | *int* | Set the maximum available threads count in one label recognition task. |
 | [`scaleDownThreshold`](#scaledownthreshold) | *int* | Set the threshold for image shrinking when dealing with large images. |
-
-## Method Details
-
-### toJSON
-
-Transform the current `SimplifiedLabelRecognizerSettings` object to a JSON string.
-
-```java
-String toJSON();
-```
-
-**Return Value**
-
-The string that generated from the current `SimplifiedLabelRecognizerSettings` object.
-
-### fromJSON
-
-Generate a `SimplifiedLabelRecognizerSettings` object from a JSON string.
-
-```java
-static SimplifiedLabelRecognizerSettings fromJSON(String jsonString);
-```
-
-**Return Value**
-
-The generated `SimplifiedLabelRecognizerSettings` object.
-
-## Attribute Details
 
 ### grayscaleTransformationModes
 
@@ -130,3 +91,5 @@ Set the threshold for image shrinking when dealing with large images.
 ```java
 int scaleDownThreshold;
 ```
+
+**Remarks**
