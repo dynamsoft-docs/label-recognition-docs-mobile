@@ -23,6 +23,7 @@ The Dynamsoft Label Recognizer SDK has been split into multiple libraries from t
   - `DynamsoftCaptureVisionRouter.aar`
   - `DynamsoftLabelRecognizer.aar`
   - `DynamsoftImageProcessing.aar`
+  - `DynamsoftNeuralNetwork.aar`
   - `DynamsoftCore.aar`
   - `DynamsoftLicense.aar`
   - `DynamsoftCameraEnhancer.aar`(optional)
@@ -39,7 +40,7 @@ The Dynamsoft Label Recognizer SDK has been split into multiple libraries from t
 
     ```groovy
     dependencies {
-       implementation 'com.dynamsoft:dynamsoftlabelrecognizerbundle:3.2.3000'
+       implementation 'com.dynamsoft:dynamsoftlabelrecognizerbundle:{version-number}'
     }
     ```
 
@@ -50,7 +51,7 @@ The Dynamsoft Label Recognizer SDK has been split into multiple libraries from t
 - Java code in 2.x:
 
 ```java
-LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this, new LicenseVerificationListener() {
+LicenseManager.initLicense("Put your license here", this, new LicenseVerificationListener() {
     @Override
     public void licenseVerificationCallback(boolean isSuccess, CoreException error) {
         if (!isSuccess) {
@@ -63,7 +64,7 @@ LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this, new
 - Java code in 3.x:
 
 ```java
-LicenseManager.initLicense("Put your license", this, new LicenseVerificationListener() {
+LicenseManager.initLicense("Put your license here", this, new LicenseVerificationListener() {
     @Override
     public void onLicenseVerified(boolean isSuccess, Exception error) {
         if(!isSuccess){
