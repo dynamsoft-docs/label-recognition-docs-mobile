@@ -24,6 +24,7 @@ The Dynamsoft Label Recognizer SDK has been split into multiple libraries from t
   - `DynamsoftCaptureVisionRouter.xcframework`
   - `DynamsoftLabelRecognizer.xcframework`
   - `DynamsoftImageProcessing.xcframework`
+  - `DynamsoftNeuralNetwork.xcframework`
   - `DynamsoftCore.xcframework`
   - `DynamsoftLicense.xcframework`
   - `DynamsoftCameraEnhancer.xcframework`(optional)
@@ -36,7 +37,7 @@ The Dynamsoft Label Recognizer SDK has been split into multiple libraries from t
    target '{Your project name}' do
       use_frameworks!
 
-     pod 'DynamsoftLabelRecognizerBundle','3.2.3000'
+     pod 'DynamsoftLabelRecognizerBundle','{version-number}'
 
    end
    ```
@@ -84,7 +85,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LicenseVerificationListen
 >1. 
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-   [DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+   [DSLicenseManager initLicense:@"Put Your License Here" verificationDelegate:self];
    return YES;
 }
 - (void)onLicenseVerified:(BOOL)isSuccess error:(NSError *)error {
@@ -97,7 +98,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LicenseVerificationListen
 2. 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-   LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate:self)
+   LicenseManager.initLicense("Put Your License Here", verificationDelegate:self)
    return true
 }
 func onLicenseVerified(_ isSuccess: Bool, error: Error?) {

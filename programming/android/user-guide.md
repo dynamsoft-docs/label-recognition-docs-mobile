@@ -54,6 +54,7 @@ There are two ways to add the libraries into your project - **Manually** or via 
    - **DynamsoftLabelRecognizer.aar**
    - **DynamsoftCore.aar**
    - **DynamsoftImageProcessing.aar**
+   - **DynamsoftNeuralNetwork.aar**
    - **DynamsoftLicense.aar**
    - **DynamsoftUtility.aar**
    - **DynamsoftCameraEnhancer.aar**

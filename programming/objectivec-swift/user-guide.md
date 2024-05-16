@@ -56,6 +56,7 @@ There are two ways to add the libraries into your project - **Manually** or via 
    - **DynamsoftLabelRecognizer.xcframework**
    - **DynamsoftCore.xcframework**
    - **DynamsoftImageProcessing.xcframework**
+   - **DynamsoftNeuralNetwork.xcframework**
    - **DynamsoftLicense.xcframework**
    - **DynamsoftUtility.xcframework**
    - **DynamsoftCameraEnhancer.xcframework**
