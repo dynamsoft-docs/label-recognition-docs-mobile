@@ -109,6 +109,18 @@ The following sample will demonstrate how to create a HelloWorld app for recogni
 
 To add the SDK to your new project, please read [add the xcframeworks](#add-the-xcframeworks) section for more details.
 
+### Deploy the CharacterModels
+
+A `CharacterModel` is a file that trained to support the text line recognition. Before implementing the label recognizing tasks, you have to include the required `CharacterModels` in your project first.
+
+1. Create a **DynamsoftResources** folder in the finder. Under the folder create a **CharacterModel** folder.
+
+2. Copy your `CharacterModel` file(s) to the **CharacterModel** folder. In this guide we put the **NumberLetter.data** to the `CharacterModel` folder.
+
+3. Rename the **DynamsoftResources** folder's extension name to **.bundle**.
+
+4. Drag the **DynamsoftResources.bundle** into your project on Xcode.
+
 ### Initialize the License
 
 1. Use the `LicenseManager` class and initialize the license in **AppDelegate**.
