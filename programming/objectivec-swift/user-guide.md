@@ -117,7 +117,7 @@ A `CharacterModel` is a file that trained to support the text line recognition. 
 
 2. Copy your `CharacterModel` file(s) to the **CharacterModel** folder. In this guide we put the **NumberLetter.data** to the `CharacterModel` folder.
 
-3. Rename **DynamsoftResources** folder's extension name to **.bundle**.
+3. Rename the **DynamsoftResources** folder's extension name to **.bundle**.
 
 4. Drag the **DynamsoftResources.bundle** into your project on Xcode.
 
