@@ -9,20 +9,21 @@ needGenerateH3Content: true
 
 # Dynamsoft Label Recognizer - iOS User Guide
 
-- [Requirements](#requirements)
-- [Add the xcframeworks](#add-the-xcframeworks)
-  - [Add the xcframeworks Manually](#add-the-xcframeworks-manually)
-  - [Add the xcframeworks via CocoaPods](#add-the-xcframeworks-via-cocoapods)
-- [Build Your First Application](#build-your-first-application)
-  - [Create a New Project](#create-a-new-project)
-  - [Include the Library](#include-the-library)
-  - [Initialize the License](#initialize-the-license)
-  - [Initialize the Camera Module](#initialize-the-camera-module)
-  - [Initialize the Capture Vision Router](#initialize-the-capture-vision-router)
-  - [Receive the Text Line Recognition Results](#receive-the-text-line-recognition-results)
-  - [Display the Recognized Textline Results](#display-the-recognized-textline-results)
-  - [Configure viewWillAppear, viewDidLoad](#configure-viewwillappear-viewdidload)
-  - [Build and Run the Project](#build-and-run-the-project)
+- [Dynamsoft Label Recognizer - iOS User Guide](#dynamsoft-label-recognizer---ios-user-guide)
+	- [Requirements](#requirements)
+	- [Add the xcframeworks](#add-the-xcframeworks)
+		- [Add the xcframeworks Manually](#add-the-xcframeworks-manually)
+		- [Add the xcframeworks via CocoaPods](#add-the-xcframeworks-via-cocoapods)
+	- [Build Your First Application](#build-your-first-application)
+		- [Create a New Project](#create-a-new-project)
+		- [Include the Library](#include-the-library)
+		- [Initialize the License](#initialize-the-license)
+		- [Initialize the Camera Module](#initialize-the-camera-module)
+		- [Initialize the Capture Vision Router](#initialize-the-capture-vision-router)
+		- [Receive the Text Line Recognition Results](#receive-the-text-line-recognition-results)
+		- [Display the Recognized Textline Results](#display-the-recognized-textline-results)
+		- [Configure viewWillAppear, viewDidLoad](#configure-viewwillappear-viewdidload)
+		- [Build and Run the Project](#build-and-run-the-project)
 
 ## Requirements
 
@@ -34,15 +35,15 @@ needGenerateH3Content: true
 
 The Dynamsoft Label Recognizer (DLR) iOS SDK comes with seven libraries:
 
-| File | Description |
-|---------|-------------|
-| *DynamsoftCaptureVisionRouter.xcframework* | The Capture Vision Router library is used to interact with image-processing and semantic-processing products in the applications. It accepts an image source and returns processing results which may contain final results or intermediate results. |
-| *DynamsoftLabelRecognizer.xcframework* | The Dynamsoft Label Recognizer library, which includes label localization and text recognition algorithm and related APIs. |
-| *DynamsoftCore.xcframework* | The core library, which includes common basic structures and intermediate result related APIs. |
-| *DynamsoftImageProcessing.xcframework* | The image processing library, which incorporates a collection of basic and specialized image processing algorithms.  |
-| *DynamsoftLicense.xcframework* | The license library, which includes license related APIs. |
-| *DynamsoftCameraEnhancer.xcframework* (Optional) | The <a href="/camera-enhancer/docs/mobile/programming/ios/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. |
-| *DynamsoftUtility.xcframework* (Optional) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc. |
+   | File | Description | Mandatory/Optional |
+   |:-----|:------------|:-------------------|
+   | `DynamsoftLabelRecognizer.xcframework` | The Dynamsoft Label Recognizer module identifies and recognizes text labels such as passport MRZs, ID cards, and VIN numbers. | Mandatory |
+   | `DynamsoftCore.xcframework`  | The Dynamsoft Core module lays the foundation for Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. It encapsulates the basic classes, interfaces, and enumerations shared by these SDKs. | Mandatory |
+   | `DynamsoftCaptureVisionRouter.xcframework` | The Dynamsoft Capture Vision Router module is the cornerstone of the Dynamsoft Capture Vision (DCV) architecture. It focuses on coordinating batch image processing and provides APIs for setting up image sources and result receivers, configuring workflows with parameters, and controlling processes. | Mandatory |
+   | `DynamsoftImageProcessing.xcframework` | The Dynamsoft Image Processing module facilitates digital image processing and supports operations for other modules, including the Barcode Reader, Label Recognizer, and Document Normalizer. | Mandatory |
+   | `DynamsoftLicense.xcframework` | The Dynamsoft License module manages the licensing aspects of Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. | Mandatory |
+   | `DynamsoftCameraEnhancer.xcframework` | The [Dynamsoft Camera Enhancer]({{ site.dce_android }}){:target="_blank"} module controls the camera, transforming it into an image source for the DCV (Dynamsoft Capture Vision) architecture through ISA implementation. It also enhances image quality during acquisition and provides basic viewers for user interaction. | Optional |
+   | `DynamsoftUtility.xcframework` | The Dynamsoft Utility module defines auxiliary classes, including the ImageManager, and implementations of the CRF (Captured Result Filter) and ISA (Image Source Adapter) . These are shared by all Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. | Optional |
 
 There are two ways to add the libraries into your project - **Manually** or via **CocaPods**.
 
