@@ -22,7 +22,7 @@ Before you start viewing the samples, the following concepts may help you unders
 
 A network connection is required to verify the trial license in the samples. You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dlr&utm_source=docs&package=android){:target="_blank"} link. Offline trial license is also available by [contacting us](https://www.dynamsoft.com/contact/){:target="_blank"}. If you download the [Installation Package](https://www.dynamsoft.com/document-normalizer/downloads/?product=dlr&utm_source=docs&package=android), it comes with a 30-day trial license by default.
 
-### Video Document Normalizing
+### Video Text Line Recognizing
 
 Most of the Dynamsoft Label Recognizer mobile samples are designed for video label text recognizing. Dynamsoft Camera Enhancer (DCE) is applied to the video streaming scanning samples. The following features in the samples are powered by DCE:
 
