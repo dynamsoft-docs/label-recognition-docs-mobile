@@ -9,19 +9,20 @@ needGenerateH3Content: true
 
 # Dynamsoft Label Recognizer - Android User Guide
 
-- [Requirements](#requirements)
-- [Add the Libraries](#add-the-libraries)
-  - [Add the Libraries Manually](#add-the-libraries-manually)
-  - [Add the Libraries via Maven](#add-the-libraries-via-maven)
-- [Build Your First Application](#build-your-first-application)
-  - [Create a New Project](#create-a-new-project)
-  - [Include the Library](#include-the-library)
-  - [Deploy the CharacterModels](#deploy-the-charactermodels)
-  - [Initialize the License](#initialize-the-license)
-  - [Initialize the Camera Module](#initialize-the-camera-module)
-  - [Initialize Capture Vision Router](#initialize-capture-vision-router)
-  - [Display Recognized Textline Results](#display-recognized-textline-results)
-  - [Build and Run the Project](#build-and-run-the-project)
+- [Dynamsoft Label Recognizer - Android User Guide](#dynamsoft-label-recognizer---android-user-guide)
+	- [Requirements](#requirements)
+	- [Add the Libraries](#add-the-libraries)
+		- [Add the Libraries Manually](#add-the-libraries-manually)
+		- [Add the Libraries via Maven](#add-the-libraries-via-maven)
+	- [Build Your First Application](#build-your-first-application)
+		- [Create a New Project](#create-a-new-project)
+		- [Include the Library](#include-the-library)
+		- [Deploy the CharacterModels](#deploy-the-charactermodels)
+		- [Initialize the License](#initialize-the-license)
+		- [Initialize the Camera Module](#initialize-the-camera-module)
+		- [Initialize Capture Vision Router](#initialize-capture-vision-router)
+		- [Display Recognized Textline Results](#display-recognized-textline-results)
+		- [Build and Run the Project](#build-and-run-the-project)
 
 ## Requirements
 
@@ -33,16 +34,16 @@ needGenerateH3Content: true
 
 The Dynamsoft Label Recognizer (DLR) Android SDK comes with seven libraries:
 
-   | File | Description |
-   |---------|-------------|
-   | *DynamsoftCaptureVisionRouter.aar* | The Capture Vision Router library is used to interact with image-processing and semantic-processing products in the applications. It accepts an image source and returns processing results which may contain final results or intermediate results. |
-   | *DynamsoftLabelRecognizer.aar* | The Dynamsoft Label Recognizer library, which includes label localization and text recognition algorithm and related APIs. |
-   | *DynamsoftCore.aar* | The core library, which includes common basic structures and intermediate result related APIs. |
-   | *DynamsoftImageProcessing.aar* | The image processing library, which incorporates a collection of basic and specialized image processing algorithms.  |
-   | *DynamsoftNeuralNetwork.aar* | The library includes deep neural network algorithms. |
-   | *DynamsoftLicense.aar* | The license library, which includes license related APIs. |
-   | *DynamsoftCameraEnhancer.aar* (Optional) | The <a href="/camera-enhancer/docs/mobile/programming/android/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. |
-   | *DynamsoftUtility.aar* (Optional) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc. |
+   | File | Description | Mandatory/Optional |
+   |:-----|:------------|:-------------------|
+   | `DynamsoftLabelRecognizer.aar` | The Dynamsoft Label Recognizer module identifies and recognizes text labels such as passport MRZs, ID cards, and VIN numbers. | Mandatory |
+   | `DynamsoftCore.aar`  | The Dynamsoft Core module lays the foundation for Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. It encapsulates the basic classes, interfaces, and enumerations shared by these SDKs. | Mandatory |
+   | `DynamsoftCaptureVisionRouter.aar` | The Dynamsoft Capture Vision Router module is the cornerstone of the Dynamsoft Capture Vision (DCV) architecture. It focuses on coordinating batch image processing and provides APIs for setting up image sources and result receivers, configuring workflows with parameters, and controlling processes. | Mandatory |
+   | `DynamsoftImageProcessing.aar` | The Dynamsoft Image Processing module facilitates digital image processing and supports operations for other modules, including the Barcode Reader, Label Recognizer, and Document Normalizer. | Mandatory |
+   | `DynamsoftNeuralNetwork.aar` | The Dynamsoft Neural Network module allows SDKs compliant with the DCV (Dynamsoft Capture Vision) architecture to leverage the power of deep learning when processing digital images. | Mandatory |
+   | `DynamsoftLicense.aar` | The Dynamsoft License module manages the licensing aspects of Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. | Mandatory |
+   | `DynamsoftCameraEnhancer.aar` | The [Dynamsoft Camera Enhancer]({{ site.dce_android }}){:target="_blank"} module controls the camera, transforming it into an image source for the DCV (Dynamsoft Capture Vision) architecture through ISA implementation. It also enhances image quality during acquisition and provides basic viewers for user interaction. | Optional |
+   | `DynamsoftUtility.aar` | The Dynamsoft Utility module defines auxiliary classes, including the ImageManager, and implementations of the CRF (Captured Result Filter) and ISA (Image Source Adapter) . These are shared by all Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. | Optional |
 
 There are two ways to add the libraries into your project - **Manually** or via **Maven**.
 
@@ -196,7 +197,7 @@ A `CharacterModel` is a file that trained to support the text line recognition. 
    >  
    >- Network connection is required for the license to work.
    >- The license string here will grant you a 24 hour trial license.
-   >- You can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request your own 30-day trial license or to extend an expired trial license.
+   >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dlr&utm_source=guide&package=android){:target="_blank"} link. Offline trial license is also available by [contacting us](https://www.dynamsoft.com/contact/){:target="_blank"}.
 
 ### Initialize the Camera Module
 

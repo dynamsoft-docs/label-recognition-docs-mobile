@@ -29,7 +29,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
     ii. Put the .aar file under the `libs` directory in the project.
     iii. In the project, open build.gradle(Module: app) and add the following code:
 
-    ```
+    ```groovy
     repositories {
         flatDir {
         dirs 'libs'
@@ -39,7 +39,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
 
     iv. Add `.aar` reference in the dependencies:
 
-    ```
+    ```groovy
     implementation(name: 'DynamsoftLabelRecognitionAndroid', ext: 'aar')
     ```
 
@@ -79,7 +79,8 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
         }
     }
     ```
-    Please replace `<insert DLR license key here>` with your DLR license key. If you do not have a valid license, please request a trial license through the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense). 
+
+    Please replace `<insert DLR license key here>` with your DLR license key. You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dlr&utm_source=guide&package=android){:target="_blank"} link. Offline trial license is also available by [contacting us](https://www.dynamsoft.com/contact/){:target="_blank"}.
 
     In the snippet above, `<full image path>` should also be replaced with the full path to the image you'd like to recognize.
 
