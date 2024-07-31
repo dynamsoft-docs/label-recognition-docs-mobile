@@ -32,7 +32,7 @@ Use the [`setInput`]({{ site.dcv_android_api }}capture-vision-router/multiple-fi
 
 ## Output
 
-To get the output result, you have to implement the `CapturedResultReceiver` and bind it with your `CaptureVisionRouter` instance. You will receive the text line recognizing results in the [`onDecodedBarcodesReceived`]({{ site.dcv_android_api }}core/basic-structures/captured-result-receiver.html#onrecognizedtextlinesreceived) method each time when a image (video frame) is processed.
+To get the output result, you have to implement the `CapturedResultReceiver` and bind it with your `CaptureVisionRouter` instance. You will receive the text line recognizing results in the [`onRecognizedTextLinesReceived`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onrecognizedtextlinesreceived) method each time when a image (video frame) is processed.
 
 ## Control the Start & Stop of the Capturing
 
