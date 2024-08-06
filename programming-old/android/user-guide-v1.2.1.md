@@ -80,7 +80,7 @@ Download the Dynamsoft Label Recognition SDK from the [Dynamsoft website](https:
     }
     ```
 
-    Please replace `<insert DLR license key here>` with your DLR license key. You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dlr&utm_source=guide&package=android){:target="_blank"} link. Offline trial license is also available by [contacting us](https://www.dynamsoft.com/contact/){:target="_blank"}.
+    Please replace `<insert DLR license key here>` with your DLR license key. You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dlr&utm_source=guide&package=android){:target="_blank"} link
 
     In the snippet above, `<full image path>` should also be replaced with the full path to the image you'd like to recognize.
 
