@@ -137,7 +137,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    >  
    >* Network connection is required for the license to work.
    >* The license string here will grant you a time-limited trial license.
-   >* You can request a 30-day offline trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dlr&utm_source=guide&package=ios){:target="_blank"} link
+   >* You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dlr&utm_source=guide&package=ios){:target="_blank"} link
 
 ### Initialize the Camera Module
 
