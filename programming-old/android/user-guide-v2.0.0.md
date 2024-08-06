@@ -120,7 +120,7 @@ There are two ways to include the Dynamsoft Label Recognizer SDK into your proje
     >Note:
     >- Network connection is required for the license to work.
     >- "DLS2***" is a default free public trial license used in the sample.
-    >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dlr&utm_source=guide&package=android){:target="_blank"} link. Offline trial license is also available by [contacting us](https://www.dynamsoft.com/contact/){:target="_blank"}.
+    >- You can request a 30-day offline trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dlr&utm_source=guide&package=android){:target="_blank"} link
 
 2. Create an instance of Dynamsoft Label Recognizer
 

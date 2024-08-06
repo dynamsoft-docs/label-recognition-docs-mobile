@@ -197,7 +197,7 @@ A `CharacterModel` is a file that trained to support the text line recognition. 
    >  
    >- Network connection is required for the license to work.
    >- The license string here will grant you a 24 hour trial license.
-   >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dlr&utm_source=guide&package=android){:target="_blank"} link. Offline trial license is also available by [contacting us](https://www.dynamsoft.com/contact/){:target="_blank"}.
+   >- You can request a 30-day offline trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dlr&utm_source=guide&package=android){:target="_blank"} link
 
 ### Initialize the Camera Module
 
