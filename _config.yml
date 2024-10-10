@@ -1,50 +1,51 @@
 repositoryUrl: https://github.com/dynamsoft-docs/label-recognition-docs-mobile/blob/main
 repository: Dynamsoft-Docs/label-recognition-docs-mobile
-docFullPath: https://www.dynamsoft.com/label-recognition/docs/mobile/
-firstLevelUrl: /label-recognition/docs/mobile/
-docHomePage: /label-recognition/docs/mobile/introduction/
+docFullPath: https://www.dynamsoft.com/label-recognition/docs-archive/mobile/
+firstLevelUrl: /label-recognition/docs-archive/mobile/
+docHomePage: /label-recognition/docs-archive/mobile/introduction/
 
-enumerations: /label-recognition/docs/core/parameters/enum/
-parameters-reference: /label-recognition/docs/core/parameters/reference/
+enumerations: /label-recognition/docs-archive/core/parameters/enum/
+parameters-reference: /label-recognition/docs-archive/core/parameters/reference/
 
-dlr_android: /label-recognition/docs/mobile/programming/android/
-dlr_android_api: /label-recognition/docs/mobile/programming/android/api-reference/
-dlr_android_release_notes: /label-recognition/docs/mobile/programming/android/release-notes/
+dlr_android: /label-recognition/docs-archive/mobile/programming/android/
+dlr_android_api: /label-recognition/docs-archive/mobile/programming/android/api-reference/
+dlr_android_release_notes: /label-recognition/docs-archive/mobile/programming/android/release-notes/
 
-dlr_ios: /label-recognition/docs/mobile/programming/objectivec-swift/
-dlr_ios_api: /label-recognition/docs/mobile/programming/objectivec-swift/api-reference/
-dlr_ios_release_notes: /label-recognition/docs/mobile/programming/objectivec-swift/release-notes/
+dlr_ios: /label-recognition/docs-archive/mobile/programming/objectivec-swift/
+dlr_ios_api: /label-recognition/docs-archive/mobile/programming/objectivec-swift/api-reference/
+dlr_ios_release_notes: /label-recognition/docs-archive/mobile/programming/objectivec-swift/release-notes/
 
-dcv_android_api: /capture-vision/docs/mobile/programming/android/api-reference/
-dcv_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
-dcv_enumerations: /capture-vision/docs/core/enums/
-dcv_parameter_reference: /capture-vision/docs/core/parameters/reference/
-dcv_parameter: /capture-vision/docs/core/parameters/
-dcv_introduction: /capture-vision/docs/core/introduction/
+dcv_android_api: /capture-vision/docs-archive/mobile/programming/android/api-reference/
+dcv_ios_api: /capture-vision/docs-archive/mobile/programming/ios/api-reference/
+dcv_enumerations: /capture-vision/docs-archive/core/enums/
+dcv_parameter_reference: /capture-vision/docs-archive/core/parameters/reference/
+dcv_parameter: /capture-vision/docs-archive/core/parameters/
+dcv_introduction: /capture-vision/docs-archive/core/introduction/
 
-dce_ios: /camera-enhancer/docs/mobile/programming/ios/
-dce_ios_api: /camera-enhancer/docs/mobile/programming/ios/
-dce_android: /camera-enhancer/docs/mobile/programming/android/
-dce_android_api: /camera-enhancer/docs/mobile/programming/android/
+dce_ios: /camera-enhancer/docs-archive/mobile/programming/ios/
+dce_ios_api: /camera-enhancer/docs-archive/mobile/programming/ios/
+dce_android: /camera-enhancer/docs-archive/mobile/programming/android/
+dce_android_api: /camera-enhancer/docs-archive/mobile/programming/android/
 
-assets: /label-recognition/docs/mobile/assets/
-edit_icon: /label-recognition/docs/mobile/assets/img-icon/edit-icon.png
-smile_icon: /label-recognition/docs/mobile/assets/img-icon/icon-smile.png
-sad_icon: /label-recognition/docs/mobile/assets/img-icon/icon-sad.png
-dbr_icon: /label-recognition/docs/mobile/assets/img-icon/icon-dbr.svg
-dwt_icon: /label-recognition/docs/mobile/assets/img-icon/icon-dwt.svg
-dnt_icon: /label-recognition/docs/mobile/assets/img-icon/icon-dnt.svg
+assets: /label-recognition/docs-archive/mobile/assets/
+edit_icon: /label-recognition/docs-archive/mobile/assets/img-icon/edit-icon.png
+smile_icon: /label-recognition/docs-archive/mobile/assets/img-icon/icon-smile.png
+sad_icon: /label-recognition/docs-archive/mobile/assets/img-icon/icon-sad.png
+dbr_icon: /label-recognition/docs-archive/mobile/assets/img-icon/icon-dbr.svg
+dwt_icon: /label-recognition/docs-archive/mobile/assets/img-icon/icon-dwt.svg
+dnt_icon: /label-recognition/docs-archive/mobile/assets/img-icon/icon-dnt.svg
 
 
-dcp_android: /code-parser/docs/mobile/programming/android/
-dcp_android_api: /code-parser/docs/mobile/programming/android/api-reference/
-dcp_ios: /code-parser/docs/mobile/programming/ios/
-dcp_ios_api: /code-parser/docs/mobile/programming/ios/api-reference/
+dcp_android: /code-parser/docs-archive/mobile/programming/android/
+dcp_android_api: /code-parser/docs-archive/mobile/programming/android/api-reference/
+dcp_ios: /code-parser/docs-archive/mobile/programming/ios/
+dcp_ios_api: /code-parser/docs-archive/mobile/programming/ios/api-reference/
 
+release-notes: /label-recognition/docs-archive/core/release-notes/
 
 useVersionTree: true
 
-baseurl: "/label-recognition/docs/mobile"
+baseurl: "/label-recognition/docs-archive/mobile"
 
 plugins:
   - jemoji
@@ -67,22 +68,22 @@ defaults:
       path: "programming-old/android"
     values:
       docRootName: "Label Recognizer Android Edition"
-      docHomePage: "/label-recognition/docs/mobile/programming/android/"
+      docHomePage: "/label-recognition/docs-archive/mobile/programming/android/"
   - scope:
       path: "programming-old/objectivec-swift"
     values:
       docRootName: "Label Recognizer iOS Edition"
-      docHomePage: "/label-recognition/docs/mobile/programming/objectivec-swift/"
+      docHomePage: "/label-recognition/docs-archive/mobile/programming/objectivec-swift/"
   - scope:
       path: "programming/android"
     values:
       docRootName: "Label Recognizer Android Edition"
-      docHomePage: "/label-recognition/docs/mobile/programming/android/"
+      docHomePage: "/label-recognition/docs-archive/mobile/programming/android/"
   - scope:
       path: "programming/objectivec-swift"
     values:
       docRootName: "Label Recognizer iOS Edition"
-      docHomePage: "/label-recognition/docs/mobile/programming/objectivec-swift/"
+      docHomePage: "/label-recognition/docs-archive/mobile/programming/objectivec-swift/"
   - scope:
       path: "Hide_Tree_Page.html"
     values:
