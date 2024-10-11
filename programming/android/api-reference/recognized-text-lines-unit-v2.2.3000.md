@@ -30,32 +30,7 @@ class RecognizedTextLinesUnit extends IntermediateResultUnit
 
 | Method | Description |
 | ------ | ----------- |
-| [`addRecognizedTextLine`](#addrecognizedtextline) | Adds a recognized text line. |
-| [`getRecognizedTextLines`](#getrecognizedtextlines) | Get all the recognized text lines in an array of [`DSRecognizedTextLineElement`](recognized-text-line-element.md). |
-| [`getCount`](#getcount) | Returns the number of text lines in this unit. |
-| [`getRecognizedTextLine`](#getrecognizedtextline) | Returns the text line at the specified index in a [`DSRecognizedTextLineElement`](recognized-text-line-element.md) object. |
-| [`removeAllRecognizedTextLines`](#removeallrecognizedtextlines) | Removes all the recognized text lines from this unit. |
-| [`removeRecognizedTextLine`](#removerecognizedtextline) | Removes the recognized text line at the specified index. |
-| [`setRecognizedTextLine(index, element, matrixToOriginalImage)`](#setrecognizedtextlineindex-element-matrixtooriginalimage) | Sets the recognized text line at the specified index. |
-| [`setRecognizedTextLine(element, matrixToOriginalImage)`](#setrecognizedtextlineelement-matrixtooriginalimage) | Sets the recognized text line at the specified index. |
-
-### AddRecognizedTextLine
-
-Adds a recognized text line.
-
-```java
-int addRecognizedTextLine(RecognizedTextLineElement element, Matrix matrixToOriginalImage);
-```
-
-**Parameters**
-
-`element`: The [`RecognizedTextLineElement`](recognized-text-line-element.md) object to be added.
-
-`matrixToOriginalImage`: The matrix to transform the original image.
-
-**Return value**
-
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+| [`getRecognizedTextLines`](#getrecognizedtextlines) | Gets a pointer to the [`RecognizedTextLineElement`](recognized-text-line-element.md) object at the specified index. |
 
 ### getRecognizedTextLines
 
@@ -105,45 +80,7 @@ Removes all the recognized text lines from the unit.
 void removeAllRecognizedTextLines();
 ```
 
-### removeRecognizedTextLine
-
-Removes the [`RecognizedTextLineElement`](recognized-text-line-element.md) at the specified index.
-
-```java
-int removeRecognizedTextLine(int index);
-```
-
-**Parameters**
-
-`index`: The index of the recognized text line to remove.
-
-**Return value**
-
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
-
-### setRecognizedTextLine(index, element, matrixToOriginalImage)
-
-Sets the recognized text line at the specified index in a [`RecognizedTextLineElement`](recognized-text-line-element.md) object.
-
-```java
-int setRecognizedTextLine(int index, RecognizedTextLineElement element, Matrix matrixToOriginalImage);
-```
-
-**Parameters**
-
-`index`: The index of the recognized text line to set.
-
-`element`: The [`RecognizedTextLineElement`](recognized-text-line-element.md) object to be set.
-
-`matrixToOriginalImage`: The matrix to the original image.
-
-**Return value**
-
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
-
-### setRecognizedTextLine(element, matrixToOriginalImage)
-
-> This method is deprecated.
+### setRecognizedTextLine
 
 Sets the recognized text line at the specified index in a [`RecognizedTextLineElement`](recognized-text-line-element.md) object.
 

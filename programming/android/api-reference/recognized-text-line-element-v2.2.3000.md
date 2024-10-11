@@ -36,7 +36,6 @@ class RecognizedTextLineElement extends RegionObjectElement
 | [`getRowNumber`](#getrownumber) | Returns the row number of the text line, starting from 1. |
 | [`setText`](#settext) | Sets the recognized text of the line. |
 | [`getSpecificationName`](#getspecificationname) | Returns the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`. |
-| [`getRawText`](#getrawtext) | Returns the recognized raw text, excluding any concatenation separators. |
 
 ### getText
 
@@ -109,15 +108,3 @@ String getSpecificationName();
 **Return value**
 
 The name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`.
-
-### getRawText
-
-Returns the recognized raw text, excluding any concatenation separators.
-
-```java
-String getRawText();
-```
-
-**Return value**
-
-The recognized raw text, excluding any concatenation separators.
