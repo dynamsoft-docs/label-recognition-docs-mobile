@@ -42,7 +42,8 @@ dcp_ios: /code-parser/docs/mobile/programming/ios/
 dcp_ios_api: /code-parser/docs/mobile/programming/ios/api-reference/
 
 
-useVersionTree: true
+useVersionTree: false
+isDCV: true
 
 baseurl: "/label-recognition/docs/mobile"
 
