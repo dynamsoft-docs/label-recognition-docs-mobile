@@ -7,7 +7,6 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: RecognizedTextLineElement
-permalink: /programming/android/api-reference/recognized-text-line-element.html
 ---
 
 # RecognizedTextLineElement
