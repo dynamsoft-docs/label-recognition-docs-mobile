@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: SimplifiedLabelRecognizerSettings - Dynamsoft Label Recognizer MAUI Edition API Reference
-description: The SimplifiedLabelRecognizerSettings contains label recognition setting of Dynamsoft Label Recognizer MAUI edition
+title: SimplifiedLabelRecognizerSettings - Dynamsoft Capture Vision MAUI Edition API Reference
+description: The SimplifiedLabelRecognizerSettings contains label recognition setting of Dynamsoft Capture Vision MAUI edition
 keywords: MAUI, SimplifiedLabelRecognizerSettings
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

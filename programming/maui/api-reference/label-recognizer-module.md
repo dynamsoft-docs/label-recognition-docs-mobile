@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: LabelRecognizerModule - Dynamsoft Label Recognizer MAUI Edition
-description: The LabelRecognizerModule class of Dynamsoft Label Recognizer MAUI edition defines general functions of the DynamsoftLabelRecognizer module.
+title: LabelRecognizerModule - Dynamsoft Capture Vision MAUI Edition
+description: The LabelRecognizerModule class of Dynamsoft Capture Vision MAUI edition defines general functions of the DynamsoftLabelRecognizer module.
 keywords: label recognizer module, MAUI
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

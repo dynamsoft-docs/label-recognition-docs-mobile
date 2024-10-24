@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: TextLineResultItem - Dynamsoft Label Recognizer MAUI Edition
-description: The class TextLineResultItem of Dynamsoft Label Recognizer MAUI edition represents a text line result item recognized by a document layout analysis engine.
+title: TextLineResultItem - Dynamsoft Capture Vision MAUI Edition
+description: The class TextLineResultItem of Dynamsoft Capture Vision MAUI edition represents a text line result item recognized by a document layout analysis engine.
 keywords: Text line result item
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

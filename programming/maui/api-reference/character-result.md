@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: CharacterResult - Dynamsoft Label Recognizer MAUI Edition
-description: The class CharacterResult of Dynamsoft Label Recognizer MAUI edition represents the result of a character recognition process.
+title: CharacterResult - Dynamsoft Capture Vision MAUI Edition
+description: The class CharacterResult of Dynamsoft Capture Vision MAUI edition represents the result of a character recognition process.
 keywords: Character result
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

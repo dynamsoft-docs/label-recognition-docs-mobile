@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: RecognizedTextLinesResult - Dynamsoft Label Recognizer MAUI Edition
-description: The class RecognizedTextLinesResult of Dynamsoft Label Recognizer MAUI edition represents the result of a text recognition process.
+title: RecognizedTextLinesResult - Dynamsoft Capture Vision MAUI Edition
+description: The class RecognizedTextLinesResult of Dynamsoft Capture Vision MAUI edition represents the result of a text recognition process.
 keywords: Recognized text lines result
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
