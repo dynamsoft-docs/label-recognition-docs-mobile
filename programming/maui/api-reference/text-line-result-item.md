@@ -23,7 +23,7 @@ The `TextLineResultItem` class represents a single text line result item recogni
 public class TextLineResultItem : CapturedResultItem
 ```
 
-*Inheritance:* [CapturedResultItem]({{ site.dcv_maui_api }}core/basic-structures/captured-result-item.html) -> TextLineResultItem
+*Inheritance:* [CapturedResultItem]({{ site.dcv_maui_api }}core/captured-result-item.html) -> TextLineResultItem
 
 ## Properties
 
@@ -45,7 +45,7 @@ string Text { get; }
 
 ### Location
 
-It is used to get the location of the text line in the form of a [Quadrilateral]({{ site.dcv_maui_api }}core/basic-structures/quadrilateral.html).
+It is used to get the location of the text line in the form of a [Quadrilateral]({{ site.dcv_maui_api }}core/quadrilateral.html).
 
 ```csharp
 Quadrilateral Location { get; }
