@@ -22,6 +22,8 @@ dcv_parameter_reference: /capture-vision/docs/core/parameters/reference/
 dcv_parameter: /capture-vision/docs/core/parameters/
 dcv_introduction: /capture-vision/docs/core/introduction/
 
+dcv_maui_api: /capture-vision/docs/mobile/programming/maui/api-reference/
+
 dce_ios: /camera-enhancer/docs/mobile/programming/ios/
 dce_ios_api: /camera-enhancer/docs/mobile/programming/ios/
 dce_android: /camera-enhancer/docs/mobile/programming/android/

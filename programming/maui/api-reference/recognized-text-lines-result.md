@@ -35,7 +35,7 @@ class RecognizedTextLinesResult
 
 ### OriginalImageHashId
 
-Get the hash id of the original image. You can use this ID to get the original image via the [`IntermediateResultManager`]({{ site.dcv_maui_api }}core/intermediate-results/intermediate-result-manager.html) class.
+Get the hash id of the original image. You can use this ID to get the original image via the [`IntermediateResultManager`]({{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class.
 
 ```csharp
 String OriginalImageHashId { get; }

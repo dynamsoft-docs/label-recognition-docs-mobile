@@ -43,7 +43,7 @@ EnumGrayscaleTransformationMode[] GrayscaleTransformationModes { get; set ; }
 
 **Remarks**
 
-View the parameter reference page of [`GrayscaleTransformationMode`]({{ site.dcv_parameter_reference }}image-parameter/grayscale-transformation-modes.html){:target="_blank"} for more detail about how to set grayscale transformation modes.
+View the parameter reference page of [`GrayscaleTransformationMode`]({{ site.dcv_parameter_reference }}image-parameter/grayscale-transformation-modes.html) for more detail about how to set grayscale transformation modes.
 
 ### GrayscaleEnhancementModes
 
@@ -55,7 +55,7 @@ EnumGrayscaleEnhancementMode[] GrayscaleEnhancementModes { get; set; }
 
 **Remarks**
 
-View the reference page of [`GrayscaleEnhancementMode`]({{ site.dcv_parameter_reference }}image-parameter/grayscale-enhancement-modes.html){:target="_blank"} for more detail about how to set grayscale enhancement modes.
+View the reference page of [`GrayscaleEnhancementMode`]({{ site.dcv_parameter_reference }}image-parameter/grayscale-enhancement-modes.html) for more detail about how to set grayscale enhancement modes.
 
 ### CharacterModelName
 
