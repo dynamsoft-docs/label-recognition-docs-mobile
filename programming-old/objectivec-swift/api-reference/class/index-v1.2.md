@@ -12,11 +12,11 @@ permalink: /programming/objectivec-swift/api-reference/class/index-v1.2.html
 
 > You are viewing a history document page of Dynamsoft Label Recognizer iOS v1.x.
 
-- [`iDMLTSConnectionParameters`](dm-lts-connection-parameters.md)
-- [`iDLRCharacterResult`](dlr-character-result.md)		
-- [`iDLRImageData`](dlr-image-data.md)		
-- [`iDLRLineResult`](dlr-line-result.md)	
-- [`iDLRQuadrilateral`](dlr-quadrilateral.md)	
-- [`iDLRReferenceRegion`](dlr-reference-region.md)	
-- [`iDLRResult`](dlr-result.md)		
-- [`iDLRRuntimeSettings`](dlr-runtime-settings.md)	
+- [`iDMLTSConnectionParameters`](dm-lts-connection-parameters.html)
+- [`iDLRCharacterResult`](dlr-character-result.html)		
+- [`iDLRImageData`](dlr-image-data.html)		
+- [`iDLRLineResult`](dlr-line-result.html)	
+- [`iDLRQuadrilateral`](dlr-quadrilateral.html)	
+- [`iDLRReferenceRegion`](dlr-reference-region.html)	
+- [`iDLRResult`](dlr-result.html)		
+- [`iDLRRuntimeSettings`](dlr-runtime-settings.html)	

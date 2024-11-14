@@ -12,12 +12,12 @@ permalink: /programming/android/index-v1.2.1.html
 
 ## Getting Started
 
-- [User Guide](user-guide.md)
+- [User Guide](user-guide.html)
 
 ## API Reference
 
-- [API Reference](api-reference/index.md)
+- [API Reference](api-reference/index.html)
 
 ## Release Notes
 
-- [Version 1.x](release-notes/android-1.md)
+- [Version 1.x](release-notes/android-1.html)

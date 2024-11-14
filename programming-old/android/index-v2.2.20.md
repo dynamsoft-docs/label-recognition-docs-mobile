@@ -12,19 +12,19 @@ permalink: /programming/android/index-v2.2.20.html
 
 ## Getting Started
 
-- [User Guide](user-guide.md)
+- [User Guide](user-guide.html)
 
 ## Samples
 
-- [Samples](samples.md)
-  - [HelloWorld](hello-world-sample.md)
-  - [MRZScanner](mrz-sample.md)
+- [Samples](samples.html)
+  - [HelloWorld](hello-world-sample.html)
+  - [MRZScanner](mrz-sample.html)
   
 ## API Reference
 
-- [API Reference](api-reference/index.md)
+- [API Reference](api-reference/index.html)
 
 ## Release Notes
 
-- [Version 2.x](release-notes/android-2.md)
-- [Version 1.x](release-notes/android-1.md)
+- [Version 2.x](release-notes/android-2.html)
+- [Version 1.x](release-notes/android-1.html)
