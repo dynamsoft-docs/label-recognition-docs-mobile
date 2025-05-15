@@ -42,7 +42,6 @@ class RawTextLine: NSObject
 | [`setText`](#settext) | Sets the recognized text. |
 | [`getConfidence`](#getconfidence) | Returns the confidence level of the recognized text. |
 | [`getCharacterResults`](#getcharacterresults) | Returns all the characters contained by the textline. |
-| [`setCharacterResults`](#setcharacterresults) | Sets the characters results. |
 | [`getRowNumber`](#getrownumber) | Returns the row number of the text line within the image. |
 | [`setRowNumber`](#setrownumber) | Sets the row number of the text line within the image. |
 | [`getSpecificationName`](#getspecificationname) | Get the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`. |
@@ -137,31 +136,6 @@ func getCharacterResults() -> [CharacterResult]
 **Return value**
 
 Returns all the characters contained by the textline in an array of [`DSCharacterResult`](character-result.md).
-
-### setCharacterResults
-
-Sets the characters results.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(NSInteger)setCharacterResults:(NSArray<DSCharacterResult*>*)characterResults
-```
-2. 
-```swift
-func setCharacterResults(_ characterResults: [CharacterResult]) -> Int
-```
-
-**Parameters**
-
-`characterResults`: An array of [`DSCharacterResult`](character-result.md).
-
-**Return value**
-
-Returns 0 if success, otherwise an error code.
 
 ### getRowNumber
 

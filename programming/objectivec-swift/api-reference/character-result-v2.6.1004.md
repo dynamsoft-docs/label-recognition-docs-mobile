@@ -31,7 +31,7 @@ The `DSCharacterResult` class represents the result of a character recognition p
 class CharacterResult: NSObject
 ```
 
-## Properties & Methods
+## Properties
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
@@ -43,11 +43,6 @@ class CharacterResult: NSObject
 | [`characterMConfidence`](#charactermconfidence) | *NSInteger* | The confidence of the character with medium confidence. |
 | [`characterLConfidence`](#characterlconfidence) | *NSInteger* | The confidence of the character with low confidence. |
 
-| Methods | Description |
-| ------- | ----------- |
-| [`init`](#init) | Initializes a new instance of the `DSCharacterResult` class. |
-| [`initWithCharacterH`](#initwithcharacterh) | Initializes a new instance of the `DSCharacterResult` class. |
-
 ### characterH
 
 The character with high confidence.
@@ -58,7 +53,7 @@ The character with high confidence.
 >
 >1. 
 ```objc
-@property (nonatomic, assign) unichar characterH;
+@property (nonatomic, assign, readonly) unichar characterH;
 ```
 2. 
 ```swift
@@ -75,7 +70,7 @@ The character with medium confidence.
 >
 >1. 
 ```objc
-@property (nonatomic, assign) unichar characterM;
+@property (nonatomic, assign, readonly) unichar characterM;
 ```
 2. 
 ```swift
@@ -92,7 +87,7 @@ The character with low confidence.
 >
 >1. 
 ```objc
-@property (nonatomic, assign) unichar characterL;
+@property (nonatomic, assign, readonly) unichar characterL;
 ```
 2. 
 ```swift
@@ -109,7 +104,7 @@ The location of the character in a quadrilateral shape.
 >
 >1. 
 ```objc
-@property (nonatomic, nullable) DSQuadrilateral * location;
+@property (nonatomic, nullable, readonly) DSQuadrilateral * location;
 ```
 2. 
 ```swift
@@ -126,7 +121,7 @@ The confidence of the character with high confidence.
 >
 >1. 
 ```objc
-@property (nonatomic, assign) NSInteger characterHConfidence;
+@property (nonatomic, assign, readonly) NSInteger characterHConfidence;
 ```
 2. 
 ```swift
@@ -143,7 +138,7 @@ The confidence of the character with medium confidence.
 >
 >1. 
 ```objc
-@property (nonatomic, assign) NSInteger characterMConfidence;
+@property (nonatomic, assign, readonly) NSInteger characterMConfidence;
 ```
 2. 
 ```swift
@@ -160,45 +155,9 @@ The confidence of the character with low confidence.
 >
 >1. 
 ```objc
-@property (nonatomic, assign) NSInteger characterLConfidence;
+@property (nonatomic, assign, readonly) NSInteger characterLConfidence;
 ```
 2. 
 ```swift
 var characterLConfidence: Int { get }
-```
-
-### init
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (instancetype)init;
-```
-2. 
-```swift
-init()
-```
-
-### initWithCharacterH
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (instancetype)initWithCharacterH:(unichar)characterH
-                        characterM:(unichar)characterM
-                        characterL:(unichar)characterL
-              characterHConfidence:(DSQuadrilateral *)characterHConfidence
-              characterMConfidence:(NSInteger)characterMConfidence
-              characterLConfidence:(NSInteger)characterLConfidence
-                          location:(NSInteger)location;
-```
-2. 
-```swift
-init(characterH: unichar, characterM: unichar, characterL: unichar, characterHConfidence: Int, characterMConfidence: Int, characterLConfidence: Int, location: Int)
 ```
