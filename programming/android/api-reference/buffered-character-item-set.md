@@ -17,7 +17,7 @@ The `BufferedCharacterItemSet` class represents the buffered characters and the 
 
 *Namespace:* com.dynamsoft.dlr
 
-*Assembly:* DynamsoftLabelRecognizer.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class BufferedCharacterItemSet

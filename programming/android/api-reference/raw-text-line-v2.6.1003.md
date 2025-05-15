@@ -1,17 +1,17 @@
 ---
 layout: default-layout
-title: DSRawTextLine - Dynamsoft Label Recognizer iOS Edition
-description: The class DSRawTextLine of Dynamsoft Label Recognizer iOS edition represents a unit which holds the raw text lines.
+title: RawTextLine - Dynamsoft Label Recognizer iOS Edition
+description: The class RawTextLine of Dynamsoft Label Recognizer iOS edition represents a unit which holds the raw text lines.
 keywords: raw text lines unit, intermediate result unit
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
 noTitleIndex: true
-breadcrumbText: DSRawTextLine
+breadcrumbText: RawTextLine
 ---
 
-# DSRawTextLine
+# RawTextLine
 
-The `DSRawTextLine` class represents a text line in an image. It can be in one of the following states:
+The `RawTextLine` class represents a text line in an image. It can be in one of the following states:
 
 - `TLS_LOCALIZED`: Localized but recognition not performed.
 - `TLS_RECOGNITION_FAILED`: Recognition failed.
@@ -19,19 +19,12 @@ The `DSRawTextLine` class represents a text line in an image. It can be in one o
 
 ## Definition
 
-*Assembly:* DynamsoftCaptureVisionBundle.xcframework
+*Namespace:* com.dynamsoft.dlr
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@interface DSRawTextLine: NSObject
-```
-2. 
-```swift
-class RawTextLine: NSObject
+*Assembly:* DynamsoftLabelRecognizer.aar
+
+```java
+class RawTextLine
 ```
 
 ## Methods
@@ -42,7 +35,6 @@ class RawTextLine: NSObject
 | [`setText`](#settext) | Sets the recognized text. |
 | [`getConfidence`](#getconfidence) | Returns the confidence level of the recognized text. |
 | [`getCharacterResults`](#getcharacterresults) | Returns all the characters contained by the textline. |
-| [`setCharacterResults`](#setcharacterresults) | Sets the characters results. |
 | [`getRowNumber`](#getrownumber) | Returns the row number of the text line within the image. |
 | [`setRowNumber`](#setrownumber) | Sets the row number of the text line within the image. |
 | [`getSpecificationName`](#getspecificationname) | Get the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`. |
@@ -54,17 +46,8 @@ class RawTextLine: NSObject
 
 Returns the recognized text.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(NSString*)getText;
-```
-2. 
-```swift
-func getText() -> String
+```java
+String getText();
 ```
 
 **Return value**
@@ -75,17 +58,8 @@ Returns the text of the text line.
 
 Returns the recognized text.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(NSInteger)setText:(NSString *)text;
-```
-2. 
-```swift
-func setText(_ text: String) -> Int
+```java
+void setText(string text);
 ```
 
 **Parameter**
@@ -100,17 +74,8 @@ Returns the `ErrorCode` if failed. Otherwise, returns 0.
 
 Returns the confidence level of the recognized text.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(NSInteger)getConfidence;
-```
-2. 
-```swift
-func getConfidence() -> Int
+```java
+int getConfidence();
 ```
 
 **Return value**
@@ -119,65 +84,22 @@ Returns the confidence level of the text line.
 
 ### getCharacterResults
 
-Returns all the characters contained by the textline in an array of [`DSCharacterResult`](character-result.md).
+Returns all the characters contained by the textline in an array of [`CharacterResult`](character-result.md).
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(nullable NSArray<DSCharacterResult *>*)getCharacterResults;
-```
-2. 
-```swift
-func getCharacterResults() -> [CharacterResult]
+```java
+CharacterResult[] getCharacterResults();
 ```
 
 **Return value**
 
-Returns all the characters contained by the textline in an array of [`DSCharacterResult`](character-result.md).
-
-### setCharacterResults
-
-Sets the characters results.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(NSInteger)setCharacterResults:(NSArray<DSCharacterResult*>*)characterResults
-```
-2. 
-```swift
-func setCharacterResults(_ characterResults: [CharacterResult]) -> Int
-```
-
-**Parameters**
-
-`characterResults`: An array of [`DSCharacterResult`](character-result.md).
-
-**Return value**
-
-Returns 0 if success, otherwise an error code.
+Returns all the characters contained by the textline in an array of [`CharacterResult`](character-result.md).
 
 ### getRowNumber
 
 Returns the row number of the text line within the image.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(NSInteger)getRowNumber;
-```
-2. 
-```swift
-func getRowNumber() -> Int
+```java
+int getRowNumber();
 ```
 
 **Return value**
@@ -188,17 +110,8 @@ Returns the row number of the text line within the image.
 
 Sets the row number of the text line within the image.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(NSInteger)setRowNumber:(NSInteger)rowNumber;
-```
-2. 
-```swift
-func setRowNumber(_ rowNumber: Int) -> Int
+```java
+int setRowNumber(int rowNumber);
 ```
 
 **Parameter**
@@ -213,17 +126,8 @@ Returns 0 if success, otherwise an error code.
 
 Returns the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(NSString *)getSpecificationName;
-```
-2. 
-```swift
-func getSpecificationName() -> String
+```java
+String getSpecificationName();
 ```
 
 **Return value**
@@ -234,17 +138,8 @@ The name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-l
 
 Sets the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(NSInteger)setSpecificationName:(NSString *)specificationName;
-```
-2. 
-```swift
-func setSpecificationName(_ specificationName: String) -> Int
+```java
+int setSpecificationName(String specificationName);
 ```
 
 **Parameter**
@@ -259,17 +154,8 @@ Returns 0 if success, otherwise an error code.
 
 Returns a `Quadrilateral` object which represents the location of the text line.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(DSQuadrilateral *)getLocation;
-```
-2. 
-```swift
-func getLocation() -> Quadrilateral
+```java
+Quadrilateral getLocation();
 ```
 
 **Return value**
@@ -280,17 +166,8 @@ A `Quadrilateral` object which represents the location of the text line.
 
 Set the location of the text line.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(NSInteger)setLocation:(DSQuadrilateral *)location;
-```
-2. 
-```swift
-func setLocation(_ location: Quadrilateral) -> Int
+```java
+int setLocation(Quadrilateral location);
 ```
 
 **Parameter**
@@ -305,17 +182,8 @@ Returns 0 if success, otherwise an error code.
 
 Returns the status of the text line.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(DSRawTextLineStatus)getStatus;
-```
-2. 
-```swift
-func getStatus() -> RawTextLineStatus
+```java
+RawTextLineStatus getStatus();
 ```
 
 **Return value**

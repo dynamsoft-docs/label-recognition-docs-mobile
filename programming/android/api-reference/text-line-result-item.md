@@ -17,7 +17,7 @@ The `TextLineResultItem` class represents a single text line result item recogni
 
 *Namespace:* com.dynamsoft.dlr
 
-*Assembly:* DynamsoftLabelRecognizer.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class TextLineResultItem extends CapturedResultItem

@@ -16,7 +16,7 @@ The `DSLocalizedTextLineElement` class represents a localized text line element.
 
 ## Definition
 
-*Assembly:* DynamsoftLabelRecognizer.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

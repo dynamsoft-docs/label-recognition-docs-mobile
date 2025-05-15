@@ -15,7 +15,7 @@ The `DSRecognizedTextLinesUnit` class represents an intermediate result unit con
 
 ## Definition
 
-*Assembly:* DynamsoftLabelRecognizer.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

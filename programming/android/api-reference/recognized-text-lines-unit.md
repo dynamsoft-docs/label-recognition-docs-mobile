@@ -18,7 +18,7 @@ The `RecognizedTextLinesUnit` class represents an intermediate result unit conta
 
 *Namespace:* com.dynamsoft.dlr.intermediate_results
 
-*Assembly:* DynamsoftLabelRecognizer.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class RecognizedTextLinesUnit extends IntermediateResultUnit

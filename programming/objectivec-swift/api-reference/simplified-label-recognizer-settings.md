@@ -15,7 +15,7 @@ The `DSSimplifiedLabelRecognizerSettings` class contains settings for label reco
 
 ## Definition
 
-*Assembly:* DynamsoftLabelRecognizer.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

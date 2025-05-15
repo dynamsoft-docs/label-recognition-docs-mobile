@@ -15,7 +15,7 @@ The `DSRawTextLinesUnit` class represents a unit which holds the raw text lines.
 
 ## Definition
 
-*Assembly:* DynamsoftLabelRecognizer.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

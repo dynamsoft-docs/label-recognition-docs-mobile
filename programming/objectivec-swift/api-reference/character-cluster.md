@@ -15,7 +15,7 @@ The `DSCharacterCluster` class represents the character clustering result. Each 
 
 ## Definition
 
-*Assembly:* DynamsoftLabelRecognizer.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

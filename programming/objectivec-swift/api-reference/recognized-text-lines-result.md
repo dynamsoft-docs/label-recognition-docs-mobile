@@ -16,7 +16,7 @@ The `DSRecognizedTextLinesResult` class represents the overall result(s) of a te
 
 ## Definition
 
-*Assembly:* DynamsoftLabelRecognizer.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -24,57 +24,28 @@ The `DSRecognizedTextLinesResult` class represents the overall result(s) of a te
 >
 >1. 
 ```objc
-@interface DSRecognizedTextLinesResult : NSObject
+@interface DSRecognizedTextLinesResult : DSCapturedResultBase
 ```
 2. 
 ```swift
-class RecognizedTextLinesResult: NSObject
+class RecognizedTextLinesResult: CapturedResultBase
 ```
 
 ## Properties
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| [`originalImageHashId`](#originalimagehashid) | *NSString \** | The hash ID of the original image. |
-| [`originalImageTag`](#originalimagetag) | *DSImageTag \** | The tag of the original image stores in a [`DSImageTag`]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html) object. |
 | [`items`](#items) | *NSArray<DSTextLineResultItem \*> \** | All the text line result items that recognized from the image in an array of [`DSTextLineResultItem`](text-line-result-item.md). |
-| [`rotationTransformMatrix`](#rotationtransformmatrix) | *CGAffineTransform* | The rotation transformation matrix of the original image relative to the rotated image.|
-| [`errorCode`](#errorcode) | *NSInteger* | The error code of the recognition result, if an error occurred. |
-| [`errorMessage`](#errormessage) | *NSString \** | The error message of the recognition result, if an error occurred. |
 
-### originalImageHashId
+The following attributes are inherited from [`DSCapturedResultBase`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-base.html):
 
-The hash ID of the original image.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nullable, readonly) NSString* originalImageHashId;
-```
-2. 
-```swift
-var originalImageHashId: String? { get }
-```
-
-### originalImageTag
-
-The tag of the original image stores in a [`DSImageTag`]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html) object.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nullable, readonly) DSImageTag* originalImageTag;
-```
-2. 
-```swift
-var originalImageTag: ImageTag? { get }
-```
+| Attributes | Type | Description |
+| ---------- | ---- | ----------- |
+| [`originalImageHashId`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-base.html#originalimagehashid) | *NSString \** | The hash id of the original image. |
+| [`originalImageTag`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-base.html#originalimagetag) | *DSImageTag \** | The [DSImageTag](image-tag.md) of the original image. |
+| [`rotationTransformMatrix`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-base.html#rotationtransformmatrix) | *CGAffineTransform* | The rotation transformation matrix of the original image relative to the rotated image. |
+| [`errorCode`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-base.html#errorcode) | *NSInteger* | Get the error code of this result. |
+| [`errorMessage`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-base.html#errormessage) | *NSString \** | Get the error message of this result. |
 
 ### items
 
@@ -91,55 +62,4 @@ All the text line result items that recognized from the image in an array of [`D
 2. 
 ```swift
 var items: [TextLineResultItem]? { get }
-```
-
-### rotationTransformMatrix
-
-Get the rotation transformation matrix of the original image relative to the rotated image.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nullable, assign, readonly) CGAffineTransform rotationTransformMatrix;
-```
-2. 
-```swift
-var rotationTransformMatrix: CGAffineTransform { get }
-```
-
-### errorCode
-
-Returns the error code of this result should something go wrong.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign, readonly) NSInteger errorCode;
-```
-2. 
-```swift
-var errorCode: Int { get }
-```
-
-### errorMessage
-
-Returns the error message of this result should something go wrong.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign, readonly) NSString * errorMessage;
-```
-2. 
-```swift
-var errorMessage: String { get }
 ```

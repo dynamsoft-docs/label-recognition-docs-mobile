@@ -3,6 +3,8 @@ repository: Dynamsoft-Docs/label-recognition-docs-mobile
 docFullPath: https://www.dynamsoft.com/label-recognition/docs/mobile/
 firstLevelUrl: /label-recognition/docs/mobile/
 docHomePage: /label-recognition/docs/mobile/introduction/
+needSearchIndex: true
+searchNeedFilter: true
 
 enumerations: /label-recognition/docs/core/parameters/enum/
 parameters-reference: /label-recognition/docs/core/parameters/reference/

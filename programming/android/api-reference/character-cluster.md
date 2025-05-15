@@ -17,7 +17,7 @@ The `CharacterCluster` class represents the character clustering result. Each `C
 
 *Namespace:* com.dynamsoft.dlr
 
-*Assembly:* DynamsoftLabelRecognizer.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class CharacterCluster

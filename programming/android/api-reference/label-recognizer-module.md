@@ -17,7 +17,7 @@ The `LabelRecognizerModule` class defines general functions of the `DynamsoftLab
 
 *Namespace:* com.dynamsoft.dlr
 
-*Assembly:* DynamsoftLabelRecognizer.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class LabelRecognizerModule 
