@@ -15,7 +15,7 @@ The `DSBufferedCharacterItemSet` class represents the buffered characters and th
 
 ## Definition
 
-*Assembly:* DynamsoftLabelRecognizer.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

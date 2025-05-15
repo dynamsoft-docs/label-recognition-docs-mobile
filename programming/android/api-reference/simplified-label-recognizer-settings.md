@@ -16,7 +16,7 @@ The `SimplifiedLabelRecognizerSettings` class contains settings for label recogn
 
 *Namespace:* com.dynamsoft.dlr
 
-*Assembly:* DynamsoftLabelRecognizer.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class SimplifiedLabelRecognizerSettings

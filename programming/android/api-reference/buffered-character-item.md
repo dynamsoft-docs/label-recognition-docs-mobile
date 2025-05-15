@@ -17,7 +17,7 @@ The `BufferedCharacterItem` class represents a buffered character.
 
 *Namespace:* com.dynamsoft.dlr
 
-*Assembly:* DynamsoftLabelRecognizer.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class BufferedCharacterItem

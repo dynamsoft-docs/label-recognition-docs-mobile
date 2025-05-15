@@ -19,7 +19,7 @@ The `DSRawTextLine` class represents a text line in an image. It can be in one o
 
 ## Definition
 
-*Assembly:* DynamsoftLabelRecognizer.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

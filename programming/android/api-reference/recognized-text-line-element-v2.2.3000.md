@@ -17,7 +17,7 @@ The `RecognizedTextLineElement` class extends the [RegionObjectElement]({{ site.
 
 *Namespace:* com.dynamsoft.dlr.intermediate_results
 
-*Assembly:* DynamsoftLabelRecognizer.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class RecognizedTextLineElement extends RegionObjectElement

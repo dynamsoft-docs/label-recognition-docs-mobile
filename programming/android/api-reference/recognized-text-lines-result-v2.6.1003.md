@@ -18,7 +18,7 @@ The `RecognizedTextLinesResult` class represents the overall result(s) of a text
 
 *Namespace:* com.dynamsoft.dlr
 
-*Assembly:* DynamsoftLabelRecognizer.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class RecognizedTextLinesResult

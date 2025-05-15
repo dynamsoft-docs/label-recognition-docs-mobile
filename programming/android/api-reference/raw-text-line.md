@@ -21,7 +21,7 @@ The `RawTextLine` class represents a text line in an image. It can be in one of 
 
 *Namespace:* com.dynamsoft.dlr
 
-*Assembly:* DynamsoftLabelRecognizer.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class RawTextLine

@@ -18,7 +18,7 @@ The `LocalizedTextLinesUnit` class represents a unit that contains localized tex
 
 *Namespace:* com.dynamsoft.dlr.intermediate_results
 
-*Assembly:* DynamsoftLabelRecognizer.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class LocalizedTextLinesUnit extends IntermediateResultUnit

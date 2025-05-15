@@ -15,7 +15,7 @@ The `DSLabelRecognizerModule` class defines general functions in the label recog
 
 ## Definition
 
-*Assembly:* DynamsoftLabelRecognizer.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

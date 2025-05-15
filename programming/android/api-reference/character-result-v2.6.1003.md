@@ -18,7 +18,7 @@ The `CharacterResult` class represents the result of a character recognition pro
 
 *Namespace:* com.dynamsoft.dlr
 
-*Assembly:* DynamsoftLabelRecognizer.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class CharacterResult

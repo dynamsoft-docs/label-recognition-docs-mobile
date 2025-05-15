@@ -19,7 +19,7 @@ The `RawTextLinesUnit` class represents a unit which holds the raw text lines.
 
 *Namespace:* com.dynamsoft.dlr
 
-*Assembly:* DynamsoftLabelRecognizer.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class RawTextLine

@@ -15,7 +15,7 @@ The `DSRecognizedTextLineElement` class represents a line of recognized text in 
 
 ## Definition
 
-*Assembly:* DynamsoftLabelRecognizer.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

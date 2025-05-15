@@ -18,7 +18,7 @@ The `LocalizedTextLineElement` class represents a localized text line element. I
 
 *Namespace:* com.dynamsoft.dlr.intermediate_results
 
-*Assembly:* DynamsoftLabelRecognizer.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 ```java
 class LocalizedTextLineElement extends RegionObjectElement

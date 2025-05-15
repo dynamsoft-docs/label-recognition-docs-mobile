@@ -16,7 +16,7 @@ The `DSRecognizedTextLinesResult` class represents the overall result(s) of a te
 
 ## Definition
 
-*Assembly:* DynamsoftLabelRecognizer.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

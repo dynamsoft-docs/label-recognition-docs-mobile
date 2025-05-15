@@ -15,7 +15,7 @@ The `DSLocalizedTextLinesUnit` class represents a unit that contains localized t
 
 ## Definition
 
-*Assembly:* DynamsoftLabelRecognizer.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
