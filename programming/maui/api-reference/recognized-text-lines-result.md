@@ -20,30 +20,23 @@ The `RecognizedTextLinesResult` class represents the overall result(s) of a text
 *Assembly:* Dynamsoft.LabelRecognizer.Maui
 
 ```csharp
-class RecognizedTextLinesResult
+class RecognizedTextLinesResult : CapturedResultBase
 ```
 
 ## Properties
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| [`OriginalImageHashId`](#originalimagehashid) | *String* | Gets the hash ID of the original image. |
 | [`Items`](#items) | *IList<TextLineResultItem>* | Gets the text line result item at the specified index. |
-| [`RotationTransformMatrix`](#rotationtransformmatrix) | *Matrix* | Get the rotation transformation matrix of the original image relative to the rotated image.|
-| [`ErrorCode`](#errorcode) | *int* | Gets the error code of the recognition result, if an error occurred. |
-| [`ErrorMessage`](#errormessage) | *String* | Gets the error message of the recognition result, if an error occurred. |
 
-### OriginalImageHashId
+The following properties are inherited from [`CapturedResultBase`]({{ site.dcv_maui_api }}core/captured-result-base.html):
 
-Get the hash id of the original image. You can use this ID to get the original image via the [`IntermediateResultManager`]({{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class.
-
-```csharp
-String OriginalImageHashId { get; }
-```
-
-**Return value**
-
-Returns the hash ID of the original image as a string.
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| [`OriginalImageHashId`]({{ site.dcv_maui_api }}core/captured-result-base.html#originalimagehashid) | *string* | Represents the hash id of the original image. |
+| [`RotationTransformMatrix`]({{ site.dcv_maui_api }}core/captured-result-base.html#rotationtransformmatrix) | *Matrix* | Represents the rotation transformation matrix of the original image relative to the rotated image. |
+| [`ErrorCode`]({{ site.dcv_maui_api }}core/captured-result-base.html#errorcode) | *int* | Represents the error code of this result. |
+| [`ErrorMessage`]({{ site.dcv_maui_api }}core/captured-result-base.html#errormessage) | *string* | Represents the error message of this result. |
 
 ### Items
 
@@ -52,43 +45,3 @@ Gets all the text line result(s) recognized from the image/frame in an array of 
 ```csharp
 IList<TextLineResultItem> Items { get; }
 ```
-
-**Return value**
-
-Returns an array of `TextLineResultItem` that contains all text line recognition results.
-
-### RotationTransformMatrix
-
-Get the rotation transformation matrix of the original image relative to the rotated image.
-
-```csharp
-Matrix RotationTransformMatrix { get; }
-```
-
-**Return Value**
-
-A `Matrix` which represents the rotation transform matrix.
-
-### ErrorCode
-
-Gets the error code of the recognition result, if an error occurred.
-
-```csharp
-int ErrorCode { get; }
-```
-
-**Return value**
-
-Returns the error code of the recognition result, or 0 if no error occurred.
-
-### ErrorMessage
-
-Gets the error message of the recognition result, if an error occurred.
-
-```csharp
-String ErrorMessage { get; }
-```
-
-**Return value**
-
-Returns a string that describes the error message.
