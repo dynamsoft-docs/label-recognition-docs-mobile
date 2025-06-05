@@ -27,7 +27,7 @@ class RecognizedTextLinesResult : CapturedResultBase
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| [`Items`](#items) | *IList<TextLineResultItem>* | Gets the text line result item at the specified index. |
+| [`Items`](#items) | *TextLineResultItem[]* | Gets the text line result item at the specified index. |
 
 The following properties are inherited from [`CapturedResultBase`]({{ site.dcv_maui_api }}core/captured-result-base.html):
 
@@ -43,5 +43,5 @@ The following properties are inherited from [`CapturedResultBase`]({{ site.dcv_m
 Gets all the text line result(s) recognized from the image/frame in an array of [`DSTextLineResultItem`](text-line-result-item.md).
 
 ```csharp
-IList<TextLineResultItem> Items { get; }
+TextLineResultItem[]? Items { get; }
 ```
