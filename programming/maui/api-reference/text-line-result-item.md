@@ -32,7 +32,7 @@ public class TextLineResultItem : CapturedResultItem
 | [`Text`](#text) | *String* | Returns the text content of the text line. |
 | [`Location`](#location) | *Quadrilateral* | Returns the location of the text line in the form of a quadrilateral. |
 | [`Confidence`](#confidence) | *int* | Returns the confidence of the text line recognition result. |
-| [`CharacterResults`](#characterresults) | *IList<CharacterResult>* | Get all the characters in the text line. Each character is represented by a [`CharacterResult`](character-result.html) object. |
+| [`CharacterResults`](#characterresults) | *CharacterResult[]* | Get all the characters in the text line. Each character is represented by a [`CharacterResult`](character-result.html) object. |
 | [`SpecificationName`](#specificationname) | *String* | Returns the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`. |
 
 ### Text
@@ -64,7 +64,7 @@ int Confidence { get; }
 Returns all the characters in the text line. Each character is represented by a [`CharacterResult`](character-result.md) object.
 
 ```csharp
-IList<CharacterResult> CharacterResults { get; }
+CharacterResult[] CharacterResults { get; }
 ```
 
 ### SpecificationName
