@@ -37,6 +37,6 @@ jobs:
     uses: dynamsoft-docs/Docs-Template-Repo/.github/workflows/called-workflow-build-sync-testing.yml@DCV-v2
     with:
       doc-repo: label-recognition-docs-mobile
-      doc-url: label-recognition/docs/mobile
+      doc-url: label-recognition/docs/v2/mobile
       doc-branch: v2
     secrets: inherit
