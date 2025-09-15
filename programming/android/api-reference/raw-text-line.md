@@ -21,7 +21,7 @@ The `RawTextLine` class represents a text line in an image. It can be in one of 
 
 *Namespace:* com.dynamsoft.dlr
 
-*Assembly:* DynamsoftCaptureVisionBundle.aar
+*Assembly:* DynamsoftLabelRecognizer.aar
 
 ```java
 class RawTextLine
@@ -35,7 +35,6 @@ class RawTextLine
 | [`setText`](#settext) | Sets the recognized text. |
 | [`getConfidence`](#getconfidence) | Returns the confidence level of the recognized text. |
 | [`getCharacterResults`](#getcharacterresults) | Returns all the characters contained by the textline. |
-| [`setCharacterResults`](#getcharacterresults) | Sets the character results. |
 | [`getRowNumber`](#getrownumber) | Returns the row number of the text line within the image. |
 | [`setRowNumber`](#setrownumber) | Sets the row number of the text line within the image. |
 | [`getSpecificationName`](#getspecificationname) | Get the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`. |
@@ -94,22 +93,6 @@ CharacterResult[] getCharacterResults();
 **Return value**
 
 Returns all the characters contained by the textline in an array of [`CharacterResult`](character-result.md).
-
-### setCharacterResults
-
-Sets the character results.
-
-```java
-int setCharacterResults(CharacterResult[] characterResults);
-```
-
-**Parameter**
-
-`characterResults`: An array of [`CharacterResult`](character-result.md).
-
-**Return value**
-
-Returns 0 if success, otherwise an error code.
 
 ### getRowNumber
 

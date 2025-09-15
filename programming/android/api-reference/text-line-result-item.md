@@ -17,7 +17,7 @@ The `TextLineResultItem` class represents a single text line result item recogni
 
 *Namespace:* com.dynamsoft.dlr
 
-*Assembly:* DynamsoftCaptureVisionBundle.aar
+*Assembly:* DynamsoftLabelRecognizer.aar
 
 ```java
 class TextLineResultItem extends CapturedResultItem
@@ -29,16 +29,15 @@ class TextLineResultItem extends CapturedResultItem
 
 | Method | Description |
 | ------ | ----------- |
-| [`getText`](#gettext) | Returns the text content of the text line. |
-| [`getLocation`](#getlocation) | Returns the location of the text line in the form of a quadrilateral. |
-| [`getConfidence`](#getconfidence) | Returns the confidence of the text line recognition result. |
+| [`getText`](#gettext) | Gets the text content of the text line. |
+| [`getLocation`](#getlocation) | Gets the location of the text line in the form of a quadrilateral. |
+| [`getConfidence`](#getconfidence) | Gets the confidence of the text line recognition result. |
 | [`getCharacterResults`](#getcharacterresults) | Get all the characters in the text line. Each character is represented by a [`CharacterResult`](character-result.md) object. |
-| [`getSpecificationName`](#getspecificationname) | Returns the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`. |
-| [`getRawText`](#getrawtext) | Returns the recognized raw text, excluding any concatenation separators. |
+| [`getSpecificationName`](#getspecificationname) | Get the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`. |
 
 ### getText
 
-Returns the text content of the individual text line.
+Gets the text content of the individual text line.
 
 ```java
 String getText();
@@ -62,7 +61,7 @@ Returns the location of the text line in the form of a quadrilateral.
 
 ### getConfidence
 
-Returns the confidence of the individual text line recognition result.
+Gets the confidence of the individual text line recognition result.
 
 ```java
 int getConfidence();
@@ -86,7 +85,7 @@ An array of [`CharacterResult`](character-result.md) contains all the characters
 
 ### getSpecificationName
 
-Returns the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`.
+Get the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`.
 
 ```java
 String getSpecificationName();
@@ -95,15 +94,3 @@ String getSpecificationName();
 **Return value**
 
 The name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`.
-
-### getRawText
-
-Returns the recognized raw text, excluding any concatenation separators.
-
-```java
-String getRawText();
-```
-
-**Return value**
-
-The recognized raw text, excluding any concatenation separators.

@@ -15,7 +15,7 @@ The `DSTextLineResultItem` class represents a single text line result item recog
 
 ## Definition
 
-*Assembly:* DynamsoftCaptureVisionBundle.xcframework
+*Assembly:* DynamsoftLabelRecognizer.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -41,7 +41,6 @@ class TextLineResultItem: CapturedResultItem
 | [`confidence`](#confidence) | *NSInteger* | The confidence of the text line recognition result. |
 | [`characterResults`](#characterresults) | *NSArray<DSCharacterResult \*> \** | All the characters in the text line. Each character is represented by a [`CharacterResult`](character-result.md) object. |
 | [`specificationName`](#specificationname) | *NSString \** | the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`. |
-| [`rawText`](#rawtext) | *NSString \** | The recognized raw text, excluding any concatenation separators. |
 
 ### text
 
@@ -126,21 +125,4 @@ The name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-l
 2. 
 ```swift
 var specificationName: String { get }
-```
-
-### rawText
-
-The recognized raw text, excluding any concatenation separators.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign, readonly) NSString* rawText;
-```
-2. 
-```swift
-var rawText: String? { get }
 ```

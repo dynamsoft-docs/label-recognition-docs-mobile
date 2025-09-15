@@ -15,7 +15,7 @@ The `DSRecognizedTextLineElement` class represents a line of recognized text in 
 
 ## Definition
 
-*Assembly:* DynamsoftCaptureVisionBundle.xcframework
+*Assembly:* DynamsoftLabelRecognizer.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -38,7 +38,6 @@ class RecognizedTextLineElement: RegionObjectElement
 | ------- | ----------- |
 | [`getText`](#gettext) | Returns the recognized text. |
 | [`setText`](#settext) | Sets the recognized text. |
-| [`getRawText`](#getrawtext) | Returns the recognized raw text, excluding any concatenation separators. |
 | [`getConfidence`](#getconfidence) | Returns the confidence level of the recognized text. |
 | [`getCharacterResults`](#getcharacterresults) | Returns all the characters contained by the textline. |
 | [`getRowNumber`](#getrownumber) | Returns the row number of the text line within the image. |
@@ -89,27 +88,6 @@ func setText(_ text: String) -> Int
 **Return value**
 
 Returns the `ErrorCode` if failed. Otherwise, returns 0.
-
-### getRawText
-
-Returns the recognized raw text, excluding any concatenation separators.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
--(NSString*)getRawText;
-```
-2. 
-```swift
-func getRawText() -> String
-```
-
-**Return value**
-
-The recognized raw text, excluding any concatenation separators.
 
 ### getConfidence
 
