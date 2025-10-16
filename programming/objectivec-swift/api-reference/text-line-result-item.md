@@ -53,7 +53,7 @@ Returns the text content of the individual text line.
 >
 >1. 
 ```objc
-@property (nonatomic, nullable, readonly) NSString* text;
+@property (nonatomic, readonly, copy) NSString* text;
 ```
 2. 
 ```swift
@@ -70,7 +70,7 @@ It is used to get the location of the text line in the form of a [DSQuadrilatera
 >
 >1. 
 ```objc
-@property (nonatomic, nullable, readonly) DSQuadrilateral* location;
+@property (nonatomic, readonly, strong) DSQuadrilateral* location;
 ```
 2. 
 ```swift
@@ -104,7 +104,7 @@ Returns all the characters in the text line. Each character is represented by a 
 >
 >1. 
 ```objc
-@property (nonatomic, nullable, readonly) NSArray<DSCharacterResult*>* charResult;
+@property (nonatomic, readonly, copy, nullable) NSArray<DSCharacterResult*>* charResult;
 ```
 2. 
 ```swift
@@ -138,7 +138,7 @@ The recognized raw text, excluding any concatenation separators.
 >
 >1. 
 ```objc
-@property (nonatomic, assign, readonly) NSString* rawText;
+@property (nonatomic, readonly, copy) NSString* rawText;
 ```
 2. 
 ```swift
