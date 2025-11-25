@@ -29,7 +29,7 @@ class TextLineResultItem extends CapturedResultItem
 | [`text`](#text) | *String* | Returns the text content of the text line. |
 | [`location`](#location) | *Quadrilateral* | Returns the location of the text line in the form of a quadrilateral. |
 | [`confidence`](#confidence) | *int* | Returns the confidence of the text line recognition result. |
-| [`characterResults`](#characterresults) | *List<CharacterResult>* | Get all the characters in the text line. Each character is represented by a [`CharacterResult`](character-result.md) object. |
+| [`characterResults`](#characterresults) | *List<CharacterResult>* | Get all the characters in the text line. Each character is represented by a [`CharacterResult`]({{ site.dcv_flutter_api }}core/character-result.html) object. |
 | [`specificationName`](#specificationname) | *String* | Returns the name of the [`TextLineSpecification`]({{site.dcv_parameter_reference}}text-line-specification/) object that generated this `TextLineResultItem`. |
 | [`rawText`](#rawtext) | *String* | Returns the recognized raw text, excluding any concatenation separators. |
 
@@ -43,7 +43,7 @@ String text;
 
 ### location
 
-It is used to get the location of the text line in the form of a [Quadrilateral]({{ site.dcv_android_api }}core/quadrilateral.html).
+It is used to get the location of the text line in the form of a [Quadrilateral]({{ site.dcv_flutter_api }}core/quadrilateral.html).
 
 ```dart
 Quadrilateral location;
@@ -59,7 +59,7 @@ int confidence;
 
 ### characterResults
 
-Returns all the characters in the text line. Each character is represented by a [`CharacterResult`](character-result.md) object.
+Returns all the characters in the text line. Each character is represented by a [`CharacterResult`]({{ site.dcv_flutter_api }}core/character-result.html) object.
 
 ```dart
 List<CharacterResult>? characterResults;
