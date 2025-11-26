@@ -20,7 +20,7 @@ The `TextLineResultItem` class represents a single text line result item recogni
 class TextLineResultItem extends CapturedResultItem
 ```
 
-*Inheritance:* [CapturedResultItem]({{ site.dcv_android_api }}core/captured-result-item.html) -> TextLineResultItem
+*Inheritance:* [CapturedResultItem]({{ site.dcv_flutter_api }}core/captured-result-item.html) -> TextLineResultItem
 
 ## Properties
 
