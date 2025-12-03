@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: SimplifiedLabelRecognizerSettings - Dynamsoft Capture Vision Flutter Edition API Reference
-description: The SimplifiedLabelRecognizerSettings contains label recognition setting of Dynamsoft Capture Vision Flutter edition
+title: SimplifiedLabelRecognizerSettings - Dynamsoft Capture Vision React Native Edition API Reference
+description: Interface SimplifiedLabelRecognizerSettings of Dynamsoft Capture Vision React Native contains label recognition setting of Dynamsoft Capture Vision Flutter edition
 keywords: Flutter, SimplifiedLabelRecognizerSettings
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -9,22 +9,22 @@ needGenerateH3Content: true
 
 # SimplifiedLabelRecognizerSettings
 
-The `SimplifiedLabelRecognizerSettings` class contains settings for label recognition. It is a sub-parameter of `SimplifiedCaptureVisionSettings`
+Interface `SimplifiedLabelRecognizerSettings` contains settings for label recognition. It is a sub-parameter of `SimplifiedCaptureVisionSettings`
 
 ## Definition
 
-*Assembly:* dynamsoft_capture_vision_flutter
+*Assembly:* dynamsoft-capture-vision-react-native
 
-```dart
-class SimplifiedLabelRecognizerSettings
+```js
+interface SimplifiedLabelRecognizerSettings
 ```
 
 ## Properties
 
 | Property | Types | Description |
 | -------- | ----- | ----------- |
-| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *List\<EnumGrayscaleTransformationMode\>* | The grayscale transformation modes in an array of [`EnumGrayscaleTransformationMode`]({{ site.dcv_flutter_api}}core/enum/grayscale-transformation-mode.html). |
-| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *List\<EnumGrayscaleEnhancementMode\>* | The grayscale enhancement modes in an array of [`EnumGrayscaleEnhancementMode`]({{ site.dcv_flutter_api}}core/enum/grayscale-enhancement-mode.html). |
+| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *Array\<EnumGrayscaleTransformationMode\>* | The grayscale transformation modes in an array of [`EnumGrayscaleTransformationMode`]({{ site.dcv_react_native_api}}core/enum/grayscale-transformation-mode.html). |
+| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *Array\<EnumGrayscaleEnhancementMode\>* | The grayscale enhancement modes in an array of [`EnumGrayscaleEnhancementMode`]({{ site.dcv_react_native_api}}core/enum/grayscale-enhancement-mode.html). |
 | [`characterModelName`](#charactermodelname) | *String* | Specify a character model by its name. |
 | [`lineStringRegExPattern`](#linestringregexpattern) | *String* | The RegEx pattern of the text line string to filter out the unqualified results. |
 | [`maxThreadsInOneTask`](#maxthreadsinonetask) | *int* | The maximum available threads count in one label recognition task. |
@@ -32,10 +32,10 @@ class SimplifiedLabelRecognizerSettings
 
 ### grayscaleTransformationModes
 
-The grayscale transformation modes in an array of [`EnumGrayscaleTransformationMode`]({{ site.dcv_flutter_api }}core/enum/grayscale-transformation-mode.html).
+The grayscale transformation modes in an array of [`EnumGrayscaleTransformationMode`]({{ site.dcv_react_native_api }}core/enum/grayscale-transformation-mode.html).
 
-```dart
-List<EnumGrayscaleTransformationMode> grayscaleTransformationModes;
+```js
+grayscaleTransformationModes?: Int32Array | Array<EnumGrayscaleTransformationMode>
 ```
 
 **Remarks**
@@ -44,10 +44,10 @@ View the parameter reference page of [`GrayscaleTransformationMode`]({{ site.dcv
 
 ### grayscaleEnhancementModes
 
-The grayscale enhancement modes in an array of [`EnumGrayscaleEnhancementMode`]({{ site.dcv_flutter_api }}core/enum/grayscale-enhancement-mode.html).
+The grayscale enhancement modes in an array of [`EnumGrayscaleEnhancementMode`]({{ site.dcv_react_native_api }}core/enum/grayscale-enhancement-mode.html).
 
-```dart
-List<EnumGrayscaleEnhancementMode> grayscaleEnhancementModes;
+```js
+grayscaleEnhancementModes?: Int32Array | Array<EnumGrayscaleEnhancementMode>
 ```
 
 **Remarks**
@@ -58,8 +58,8 @@ View the reference page of [`GrayscaleEnhancementMode`]({{ site.dcv_parameter_re
 
 Specify a character model by its name.
 
-```dart
-String? characterModelName;
+```js
+characterModelName?: string
 ```
 
 **Remarks**
@@ -70,8 +70,8 @@ View the parameter reference of [`CharacterModelName`]({{ site.dcv_parameter_ref
 
 The RegEx pattern of the text line string to filter out the unqualified results.
 
-```dart
-String? lineStringRegExPattern;
+```js
+lineStringRegExPattern?: string
 ```
 
 **Remarks**
@@ -80,8 +80,8 @@ String? lineStringRegExPattern;
 
 The maximum available threads count in one label recognition task.
 
-```dart
-int maxThreadsInOneTask;
+```js
+maxThreadsInOneTask?: number
 ```
 
 **Remarks**
@@ -90,6 +90,6 @@ int maxThreadsInOneTask;
 
 The threshold for image shrinking when dealing with large images.
 
-```dart
-int scaleDownThreshold;
+```js
+scaleDownThreshold?: number
 ```
