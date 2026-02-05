@@ -37,6 +37,13 @@ class LocalizedTextLinesUnit extends IntermediateResultUnit
 | [`removeLocalizedTextLine`](#removelocalizedtextline) | Removes a localized text line from the unit. |
 | [`addLocalizedTextLine`](#addlocalizedtextline) | Adds a [`LocalizedTextLineElement`](localized-text-line-element.md) to the unit. |
 | [`setLocalizedTextLine`](#setlocalizedtextline) | Sets the [`LocalizedTextLineElement`](localized-text-line-element.md) at the specified index. |
+| [`getAuxiliaryRegionElements`](#getauxiliaryregionelements) | Returns an array of [`AuxiliaryRegionElement`]({{ site.dcv_android_api }}core/intermediate-results/auxiliary-region-element.html) objects. |
+| [`getAuxiliaryRegionElementsCount`](#getauxiliaryregionElementscount) | Returns the number of auxiliary region elements in this unit. |
+| [`getAuxiliaryRegionElement`](#getauxiliaryregionelement) | Returns the auxiliary region element at the specified index. |
+| [`setAuxiliaryRegionElement`](#setauxiliaryregionelement) | Sets or replaces the auxiliary region element at the specified index. |
+| [`addAuxiliaryRegionElement`](#addauxiliaryregionelement) | Adds a new auxiliary region element to this unit. |
+| [`removeAuxiliaryRegionElement`](#removeauxiliaryregionelement) | Removes the auxiliary region element at the specified index. |
+| [`removeAllAuxiliaryRegionElements`](#removeallauxiliaryregionelements) | Removes all the auxiliary region elements from this unit. |
 
 ### getLocalizedTextLines
 
@@ -135,3 +142,105 @@ int setLocalizedTextLine(int index, LocalizedTextLineElement element, Matrix mat
 **Return value**
 
 Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### getAuxiliaryRegionElements
+
+Returns an array of [`AuxiliaryRegionElement`]({{ site.dcv_android_api }}core/intermediate-results/auxiliary-region-element.html) objects, each representing an auxiliary region.
+
+```java
+AuxiliaryRegionElement[] getAuxiliaryRegionElements();
+```
+
+**Return value**
+
+Returns an array of [`AuxiliaryRegionElement`]({{ site.dcv_android_api }}core/intermediate-results/auxiliary-region-element.html) objects.
+
+### getAuxiliaryRegionElementsCount
+
+Returns the number of auxiliary region elements in this unit.
+
+```java
+int getAuxiliaryRegionElementsCount();
+```
+
+**Return value**
+
+Returns the number of auxiliary region elements.
+
+### getAuxiliaryRegionElement
+
+Returns the auxiliary region element at the specified index.
+
+```java
+AuxiliaryRegionElement getAuxiliaryRegionElement(int index);
+```
+
+**Parameters**
+
+`index`: The zero-based index of the auxiliary region element to retrieve.
+
+**Return value**
+
+Returns the auxiliary region element at the specified index, or `null` if the index is out of range.
+
+### setAuxiliaryRegionElement
+
+Sets or replaces the auxiliary region element at the specified index.
+
+```java
+int setAuxiliaryRegionElement(int index, AuxiliaryRegionElement element, Matrix matrixToOriginalImage);
+```
+
+**Parameters**
+
+`index`: The zero-based index where the element should be set.
+
+`element`: The auxiliary region element to set.
+
+`matrixToOriginalImage`: The transformation matrix from the current image to the original image.
+
+**Return value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### addAuxiliaryRegionElement
+
+Adds a new auxiliary region element to this unit.
+
+```java
+int addAuxiliaryRegionElement(AuxiliaryRegionElement element, Matrix matrixToOriginalImage);
+```
+
+**Parameters**
+
+`element`: The auxiliary region element to add.
+
+`matrixToOriginalImage`: The transformation matrix from the current image to the original image.
+
+**Return value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### removeAuxiliaryRegionElement
+
+Removes the auxiliary region element at the specified index.
+
+```java
+int removeAuxiliaryRegionElement(int index);
+```
+
+**Parameters**
+
+`index`: The zero-based index of the auxiliary region element to remove.
+
+**Return value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### removeAllAuxiliaryRegionElements
+
+Removes all the auxiliary region elements from this unit.
+
+```java
+void removeAllAuxiliaryRegionElements();
+```

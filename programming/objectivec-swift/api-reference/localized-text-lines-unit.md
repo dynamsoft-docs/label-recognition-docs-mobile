@@ -43,6 +43,13 @@ class LocalizedTextLinesUnit: IntermediateResultUnit
 | [`removeLocalizedTextLine`](#removelocalizedtextline) | Remove the localized text line at the specified index from this unit. |
 | [`addLocalizedTextLine`](#addlocalizedtextline) | Add a localized text line to this unit. |
 | [`setLocalizedTextLine`](#setlocalizedtextline) | Set the localized text line at the specified index in a [`LocalizedTextLineElement`](localized-text-line-element.md) object. |
+| [`getAuxiliaryRegionElements`](#getauxiliaryregionelements) | Get all the auxiliary region elements in an array of [`AuxiliaryRegionElement`]({{ site.dcv_ios_api }}core/intermediate-results/auxiliary-region-element.html). |
+| [`getAuxiliaryRegionElementsCount`](#getauxiliaryelementscount) | Get the number of auxiliary region elements in this unit. |
+| [`getAuxiliaryRegionElement`](#getauxiliaryregionelement) | Get the auxiliary region element at the specified index. |
+| [`setAuxiliaryRegionElement`](#setauxiliaryregionelement) | Set or replace the auxiliary region element at the specified index. |
+| [`addAuxiliaryRegionElement`](#addauxiliaryregionelement) | Add a new auxiliary region element to this unit. |
+| [`removeAuxiliaryRegionElement`](#removeauxiliaryregionelement) | Remove the auxiliary region element at the specified index. |
+| [`removeAllAuxiliaryRegionElements`](#removeallauxiliaryregionelements) | Remove all the auxiliary region elements from this unit. |
 
 ### getLocalizedTextLines
 
@@ -211,3 +218,172 @@ func setLocalizedTextLine(_ index: Int, element: DSLocalizedTextLineElement, mat
 **Return value**
 
 Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### getAuxiliaryRegionElements
+
+Get all the auxiliary region elements in an array of [`AuxiliaryRegionElement`]({{ site.dcv_ios_api }}core/intermediate-results/auxiliary-region-element.html).
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(nullable NSArray<DSAuxiliaryRegionElement*>*)getAuxiliaryRegionElements;
+```
+2. 
+```swift
+func getAuxiliaryRegionElements() -> [DSAuxiliaryRegionElement]?
+```
+
+**Return value**
+
+All the auxiliary region elements in an array of [`AuxiliaryRegionElement`]({{ site.dcv_ios_api }}core/intermediate-results/auxiliary-region-element.html).
+
+### getAuxiliaryRegionElementsCount
+
+Get the number of auxiliary region elements in this unit.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(NSInteger)getAuxiliaryRegionElementsCount;
+```
+2. 
+```swift
+func getAuxiliaryRegionElementsCount() -> Int
+```
+
+**Return value**
+
+The number of auxiliary region elements.
+
+### getAuxiliaryRegionElement
+
+Get the auxiliary region element at the specified index.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(nullable DSAuxiliaryRegionElement*)getAuxiliaryRegionElement:(NSInteger)index;
+```
+2. 
+```swift
+func getAuxiliaryRegionElement(_ index: Int) -> DSAuxiliaryRegionElement?
+```
+
+**Parameters**
+
+`index`: The zero-based index of the auxiliary region element to retrieve.
+
+**Return value**
+
+The auxiliary region element at the specified index, or `nil` if the index is out of range.
+
+### setAuxiliaryRegionElement
+
+Set or replace the auxiliary region element at the specified index.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(NSInteger)setAuxiliaryRegionElement:(NSInteger)index
+                              element:(DSAuxiliaryRegionElement*)element
+                matrixToOriginalImage:(CGAffineTransform)matrixToOriginalImage;
+```
+2. 
+```swift
+func setAuxiliaryRegionElement(_ index: Int, element: DSAuxiliaryRegionElement, matrixToOriginalImage: CGAffineTransform) -> Int
+```
+
+**Parameters**
+
+`index`: The zero-based index where the element should be set.
+
+`element`: The auxiliary region element to set.
+
+`matrixToOriginalImage`: The transformation matrix from the current image to the original image.
+
+**Return value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### addAuxiliaryRegionElement
+
+Add a new auxiliary region element to this unit.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(NSInteger)addAuxiliaryRegionElement:(DSAuxiliaryRegionElement*)element
+                matrixToOriginalImage:(CGAffineTransform)matrixToOriginalImage;
+```
+2. 
+```swift
+func addAuxiliaryRegionElement(_ element: DSAuxiliaryRegionElement, matrixToOriginalImage: CGAffineTransform) -> Int
+```
+
+**Parameters**
+
+`element`: The auxiliary region element to add.
+
+`matrixToOriginalImage`: The transformation matrix from the current image to the original image.
+
+**Return value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### removeAuxiliaryRegionElement
+
+Remove the auxiliary region element at the specified index.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(NSInteger)removeAuxiliaryRegionElement:(NSInteger)index;
+```
+2. 
+```swift
+func removeAuxiliaryRegionElement(_ index: Int) -> Int
+```
+
+**Parameters**
+
+`index`: The zero-based index of the auxiliary region element to remove.
+
+**Return value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### removeAllAuxiliaryRegionElements
+
+Remove all the auxiliary region elements from this unit.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(void)removeAllAuxiliaryRegionElements;
+```
+2. 
+```swift
+func removeAllAuxiliaryRegionElements()
+```
+
