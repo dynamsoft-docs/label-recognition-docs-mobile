@@ -40,7 +40,7 @@ The following methods are inherited from the `RegionObjectElement` class:
 | [`getLocation`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#getlocation) | Returns the location of the region object, represented as a quadrilateral. |
 | [`setLocation`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#setlocation) | Sets the location of the region object. |
 | [`getReferencedElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#getreferencedelement) | Returns the referenced element that supports the capturing of this element. |
-| [`getRegionObjectElementType`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | Returns the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcv_enumerations }}core/region-object-element-type.html?lang=objc,swift). |
+| [`getRegionObjectElementType`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | Returns the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcv_android_api }}core/enum/region-object-element-type.html). |
 
 
 
