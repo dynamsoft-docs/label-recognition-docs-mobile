@@ -35,7 +35,7 @@ class SimplifiedLabelRecognizerSettings: NSObject
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *NSArray<DSGrayscaleTransformationMode \*> \** | Set the grayscale transformation modes with an array of enumeration [`GrayscaleTransformationMode`]({{ site.dcv_enumerations}}core/grayscale-transformation-mode.html). |
-| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *NSArray<DSGrayscaleEnhancementMode \*> \** | Set the grayscale enhancement modes with an array of enumeration [`GrayscaleEnhancementMode`]({{ site.dcv_enumerations}}core/grayscale-enhancement-mode.html). |
+| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *NSArray<DSGrayscaleEnhancementMode \*> \** | Set the grayscale enhancement modes with an array of enumeration [`GrayscaleEnhancementMode`]({{ site.dcv_ios_api }}core/enum/grayscale-enhancement-mode.html). |
 | [`characterModelName`](#charactermodelname) | *NSString \** | Specify a character model by its name. |
 | [`lineStringRegExPattern`](#linestringregexpattern) | *NSString \** | Set the RegEx pattern of the text line string to filter out the unqualified results. |
 | [`maxThreadsInOneTask`](#maxthreadsinonetask) | *NSInteger* | Set the maximum available threads count in one label recognition task. |
@@ -64,7 +64,7 @@ View the parameter reference page of [`GrayscaleTransformationMode`]({{ site.dcv
 
 ### grayscaleEnhancementModes
 
-Set the grayscale enhancement modes with an array of enumeration [`GrayscaleEnhancementMode`]({{ site.dcv_enumerations }}core/grayscale-enhancement-mode.html).
+Set the grayscale enhancement modes with an array of enumeration [`GrayscaleEnhancementMode`]({{ site.dcv_ios_api }}core/enum/grayscale-enhancement-mode.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
