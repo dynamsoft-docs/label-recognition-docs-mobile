@@ -101,3 +101,6 @@ defaults:
 
 url: "https://www.dynamsoft.com" # sitemap root
 
+
+# Link variables used in pages/sidebars but previously undefined (rendered as broken relative links; GSC 404s, Oct 2026)
+dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
